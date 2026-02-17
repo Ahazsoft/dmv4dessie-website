@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.header-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 2px solid black;
+}
+
+.header-logo-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 5;
+}
+
+.header-logo-title-container img{    
+    width: 44px;
+    height: 44px;
+}
+
+.header-logo-title-container h2 {
+    font-family: "Shippori Mincho";
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 100%;
+    /* margin-left: 30px; */
+}
+
+.header-nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 4;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+.header-nav-container li{
+    list-style-type: none;
+}
+
+.header-nav-container li a{
+    font-family: "Work Sans";
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    line-height: 100%;
+}
+
+.header-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 4;
+}
+
+.header-container .btn {
+    text-align: center;
+    background-color: #7AC717;
+    color: white;
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 100%;
+    width: 160px;
+    height: 60px;
+    border-radius: 8px;
+    padding: 20px 50px;
+    cursor: pointer;
+    margin: 10px 0px;
+    margin-right: 50px;
+    border:none;
+}

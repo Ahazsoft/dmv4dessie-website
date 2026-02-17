@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 5;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+.hero-section-descriptions {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 550px;
+  margin-top: 120px;
+  margin-left: 80px;
+  margin-right: 10px;
+}
+
+.hero-section-descriptions-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section-descriptions-top .line {
+    width: 17px;
+    height: 2px;
+    background-color: blue;
+    margin-right: 10px;
+}
+
+.hero-section-descriptions-top p {
+    width: 333px;
+    height: 25px;
+    font-weight: 500;
+    font-family: "Outfit";
+    font-size: 20px;
+    color: #7AC717;
+}
+
+.hero-section-descriptions-middle h2 {
+    margin: 0;
+    display: inline-block;
+    font-weight: 700;
+    font-family: "Raleway";
+    font-size: 44px;    
+    color: #333333;
+}
+
+.hero-section-descriptions-text p {
+    font-weight: 400;
+    font-family: "Outfit";
+    color: #989898;
+}
+
+.hero-section-descriptions-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-section-descriptions-bottom img {
+    width: 48px;
+    height: 48px;
+}
+
+.hero-section-images {
+   flex-grow: 1;
+   position: relative;   
+   margin: 0;
+   width: auto;
+   padding: 10px;
+   padding-right:0;
+}
+
+.hero-section-images .bg-shape {
+    position: absolute;
+    width: 700px;
+    height: 213px;
+    bottom:-110px;
+    right: 0;
+    background-color: #F8991780;
+    z-index: 1;
+}
+
+
+.hero-section-images .large-back {
+    position: absolute;
+    border-radius: 10px;
+    border:none;
+    width: 350px;
+    height: 410px;
+    bottom: -200px;
+    left: 100px;
+    background-color: #7AC717;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.hero-section-images .large-front img{
+    position: absolute;
+    border-radius: 8px;
+    border:none;
+    width: 350px;
+    height: 410px;
+    bottom: -220px;
+    left: 120px;
+    background-color: #7AC791;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.hero-section-images .small-back {
+    position: absolute;
+    border-radius: 10px;
+    border:none;
+    width: 250px;
+    height: 210px;
+    bottom: -300px;
+    left: 320px;
+    background-color: #F8991780;
+    opacity: 0.7;
+    z-index: 4;
+}
+
+.hero-section-images .small-front img{
+    position: absolute;
+    border-radius: 8px;
+    border:none;
+    width: 250px;
+    height: 210px;
+    bottom: -320px;
+    left: 340px;
+    z-index: 1111;
+    cursor: pointer;
+}

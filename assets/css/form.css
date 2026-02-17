@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.form-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 80px 8%;
+  gap: 150px;
+}
+
+.form-section-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 10px;
+}
+
+.form-section-left-title h2 {
+  font-family: "Outfit";
+  font-size: 39px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #1d1d1d;
+  margin-bottom: 25px;
+  max-width: 550px;
+}
+
+.green-text {
+  color: #7ac70c;
+}
+
+.form-section-left-description p {
+  font-family: "Outfit";
+  font-weight: 400;
+  color: #777;
+  font-size: 14px;
+  max-width: 510px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.form-section-left-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress-wrapper {
+  background: #f0f0f0;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.progress-percentage {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #7ac70c;
+  position: relative;
+  left: calc(0.29 * 510);
+}
+
+.progress-info .raised {
+  color: #7ac70c;
+  font-weight: 600;
+}
+
+.progress-info .goal {
+  color: #7ac70c;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.form-progress-bar {
+  width: 29%;
+  height: 100%;
+  background: #7ac70c;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 160px;
+  height: 64px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.pay-btn:hover {
+  background: #f7f7f7;
+}
+
+.form-section-right {
+  flex: 1;
+  background: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-section-right-inner {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border: 1px solid #000000;
+}
+
+.form-section-right-inner h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-section-right-inner input,
+.form-section-right-inner textarea {
+  width: 100%;
+  background-color: transparent;
+  padding: 14px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-section-right-inner textarea {
+  height: 130px;
+  resize: none;
+}
+
+.form-section-right-inner .submit-btn {
+  text-align: center;
+  background-color: #7ac717;
+  color: white;
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  width: 190px;
+  height: 60px;
+  border-radius: 8px;
+  padding: 22px 0px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 50px;
+  border: none;
+}
+
+.form-section-right-inner .submit-btn:hover {
+  background: #68af0a;
+}

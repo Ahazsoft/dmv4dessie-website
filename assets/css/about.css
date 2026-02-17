@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.about-section {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.about-section-images {
+  position: relative;
+  margin: 0;
+  width: auto;
+  padding: 10px;
+  padding-right: 0;
+}
+
+.about-section-images .bg-shape {
+  position: absolute;
+  width: 570px;
+  height: 213px;
+  bottom: -90px;
+  right: 0;
+  background-color: #f8991780;
+  z-index: 1;
+}
+
+.about-section-images .large-back {
+  position: absolute;
+  border-radius: 10px;
+  border: none;
+  width: 400px;
+  height: 270px;
+  bottom: -10px;
+  left: -500px;
+  background-color: #7ac717;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.about-section-images .large-front img {
+  position: absolute;
+  border-radius: 8px;
+  width: 400px;
+  height: 270px;
+  bottom: -30px;
+  left: -480px;
+  background-color: #7ac791;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.about-section-images .small-back {
+  position: absolute;
+  border-radius: 10px;
+  border: none;
+  width: 350px;
+  height: 230px;
+  bottom: -190px;
+  left: -380px;
+  background-color: #f8991780;
+  opacity: 0.7;
+  z-index: 4;
+}
+
+
+.about-section-images .small-front img {
+ 
+  position: absolute;
+  border-radius: 8px;
+  border: none;
+  width: 350px;
+  height: 230px;
+  bottom: -210px;
+  left: -360px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.about-section-description {
+  max-width: 650px;
+  padding: 30px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.about-section-description-top p {
+  color: #7ac717;
+  font-weight: 600;
+  font-family: "Outfit";
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.about-section-description-top h2 {
+  font-family: "Outfit";
+  font-size: 36px;
+  line-height: 46px;
+  color: #1d1d1d;
+}
+
+.about-section-description-text .line {
+  width: 71px;
+  height: 3px;
+  background-color: #13829b;
+  margin: 20px 0;
+  border-radius: 50px;
+}
+
+.about-section-description-text p {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #6f7775;
+}
+
+.about-section-description-bullet {
+  margin-top: 20px;
+}
+
+.about-section-description-bullet .bullet {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.about-section-description-bullet .bullet img {
+  width: 24px;
+  height: 24px;
+}
+
+.about-section-description-bullet .bullet p {
+  font-family: "Outfit";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.about-section-description-bottom .btn {
+  text-align: center;
+  background-color: #7ac717;
+  color: white;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  width: 214px;
+  height: 72px;
+  border-radius: 8px;
+  padding: 24px 0px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 50px;
+  border: none;
+  margin-left: 20px;
+}
