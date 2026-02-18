@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.event-section {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
+.event-section-title {
+  padding: 0 30px;
+}
+
+.event-section-title h2 {
+  font-family: "Outfit";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 26px;
+  color: #7ac717;
+}
+
+.event-section-event-container {
+  margin-top: 10px;
+  /* border: 1px solid navy; */
+  padding: 74px 67px;
+  background-color: #d9d9d94d;
+}
+
+#event-section-event-inner-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.event-card {
+  max-width: 560px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.event-card-top {
+  position: relative;
+  width: 100%;
+}
+
+.event-card-top img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+
+.event-card-top-date-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #3c5f0b;
+  padding: 25px 30px;
+  color: white;
+  text-align: center;
+}
+
+.event-card-top-date-container h2 {
+  font-family: "Shippori Mincho";
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+}
+
+.event-card-top-date-container h4 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  margin: 5px 0 0 0;
+  font-weight: 400;
+}
+
+
+.event-card-medium {
+  padding: 18px 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.event-card-medium p {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  color: #555;
+  margin: 0;
+}
+
+.event-card-medium span {
+  font-weight: 600;
+  color: #222;
+}
+
+
+.event-card-bottom {
+  padding-top: 20px;
+}
+
+.event-card-bottom h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #7ac717;
+  margin: 0 0 12px 0;
+}
+
+.event-card-bottom p {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}

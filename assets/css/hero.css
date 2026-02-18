@@ -86,7 +86,7 @@
 
 .hero-section-images .bg-shape {
     position: absolute;
-    width: 700px;
+    width: 660px;
     height: 213px;
     bottom:-110px;
     right: 0;
@@ -99,9 +99,9 @@
     position: absolute;
     border-radius: 10px;
     border:none;
-    width: 350px;
-    height: 410px;
-    bottom: -200px;
+    width: 326px;
+    height: 349px;
+    bottom: -150px;
     left: 100px;
     background-color: #7AC717;
     opacity: 0.7;
@@ -112,9 +112,9 @@
     position: absolute;
     border-radius: 8px;
     border:none;
-    width: 350px;
-    height: 410px;
-    bottom: -220px;
+    width: 326px;
+    height: 349px;
+    bottom: -170px;
     left: 120px;
     background-color: #7AC791;
     z-index: 3;
@@ -125,12 +125,12 @@
     position: absolute;
     border-radius: 10px;
     border:none;
-    width: 250px;
-    height: 210px;
-    bottom: -300px;
+    width: 194px;
+    height: 144px;
+    bottom: -200px;
     left: 320px;
     background-color: #F8991780;
-    opacity: 0.7;
+    opacity: 0.9;
     z-index: 4;
 }
 
@@ -138,10 +138,10 @@
     position: absolute;
     border-radius: 8px;
     border:none;
-    width: 250px;
-    height: 210px;
-    bottom: -320px;
-    left: 340px;
+    width: 194px;
+    height: 144px;
+    bottom: -210px;
+    left: 330px;
     z-index: 1111;
     cursor: pointer;
 }
