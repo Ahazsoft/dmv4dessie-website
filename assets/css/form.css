@@ -6,6 +6,7 @@
 
 .form-section {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   padding: 80px 8%;
@@ -146,6 +147,7 @@
 }
 
 .form-section-right-inner h2 {
+  font-family: "Raleway";
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 30px;
@@ -188,4 +190,26 @@
 
 .form-section-right-inner .submit-btn:hover {
   background: #68af0a;
+}
+
+@media (max-width:600px) {
+.form-section {
+  flex-direction: column;
+  gap: 70px;
+
+}
+
+.pay-btn {
+  width: 130px;
+  height: 40px;
+}
+
+.form-section-right {
+  padding: 25px;
+}
+
+.form-section-right-inner h2{
+  font-size: 20px;
+}
+  
 }

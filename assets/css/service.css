@@ -1,9 +1,12 @@
 .services-section {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 60px 40px;
   gap: 40px;
+    margin-top: 0;
+
 }
 
 .services-section-single-service {
@@ -56,4 +59,15 @@
 .services-section-single-service:hover {
   border: 1px solid #78be20;
   background: #fff;
+}
+
+@media (max-width: 600px) {
+  .services-section {
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-section-single-service:not(:last-child)::after {
+    display: none;
+  }
 }

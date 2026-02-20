@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 .hero-section {
   display: flex;
@@ -11,7 +10,7 @@
   position: relative;
   z-index: 5;
   align-items: center;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 .hero-section-descriptions {
@@ -29,119 +28,192 @@
 .hero-section-descriptions-top {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: center;  
 }
 
 .hero-section-descriptions-top .line {
-    width: 17px;
-    height: 2px;
-    background-color: blue;
-    margin-right: 10px;
+  position: relative;
+  top: -0.32rem;
+  width: 17px;
+  height: 2px;
+  background-color: blue;
+  margin-right: 10px;
 }
 
 .hero-section-descriptions-top p {
-    width: 333px;
-    height: 25px;
-    font-weight: 500;
-    font-family: "Outfit";
-    font-size: 20px;
-    color: #7AC717;
+  
+  width: 333px;
+  height: 25px;
+  font-weight: 500;
+  font-family: "Outfit";
+  font-size: 20px;
+  color: #7ac717;
 }
 
 .hero-section-descriptions-middle h2 {
-    margin: 0;
-    display: inline-block;
-    font-weight: 700;
-    font-family: "Raleway";
-    font-size: 44px;    
-    color: #333333;
+  margin: 0;
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Raleway";
+  font-size: 44px;
+  color: #333333;
 }
 
 .hero-section-descriptions-text p {
-    font-weight: 400;
-    font-family: "Outfit";
-    color: #989898;
+  font-weight: 400;
+  font-family: "Outfit";
+  color: #989898;
 }
 
 .hero-section-descriptions-bottom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .hero-section-descriptions-bottom img {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
+}
+
+.hero-section-descriptions-bottom a {
+  text-decoration: none;
+  color: #333333;
 }
 
 .hero-section-images {
-   flex-grow: 1;
-   position: relative;   
-   margin: 0;
-   width: auto;
-   padding: 10px;
-   padding-right:0;
+  flex-grow: 1;
+  position: relative;
+  margin: 0;
+  width: auto;
+  padding: 10px;
+  padding-right: 0;
 }
 
 .hero-section-images .bg-shape {
-    position: absolute;
-    width: 660px;
-    height: 213px;
-    bottom:-110px;
-    right: 0;
-    background-color: #F8991780;
-    z-index: 1;
+  position: absolute;
+  width: 660px;
+  height: 213px;
+  bottom: -110px;
+  right: 0;
+  background-color: #f8991780;
+  z-index: 1;
 }
-
 
 .hero-section-images .large-back {
-    position: absolute;
-    border-radius: 10px;
-    border:none;
-    width: 326px;
-    height: 349px;
-    bottom: -150px;
-    left: 100px;
-    background-color: #7AC717;
-    opacity: 0.7;
-    z-index: 2;
+  position: absolute;
+  border-radius: 10px;
+  border: none;
+  width: 326px;
+  height: 349px;
+  bottom: -150px;
+  left: 100px;
+  background-color: #7ac717;
+  opacity: 0.7;
+  z-index: 2;
 }
 
-.hero-section-images .large-front img{
-    position: absolute;
-    border-radius: 8px;
-    border:none;
-    width: 326px;
-    height: 349px;
-    bottom: -170px;
-    left: 120px;
-    background-color: #7AC791;
-    z-index: 3;
-    cursor: pointer;
+.hero-section-images .large-front img {
+  position: absolute;
+  border-radius: 8px;
+  border: none;
+  width: 326px;
+  height: 349px;
+  bottom: -170px;
+  left: 120px;
+  background-color: #7ac791;
+  z-index: 3;
+  cursor: pointer;
 }
 
 .hero-section-images .small-back {
-    position: absolute;
-    border-radius: 10px;
-    border:none;
-    width: 194px;
-    height: 144px;
-    bottom: -200px;
-    left: 320px;
-    background-color: #F8991780;
-    opacity: 0.9;
-    z-index: 4;
+  position: absolute;
+  border-radius: 10px;
+  border: none;
+  width: 194px;
+  height: 144px;
+  bottom: -200px;
+  left: 320px;
+  background-color: #f8991780;
+  opacity: 0.9;
+  z-index: 4;
 }
 
-.hero-section-images .small-front img{
-    position: absolute;
-    border-radius: 8px;
-    border:none;
-    width: 194px;
-    height: 144px;
-    bottom: -210px;
-    left: 330px;
-    z-index: 1111;
-    cursor: pointer;
+.hero-section-images .small-front img {
+  position: absolute;
+  border-radius: 8px;
+  border: none;
+  width: 194px;
+  height: 144px;
+  bottom: -210px;
+  left: 330px;
+  z-index: 1111;
+  cursor: pointer;
+}
+
+
+/* mobile screen  < 600px width */ 
+@media (max-width: 600px) {
+  .hero-section {
+    width: 100%;
+    flex-direction: column;
+    gap: 240px;
+  }
+  .hero-section-descriptions {
+    max-width: 100%;
+    margin-top: 40px;
+    margin-left: 0;
+    padding: 0 20px;
+    margin-right: 0;
+  }
+
+  .hero-section-descriptions-top p {
+    font-size: 18px;
+  }
+  .hero-section-descriptions-middle h2 {
+    font-size: 35px;
+  }
+
+  .hero-section-descriptions-text p {
+    margin-top: 10px;
+  }
+
+  .hero-section-images {
+    margin-top:-50px;
+    width: 100%;
+  }
+
+  .hero-section-images .bg-shape {
+    width: 100%;
+    height: 160px;
+  }
+
+  .hero-section-images .large-back {
+    width: 226px;
+    height: 259px;
+    left: 80px;
+    bottom: -130px;
+  }
+  .hero-section-images .large-front img {
+    width: 226px;
+    height: 259px;
+    left: 95px;
+    bottom: -145px;
+  }
+
+  .hero-section-images .small-back {
+    width: 150px;
+    height: 135px;
+    left: 210px;
+    bottom: -190px;
+  }
+  .hero-section-images .small-front img {
+    width: 150px;
+    height: 135px;
+    left: 225px;
+    bottom: -205px;
+  }
+
+
 }

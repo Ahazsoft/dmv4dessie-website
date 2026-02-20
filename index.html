@@ -16,24 +16,38 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/animate.min.css" />
     <link rel="stylesheet" href="assets/css/custom-animate.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
   </head>
   <body>
     <!-- header begin-->
+
     <header class="header-container">
       <div class="header-logo-title-container">
         <img src="assets/images/Logo.png" alt="DMV Logo" />
         <h2>DMV For Dessie</h2>
       </div>
-      <ul class="header-nav-container">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Event</a></li>
-        <li><a href="#">Contact</a></li>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- OVERLAY -->
+      <div class="overlay" id="overlay"></div>
+
+      <!-- DRAWER NAV -->
+      <ul class="header-nav-container" id="navMenu">
+        <div class="drawer-header">
+          <button class="close-btn" id="closeBtn">&times;</button>
+        </div>
+
+        <li><a href="index.html#1">Home</a></li>
+        <li><a href="index.html#about-section">About us</a></li>
+        <li><a href="index.html#3">Event</a></li>
+        <li><a href="index.html#4">Contact</a></li>
       </ul>
+
       <div class="header-donate-button">
         <button class="btn">Donate</button>
       </div>
@@ -42,7 +56,7 @@
 
     <div class="wrapper">
       <!-- hero section begin -->
-      <section class="hero-section">
+      <section class="hero-section"  >
         <div class="hero-section-descriptions">
           <div class="hero-section-descriptions-top">
             <div class="line"></div>
@@ -178,7 +192,7 @@
           </div>
         </div>
 
-        <div class="about-section-images">
+        <div class="about-section-images" id="about-section">
           <div class="custom-layout">
             <!-- Background -->
             <div class="bg-shape"></div>
@@ -265,7 +279,7 @@
       <!-- form section ends -->
 
       <!-- event section begin  -->
-      <section class="event-section">
+      <section class="event-section" >
         <div class="event-section-title">
           <h2>Our Events</h2>
         </div>
@@ -334,9 +348,9 @@
         <div class="footer-container-top-right">
           <div class="footer-container-top-right-title">Contacts</div>
           <div class="footer-container-top-right-addresses">
-            <div class="footer-address-location">
+            
               <p>654 Town Street, 88 United States</p>
-            </div>
+            
             <p>contact_us@dmvfordessie.org</p>
             <p>0769791991</p>
           </div>
@@ -345,17 +359,13 @@
 
       <div class="footer-container-copyright">
         <p>
-          Copyright &copy; Sharmii | Designed by Sharmika Mageswaran - Powered
-          by Figma
+          Copyright &copy; Dmv For Dessie | Designed by <a href="https://www.ahaz.io/" >Ahaz Solutions</a>          
         </p>
       </div>
     </footer>
     <!-- footer ends -->
 
     <script src="assets/js/eventloader.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
-      defer
-    ></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

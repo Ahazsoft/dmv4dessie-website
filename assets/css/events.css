@@ -22,8 +22,8 @@
 }
 
 .event-section-event-container {
+  max-width: auto;
   margin-top: 10px;
-  /* border: 1px solid navy; */
   padding: 74px 67px;
   background-color: #d9d9d94d;
 }
@@ -121,4 +121,24 @@
   color: #666;
   line-height: 1.7;
   margin: 0;
+}
+
+@media (max-width:600px) {
+
+  .event-section{
+  padding: 50px 30px;
+
+  }
+
+  .event-section-title h2{
+    font-size: 25px;
+  }
+.event-section-event-container{
+  padding: 30px 10px;    
+
+}
+  #event-section-event-inner-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
 }

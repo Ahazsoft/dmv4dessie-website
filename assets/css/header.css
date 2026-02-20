@@ -8,6 +8,7 @@
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
     border-bottom: 2px solid black;
 }
@@ -76,4 +77,103 @@
     margin: 10px 0px;
     margin-right: 50px;
     border:none;
+}
+
+
+
+/* HAMBURGER & CLOSE DEFAULT HIDDEN */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: black;
+    border-radius: 2px;
+}
+
+.close-btn {
+       display: none;
+    }
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 98;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media (max-width: 600px) {
+
+    .header-nav-container,
+    .header-donate-button {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-container {
+        padding: 10px 20px;
+        
+    }
+
+    /* DRAWER STYLE */
+    .header-nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 270px;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 30px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.15);
+        display: flex;
+        z-index: 99;
+    }
+
+    .header-nav-container.active {  
+        right: 0;
+    }
+
+     .drawer-header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .close-btn {
+        display: inline;
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .header-nav-container li a {
+        font-size: 22px;
+    }
 }
