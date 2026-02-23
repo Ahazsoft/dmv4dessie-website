@@ -18,11 +18,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   padding: 0 10px;
 }
 
 .form-section-left-title h2 {
+  margin: 0;
   font-family: "Outfit";
   font-size: 39px;
   font-weight: 600;
@@ -37,10 +38,11 @@
 }
 
 .form-section-left-description p {
+  margin: 0;
   font-family: "Outfit";
   font-weight: 400;
   color: #777;
-  font-size: 14px;
+  font-size: 18px;
   max-width: 510px;
   line-height: 1.7;
   margin-bottom: 40px;
@@ -75,7 +77,7 @@
   font-weight: 600;
   color: #7ac70c;
   position: relative;
-  left: calc(0.29 * 510);
+  left: 25%;
 }
 
 .progress-info .raised {
@@ -142,6 +144,10 @@
 .form-section-right-inner {
   width: 100%;
   max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 40px;
   border: 1px solid #000000;
 }

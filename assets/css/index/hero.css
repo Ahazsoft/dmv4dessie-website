@@ -33,7 +33,6 @@
 
 .hero-section-descriptions-top .line {
   position: relative;
-  top: -0.32rem;
   width: 17px;
   height: 2px;
   background-color: blue;
@@ -187,32 +186,33 @@
   .hero-section-images .bg-shape {
     width: 100%;
     height: 160px;
+    
   }
 
   .hero-section-images .large-back {
     width: 226px;
     height: 259px;
-    left: 80px;
+    left: 65px;
     bottom: -130px;
   }
   .hero-section-images .large-front img {
     width: 226px;
     height: 259px;
-    left: 95px;
+    left: 80px;
     bottom: -145px;
   }
 
   .hero-section-images .small-back {
     width: 150px;
     height: 135px;
-    left: 210px;
+    left: 195px;
     bottom: -190px;
   }
   .hero-section-images .small-front img {
     width: 150px;
-    height: 135px;
-    left: 225px;
-    bottom: -205px;
+    height: 125px;
+    left: 210px;
+    bottom: -200px;
   }
 
 

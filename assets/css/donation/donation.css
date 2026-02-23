@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.donation-hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px 10px;
+}
+
+.donation-hero-section-subtitle {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.donation-hero-section-subtitle .line {
+  width: 100px;
+  height: 1.3px;
+  background-color: #2c7be5;
+}
+
+.donation-hero-section-subtitle h3 {
+  font-family: "outfit";
+  color: #7ac717;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.donation-hero-section-title {
+  width: 50%;
+}
+
+.donation-hero-section-title h2 {
+  font-family: "outfit";
+  font-weight: 600;
+  font-size: 45px;
+  text-align: center;
+  margin: 0;
+}
+
+.donation-hero-section-donation-causes {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+/* CARD */
+.donation-card {
+  border: 1.5px solid #dcdcdc;
+  border-radius: 24px;
+  padding: 15px;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.donation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE */
+.donation-card-image img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* STATUS SECTION */
+.donation-card-status {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.donation-card-status-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donation-card-status-top h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Raleway";
+  color: black;
+}
+
+.donation-card-status-top p {
+  font-weight: 600;
+  color: #436D0D;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e4e4e4;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #7ac717;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* BOTTOM RAISED/GOAL */
+.donation-card-status-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.donation-card-status-bottom h2 {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Raleway";
+  color: #111;
+}
+
+/* DESCRIPTION */
+.donation-card-description {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.4;
+  font-family: "Outfit";
+}
+
+/* BUTTON */
+.donate-btn {
+  align-self: center;
+  background: #7ac717;
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.donate-btn:hover {
+  background-color: #5aa317;
+  transform: translateY(-1px);
+}

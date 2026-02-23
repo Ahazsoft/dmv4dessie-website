@@ -8,22 +8,24 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-top: 70px;
+  gap: 30px;
+  margin: 70px 20px;
+  margin-bottom: 30px;
 }
 
 .about-section-images {
+  flex-grow: 1;
   position: relative;
-  margin: 0;
-  width: auto;
+  width: 100%;
   padding: 10px;
   padding-right: 0;
 }
 
 .about-section-images .bg-shape {
-  position: absolute;
-  width: 570px;
-  height: 213px;
-  bottom: -90px;
+position: absolute;
+  width: 100%;
+  height: 210px;
+  bottom: -70px;
   right: 0;
   background-color: #f8991780;
   z-index: 1;
@@ -32,23 +34,22 @@
 .about-section-images .large-back {
   position: absolute;
   border-radius: 10px;
-  border: none;
-  width: 400px;
-  height: 270px;
-  bottom: -10px;
-  left: -500px;
+  width: 60%;
+  height: 210px;
+  top: -180px;
+  left: 50px;
   background-color: #7ac717;
   opacity: 0.8;
   z-index: 2;
 }
 
 .about-section-images .large-front img {
-  position: absolute;
+position: absolute;
   border-radius: 8px;
-  width: 400px;
-  height: 270px;
-  bottom: -30px;
-  left: -480px;
+  width: 60%;
+  height: 210px;
+  top: -160px;
+  left: 70px;
   background-color: #7ac791;
   z-index: 3;
   cursor: pointer;
@@ -58,23 +59,23 @@
   position: absolute;
   border-radius: 10px;
   border: none;
-  width: 350px;
-  height: 230px;
-  bottom: -190px;
-  left: -380px;
+  width: 50%;
+  height: 170px;
+  bottom: -120px;
+  left: 190px;
   background-color: #f8991780;
   opacity: 0.8;
   z-index: 4;
 }
 
 .about-section-images .small-front img {
-  position: absolute;
+   position: absolute;
   border-radius: 8px;
   border: none;
-  width: 350px;
-  height: 230px;
-  bottom: -210px;
-  left: -360px;
+  width: 50%;
+  height: 170px;
+  bottom: -140px;
+  left: 210px;
   z-index: 5;
   cursor: pointer;
 }
@@ -99,6 +100,7 @@
   font-family: "Outfit";
   font-size: 36px;
   line-height: 46px;
+  margin: 0;  
   color: #1d1d1d;
 }
 
@@ -116,6 +118,7 @@
   font-size: 15px;
   line-height: 22px;
   color: #6f7775;
+  margin: 0;
 }
 
 .about-section-description-bullet {
@@ -125,6 +128,7 @@
 .about-section-description-bullet .bullet {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
 }
 
@@ -140,23 +144,24 @@
   line-height: 26px;
 }
 
+.about-section-description-bottom{
+  padding: 30px 0;
+}
+
 .about-section-description-bottom .btn {
   text-align: center;
-  background-color: #7ac717;
-  color: white;
-  font-family: "Lato";
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 100%;
-  width: 214px;
-  height: 72px;
-  border-radius: 8px;
-  padding: 24px 0px;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-right: 50px;
-  border: none;
-  margin-left: 20px;
+    background-color: #7AC717;
+    color: white;
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 100%;
+    width: 160px;
+    height: 60px;
+    border-radius: 8px;
+    padding: 20px 50px;
+    cursor: pointer;
+    border:none;
 }
 
 @media (max-width: 600px) {
@@ -174,26 +179,27 @@
     bottom: 30px;
   }
   .about-section-images .large-back {
+    position: absolute;
     width: 270px;
     height: 170px;
-    bottom: 80px;
+    top: 60px;
     left: 30px;
   }
   .about-section-images .large-front img {
     width: 270px;
     height: 170px;
-    bottom: 65px;
+    top: 75px;
     left: 45px;
   }
 
   .about-section-images .small-back {
-    width: 230px;
+    width: 210px;
     height: 120px;
     bottom: 20px;
     left: 130px;
   }
   .about-section-images .small-front img {
-    width: 230px;
+    width: 210px;
     height: 120px;
     bottom: 5px;
     left: 145px;

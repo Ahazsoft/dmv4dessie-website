@@ -1,179 +1,209 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-.header-container{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    border-bottom: 2px solid black;
+body {
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 2px solid black;
 }
 
 .header-logo-title-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-grow: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 5;
 }
 
-.header-logo-title-container img{    
-    width: 44px;
-    height: 44px;
+.header-logo-title-container img {
+  width: 44px;
+  height: 44px;
 }
 
 .header-logo-title-container h2 {
-    font-family: "Shippori Mincho";
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 100%;
-    /* margin-left: 30px; */
+  font-family: "Shippori Mincho";
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 100%;
+  /* margin-left: 30px; */
 }
 
 .header-nav-container {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 4;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 4;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
 }
 
-.header-nav-container li{
-    list-style-type: none;
+.header-nav-container li {
+  list-style-type: none;
 }
 
-.header-nav-container li a{
-    font-family: "Work Sans";
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
-    line-height: 100%;
+.header-nav-container li a {
+  font-family: "Work Sans";
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  line-height: 100%;
+  position: relative;     
+  display: inline-block;  
 }
+
+.header-nav-container li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* space under text */
+  width: 100%;
+  height: 2px;
+  background-color: #7ac717;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+/* hover animation */
+.header-nav-container li a:hover::after {
+  transform: scaleX(1);
+}
+
+.header-nav-container li a.active::after {
+  transform: scaleX(1);
+}
+
 
 .header-button {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-grow: 4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 4;
 }
 
 .header-container .btn {
-    text-align: center;
-    background-color: #7AC717;
-    color: white;
-    font-family: "Lato";
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 100%;
-    width: 160px;
-    height: 60px;
-    border-radius: 8px;
-    padding: 20px 50px;
-    cursor: pointer;
-    margin: 10px 0px;
-    margin-right: 50px;
-    border:none;
+  text-align: center;
+  background-color: #7ac717;
+  color: white;
+  font-family: "Lato";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  width: 160px;
+  height: 60px;
+  border-radius: 8px;
+  padding: 20px 50px;
+  cursor: pointer;
+  margin: 10px 0px;
+  margin-right: 50px;
+  border: none;
 }
 
 
+.header-container .btn:hover {
+  background-color: #5aa317;
+  transform: translateY(-1px);
+}
 
-/* HAMBURGER & CLOSE DEFAULT HIDDEN */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 6px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
 }
 
 .hamburger span {
-    width: 28px;
-    height: 3px;
-    background: black;
-    border-radius: 2px;
+  width: 28px;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
 }
 
 .close-btn {
-       display: none;
-    }
+  display: none;
+}
 
 /* OVERLAY */
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-    z-index: 98;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 98;
 }
 
 .overlay.active {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
-
 @media (max-width: 600px) {
+  .header-nav-container,
+  .header-donate-button {
+    display: none;
+  }
 
-    .header-nav-container,
-    .header-donate-button {
-        display: none;
-    }
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
 
-    .hamburger {
-        display: flex;
-        align-items: center;
-    }
+  .header-container {
+    padding: 10px 20px;
+  }
 
-    .header-container {
-        padding: 10px 20px;
-        
-    }
+  /* DRAWER STYLE */
+  .header-nav-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 270px;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 30px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    z-index: 99;
+  }
 
-    /* DRAWER STYLE */
-    .header-nav-container {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 270px;
-        background: white;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 30px;
-        gap: 30px;
-        transition: right 0.3s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.15);
-        display: flex;
-        z-index: 99;
-    }
+  .header-nav-container.active {
+    right: 0;
+  }
 
-    .header-nav-container.active {  
-        right: 0;
-    }
+  .drawer-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
 
-     .drawer-header {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
+  .close-btn {
+    display: inline;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 
-    .close-btn {
-        display: inline;
-        font-size: 28px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .header-nav-container li a {
-        font-size: 22px;
-    }
+  .header-nav-container li a {
+    font-size: 22px;
+  }
 }
