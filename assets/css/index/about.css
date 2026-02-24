@@ -22,7 +22,7 @@
 }
 
 .about-section-images .bg-shape {
-position: absolute;
+  position: absolute;
   width: 100%;
   height: 210px;
   bottom: -70px;
@@ -44,7 +44,7 @@ position: absolute;
 }
 
 .about-section-images .large-front img {
-position: absolute;
+  position: absolute;
   border-radius: 8px;
   width: 60%;
   height: 210px;
@@ -69,7 +69,7 @@ position: absolute;
 }
 
 .about-section-images .small-front img {
-   position: absolute;
+  position: absolute;
   border-radius: 8px;
   border: none;
   width: 50%;
@@ -100,14 +100,14 @@ position: absolute;
   font-family: "Outfit";
   font-size: 36px;
   line-height: 46px;
-  margin: 0;  
+  margin: 0;
   color: #1d1d1d;
 }
 
 .about-section-description-text .line {
   width: 71px;
   height: 3px;
-  background-color: #13829b;
+  background-color: #7ac717;
   margin: 20px 0;
   border-radius: 50px;
 }
@@ -144,24 +144,33 @@ position: absolute;
   line-height: 26px;
 }
 
-.about-section-description-bottom{
+.about-section-description-bottom {
   padding: 30px 0;
 }
 
 .about-section-description-bottom .btn {
-  text-align: center;
-    background-color: #7AC717;
-    color: white;
-    font-family: "Lato";
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 100%;
-    width: 160px;
-    height: 60px;
-    border-radius: 8px;
-    padding: 20px 50px;
-    cursor: pointer;
-    border:none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 10px;
+  background-color: #7ac717;
+  font-family: "Outfit";
+  text-decoration: none;
+  width: 30%;
+  color: #ffffff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-section-description-bottom .btn:hover {
+  background-color: #5aa317;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 600px) {

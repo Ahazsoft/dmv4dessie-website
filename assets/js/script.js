@@ -1,43 +1,40 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-const overlay = document.getElementById("overlay");
-const closeBtn = document.getElementById("closeBtn");
-const navLinks = document.querySelectorAll("#navMenu a");
-const donateButton = document.getElementById("dontate-button");
+function injectHeader() {
+  // JavaScript to inject the header HTML
+  const headerHTML = `
+    <div class="header-logo-title-container">
+        <img src="assets/images/Logo.png" alt="DMV Logo" />
+        <h2>DMV For Dessie</h2>
+    </div>
 
-// donate button
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-donateButton.addEventListener("click", () => {
-  window.location.href = "donation.html";
-});
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
 
-// mobile responsive drawer
-function openDrawer() {
-  navMenu.classList.add("active");
-  overlay.classList.add("active");
+    <!-- DRAWER NAV -->
+    <ul class="header-nav-container" id="navMenu">
+        <div class="drawer-header">
+            <button class="close-btn" id="closeBtn">&times;</button>
+        </div>
+        <li><a href="index.html" class="navlinks">Home</a></li>
+        <li><a href="about.html" class="navlinks">About us</a></li>
+        <li><a href="index.html#events-section" class="navlinks">Event</a></li>
+        <li><a href="contact.html" class="navlinks">Contact</a></li>
+    </ul>
+
+    <div class="header-donate-button">
+        <button class="btn" id="donate-button">Donate</button>
+    </div>
+`;
+
+  // Injecting the HTML into the header
+  document.querySelector(".header-container").innerHTML = headerHTML;
 }
-
-function closeDrawer() {
-  navMenu.classList.remove("active");
-  overlay.classList.remove("active");
-}
-
-hamburger.addEventListener("click", openDrawer);
-closeBtn.addEventListener("click", closeDrawer);
-overlay.addEventListener("click", closeDrawer);
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", closeDrawer);
-});
-
-// Highlight active nav link
-const currentPath = window.location.pathname.split("/").pop();
-const navLinksActive = document.querySelectorAll("#navMenu a");
-navLinksActive.forEach((link) => {
-  if (link.getAttribute("href") === currentPath) {
-    link.classList.add("active");
-  }
-});
 
 function injectFooter() {
   // JavaScript to inject HTML into footer
@@ -96,6 +93,46 @@ function injectFooter() {
   document.querySelector(".footer-container").innerHTML = footerHTML;
 }
 
+function initHeaderLogic() {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("closeBtn");
+  const donateButton = document.getElementById("donate-button");
+  const navLinks = document.querySelectorAll("#navMenu a");
+
+  // Donate
+  donateButton.addEventListener("click", () => {
+    window.location.href = "donation.html";
+  });
+
+  function openDrawer() {
+    navMenu.classList.add("active");
+    overlay.classList.add("active");
+  }
+
+  function closeDrawer() {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+
+  hamburger.addEventListener("click", openDrawer);
+  closeBtn.addEventListener("click", closeDrawer);
+  overlay.addEventListener("click", closeDrawer);
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeDrawer);
+  });
+
+  // Active link highlight
+  const currentPath = window.location.pathname.split("/").pop();
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+}
+
 function displayDimensions() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -106,7 +143,11 @@ function displayDimensions() {
   document.querySelector(".debug").appendChild(h2);
 }
 
-// displayDimensions();
-injectFooter();
-// 1580 px
-// 1280 px
+
+/* === Proper Execution Order === */
+document.addEventListener("DOMContentLoaded", () => {
+  injectHeader();
+  injectFooter();
+  initHeaderLogic();
+  displayDimensions();
+});

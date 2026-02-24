@@ -156,16 +156,17 @@
 }
 
 .contact-info-description-top-subtitle .line {
-  width: 60px;
+  width: 30px;
   height: 2px;
-  background-color: #2c7be5;
+  background-color: #7ac717;
 }
 .contact-info-description-top h2 {
-  margin: 5px 0;
+  margin: 0;
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Raleway";
+  font-size: 40px;
   color: #333333;
-  font-family: "Outfit";
-  font-size: 35px;
-  font-weight: 600;
 }
 .contact-info-description-top-subtitle h3 {
   margin: 5px 0;

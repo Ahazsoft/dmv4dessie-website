@@ -1,50 +1,51 @@
 const causes = [
   {
     id: 1,
-    title: "Helping the homeless during hopeless",
-    image: "assets/images/donation/Cause1.png",
+    title: "Crisis Hardship Grants for Widows & Elders",
+    image: "assets/images/donation/Cause4.png",
     raised: 49500,
-    goal: 55000
+    goal: 55000,
   },
+
   {
     id: 2,
     title: "Fighting hunger with food distribution drives",
-    image: "assets/images/donation/cause2.png",
+    image: "assets/images/donation/Cause2.png",
     raised: 49500,
-    goal: 55000
+    goal: 55000,    
   },
   {
     id: 3,
     title: "Providing medical aid to underserved areas",
-    image: "assets/images/donation/cause3.png",
+    image: "assets/images/donation/Cause3.png",
     raised: 49500,
-    goal: 55000
+    goal: 55000,
   },
   {
     id: 4,
-    title: "Crisis Hardship Grants for Widows & Elders",
-    image: "assets/images/donation/cause4.png",
+    title: "Helping the homeless during hopeless",
+    image: "assets/images/donation/Cause1.png",
     raised: 49500,
-    goal: 55000
+    goal: 55000,
   },
   {
     id: 5,
     title: "Aiding the homeless when things seem hopeless",
-    image: "assets/images/donation/cause5.png",
+    image: "assets/images/donation/Cause5.png",
     raised: 49500,
-    goal: 55000
+    goal: 55000,
   },
   {
     id: 6,
     title: "Emergency Nutrition for War-Displaced Families",
-    image: "assets/images/donation/cause6.png",
+    image: "assets/images/donation/Cause6.png",
     raised: 49500,
-    goal: 55000
-  }
+    goal: 55000,
+  },
 ];
 
 const container = document.querySelector(
-  ".donation-hero-section-donation-causes"
+  ".donation-hero-section-donation-causes",
 );
 
 function formatCurrency(amount) {
@@ -83,7 +84,7 @@ function createCard(cause) {
         ${cause.title}
       </div>
 
-      <button class="donate-btn" onClick=(${cause.id})>
+      <button class="donate-btn" onClick=(openDonationdetail())>
         Donate Now ↗
       </button>
 
@@ -92,3 +93,8 @@ function createCard(cause) {
 }
 
 container.innerHTML = causes.map(createCard).join("");
+
+
+function openDonationdetail(){
+  window.location.href = "donation-detail.html";
+}
