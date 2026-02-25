@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="assets/css/about/about-us.css" />
     <link rel="stylesheet" href="assets/css/about/cards.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- header begin-->
 
-    <header class="header-container"></header>
+    <header class="header-container" data-aos="fade-down"></header>
     <!-- header ends  -->
 
     <!-- about-us-introduction -->
     <section class="about-hero">
       <!-- text descriptions -->
-      <div class="about-hero-description">
-        <div class="about-hero-description-top">
+      <div class="about-hero-description" >
+        <div class="about-hero-description-top" data-aos="fade-up" data-aos-delay="100">
           <div class="about-hero-description-top-subtitle">
             <div class="line"></div>
             <h2>About Our Charity</h2>
@@ -27,7 +28,7 @@
           <h2>We’re helping communities rebuild and thrive</h2>
         </div>
 
-        <div class="about-hero-description-middle">
+        <div class="about-hero-description-middle" data-aos="fade-up" data-aos-delay="200">
           <p>
             Dmv For Dessie is a nonprofit organization dedicated to supporting
             underprivileged children and families through education, nutrition,
@@ -36,7 +37,7 @@
             need.
           </p>
 
-          <div class="about-hero-description-middle-container">
+          <div class="about-hero-description-middle-container" data-aos="fade-up" data-aos-delay="200">
             <!-- Trusted Organization -->
             <div class="middle-container-left">
               <div class="middle-container-icon">
@@ -76,7 +77,7 @@
           </div>
         </div>
 
-        <div class="about-hero-description-bottom">
+        <div class="about-hero-description-bottom" data-aos="fade-up">
           <h2>
             We believe every child deserves love, opportunity, and a future
             worth dreaming about — and that’s what we fight for every day.
@@ -84,7 +85,7 @@
 
           <div class="about-hero-description-bottom-container">
             <!-- Discover Button -->
-            <button>Discover Now ↗</button>
+            <button>Discover Now <span class="custom-btn-arrow"></span></button>
 
             <!-- Contact Block -->
             <div class="bottom-container-contact">
@@ -100,7 +101,7 @@
       </div>
 
       <!-- images  -->
-      <div class="about-hero-images">
+      <div class="about-hero-images" data-aos="fade-right">
         <div class="custom-layout">
           <!-- Background -->
           <div class="bg-shape"></div>
@@ -125,14 +126,14 @@
 
     <!-- volunteers section  css found inside cards -->
     <section class="volunteers-section">
-      <div class="volunteers-section-subtitle-container">
+      <div class="volunteers-section-subtitle-container" data-aos="fade-up">
         <div class="line"></div>
         <h3>Meet The Team</h3>
         <div class="line"></div>
       </div>
-      <h2>Our Passionate Volunteers</h2>
+      <h2 data-aos="fade-up" data-aos-delay="100">Our Passionate Volunteers</h2>
       <div class="volunteers-card-container">
-        <div class="volunteers-card">
+        <div class="volunteers-card" data-aos="fade-left" data-aos-delay="0">
           <div class="volunteers-card-image-container">
             <img src="assets/images/about/male.png" alt="" srcset="" />
           </div>
@@ -140,7 +141,7 @@
           <h3 class="volunteers-card-title">Volunteer</h3>
         </div>
         <!-- volunteer-card end -->
-        <div class="volunteers-card">
+        <div class="volunteers-card" data-aos="fade-left" data-aos-delay="200">
           <div class="volunteers-card-image-container">
             <img src="assets/images/about/female.png" alt="" srcset="" />
           </div>
@@ -148,7 +149,7 @@
           <h3 class="volunteers-card-title">Volunteer</h3>
         </div>
         <!-- volunteer-card end -->
-        <div class="volunteers-card">
+        <div class="volunteers-card" data-aos="fade-left" data-aos-delay="400">
           <div class="volunteers-card-image-container">
             <img src="assets/images/about/male.png" alt="" srcset="" />
           </div>
@@ -156,7 +157,7 @@
           <h3 class="volunteers-card-title">Volunteer</h3>
         </div>
         <!-- volunteer-card end -->
-        <div class="volunteers-card">
+        <div class="volunteers-card" data-aos="fade-left" data-aos-delay="600">
           <div class="volunteers-card-image-container">
             <img src="assets/images/about/female.png" alt="" srcset="" />
           </div>
@@ -176,7 +177,7 @@
       </div>
 
       <div class="donors-card-container">
-        <div class="donors-card">
+        <div class="donors-card" data-aos="fade-right" data-aos-delay="600">
           <div class="donors-card-image-container">
             <img
               src="assets/images/about/logo-placeholder.png"
@@ -188,7 +189,7 @@
           <!-- <h3 class="donors-card-title">Volunteer</h3> -->
         </div>
         <!-- donor-card end -->
-        <div class="donors-card">
+        <div class="donors-card" data-aos="fade-right" data-aos-delay="400">
           <div class="donors-card-image-container">
             <img
               src="assets/images/about/logo-placeholder.png"
@@ -200,7 +201,7 @@
           <!-- <h3 class="donors-card-title">Volunteer</h3> -->
         </div>
         <!-- donor-card end -->
-        <div class="donors-card">
+        <div class="donors-card" data-aos="fade-right" data-aos-delay="200">
           <div class="donors-card-image-container">
             <img
               src="assets/images/about/logo-placeholder.png"
@@ -212,7 +213,7 @@
           <!-- <h3 class="donors-card-title">Volunteer</h3> -->
         </div>
         <!-- donor-card end -->
-        <div class="donors-card">
+        <div class="donors-card" data-aos="fade-right">
           <div class="donors-card-image-container">
             <img
               src="assets/images/about/logo-placeholder.png"
@@ -228,9 +229,18 @@
     </section>
 
     <!-- footer beign -->
-    <footer class="footer-container"></footer>
+    <footer class="footer-container" data-aos="fade-up" ></footer>
     <!-- footer ends -->
     <!-- <div class="debug"></div> -->
     <script src="assets/js/script.js"></script>
+    <!-- AOS JavaScript Initialization -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        offset: 100,
+        once: true,
+      });
+    </script>
   </body>
 </html>

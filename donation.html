@@ -8,32 +8,43 @@
     <link rel="stylesheet" href="assets/css/footer.css" />
 
     <link rel="stylesheet" href="assets/css/donation/donation.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- header begin-->
-        <header class="header-container"></header>
+        <header class="header-container" data-aos="fade-down"></header>
 
     <!-- header ends  -->
 
     <div class="donation-hero-section">
-      <div class="donation-hero-section-subtitle">
+      <div class="donation-hero-section-subtitle" data-aos="fade-up" data-aos-delay="100">
         <div class="line"></div>
         <h3>Help The People</h3>
         <div class="line"></div>
       </div>
-      <div class="donation-hero-section-title">
+      <div class="donation-hero-section-title" data-aos="fade-up" data-aos-delay="300">
         <h2>Find the popular cause and donate them</h2>
       </div>
 
-      <div class="donation-hero-section-donation-causes"></div>
+      <div class="donation-hero-section-donation-causes" data-aos="fade-up"></div>
     </div>
     <!-- donation-hero-section ends -->
     <!-- footer beign -->
-    <footer class="footer-container">
+    <footer class="footer-container" data-aos="fade-up">
       
     </footer>
     <!-- footer ends -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/donation.js"></script>
+    <!-- AOS JavaScript Initialization -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        offset: 100,
+        once: true,
+      });
+    </script>
   </body>
 </html>

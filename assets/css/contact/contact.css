@@ -216,7 +216,7 @@
 }
 
 .contact-info-form button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   align-self: center;
@@ -236,4 +236,21 @@
 .contact-info-form button:hover {
   background-color: #5aa317;
   transform: translateY(-2px);
+}
+
+
+
+.contact-info-form button .custom-btn-arrow {
+  display: inline-block;
+  line-height: 1;
+}
+
+.contact-info-form button .custom-btn-arrow::after {
+  content: "↗"; /* default arrow */
+  display: inline-block;
+}
+
+/* On hover, show the thinner rightward arrow */
+.contact-info-form button:hover .custom-btn-arrow::after {
+  content: "➝";
 }

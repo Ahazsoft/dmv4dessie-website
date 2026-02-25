@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.events-section {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 0;
+  padding: 0 5vw;
+}
+
+.events-section-subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.events-section-subtitle .line {
+  width: 60px;
+  height: 2px;
+  background-color: #7ac717;
+}
+
+.events-section-subtitle h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #7ac717;
+  font-family: "Outfit";
+  margin: 10px 0;
+}
+
+.events-section-title > h2 {
+  font-weight: 700;
+  font-family: "Raleway";
+  font-size: 50px;
+  color: #333333;
+  max-width: 70vw;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.events-section-events-container {
+  border-top: 1.5px solid #989898;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.events-section-events-container .events-section-event-card {
+  width: 100%;
+  border-bottom: 1px solid #989898;
+  display: flex;
+  flex-direction: row;
+  padding: 5vh 0;
+  justify-content: space-around;
+}
+
+.events-section-event-card .date-month-year-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20%;
+  gap: 20px;
+}
+.date-month-year-container .date {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-family: "Outfit";
+  font-size: 80px;
+  color: #333333;
+}
+.date-month-year-container .month-year {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-family: "Outfit";
+  font-size: 25px;
+  color: #989898;
+}
+
+.events-section-event-card .description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 2vh 0;
+}
+
+.events-section-event-card .description .title {
+  font-weight: 500;
+  font-family: "Outfit";
+  font-size: 35px;
+  color: #333333;
+  text-wrap: wrap;
+}
+.events-section-event-card .description .location-time-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.location-time-container .location-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.location-time-container .location-container img {
+  width: 20px;
+  height: 20px;
+}
+
+.location-time-container .time-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.location-time-container .time-container img {
+  width: 20px;
+  height: 20px;
+}
+.events-section-event-card .description .location-time-container p {
+  margin: 0;
+}
+
+.events-section-event-card .description .image-containers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.image-containers .image-container {
+  position: relative;
+  background-color: white;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  /* z-index:1; */
+}
+.image-container:hover{
+  transform: translateY(-10px);
+  transition: 0.25s ease-in-out;
+}
+
+.image-container.stacked-1 {
+  position: relative;
+  right: 20px;
+}
+
+.image-container.stacked-2 {
+  position: relative;
+  right: 40px;
+}
+.image-container.stacked-2:hover {
+  transform: translateY(-10px);
+}
+.image-container.stacked-3 {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 22px;
+  position: relative;
+  right: 60px;
+}
+.image-container.stacked-3:hover {
+  transform: translateY(-10px);
+}
+.text-container {
+  background-color: #7ac717;
+  color: white;
+
+  width: 49px;
+  height: 49px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 22px;
+}
+.image-containers p {
+  position: relative;
+  right: 60px;
+  font-size: 22px;
+  margin: 0;
+}
+
+.events-section-event-card .button-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.events-section-event-card .button-container button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #7ac717;
+  color: #ffffff;
+  border: none;
+  padding: 18px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.events-section-event-card .button-container button:hover {
+  background-color: #5aa317;
+  transform: translateY(-2px);
+}
+
+.button-container button .custom-btn-arrow {
+  display: inline-block;
+  line-height: 1;
+}
+
+.button-container button .custom-btn-arrow::after {
+  content: "↗"; /* default arrow */
+  display: inline-block;
+}
+
+/* On hover, show the thinner rightward arrow */
+.button-container button:hover .custom-btn-arrow::after {
+  content: "➝";
+}

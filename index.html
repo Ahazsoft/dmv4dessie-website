@@ -12,34 +12,52 @@
     <link rel="stylesheet" href="assets/css/index/service.css" />
     <link rel="stylesheet" href="assets/css/index/form.css" />
     <link rel="stylesheet" href="assets/css/index/events.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
     <!-- header begin-->
-    <header class="header-container"></header>
+    <header class="header-container" data-aos="fade-down"></header>
     <!-- header ends  -->
 
     <div class="wrapper">
       <!-- hero section begin -->
       <section class="hero-section">
         <div class="hero-section-descriptions">
-          <div class="hero-section-descriptions-top">
+          <div
+            class="hero-section-descriptions-top"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="line"></div>
             <p>Hope, Help, and Humanity for Dessie.</p>
           </div>
-          <div class="hero-section-descriptions-middle">
+          <div
+            class="hero-section-descriptions-middle"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <h2>
               A small act of giving <br />
               can create countless smiles.
             </h2>
           </div>
-          <div class="hero-section-descriptions-text">
+          <div
+            class="hero-section-descriptions-text"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <p>
               Even the smallest donation can mean the world to someone in
               <br />
               need. Donate today and help change a life.
             </p>
           </div>
-          <div class="hero-section-descriptions-bottom">
+          <div
+            class="hero-section-descriptions-bottom"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <img
               src="assets/images/icon/play-button.png"
               alt="Learn More button"
@@ -51,7 +69,7 @@
         </div>
         <!-- hero section description ends here -->
 
-        <div class="hero-section-images">
+        <div class="hero-section-images" data-aos="fade-left" data-aos-delay="300">
           <div class="custom-layout">
             <!-- Background -->
             <div class="bg-shape"></div>
@@ -74,7 +92,7 @@
 
       <!-- services-section begin-->
       <section class="services-section">
-        <div class="services-section-single-service">
+        <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="100">
           <img src="assets/images/icon/medicine.png" alt="" />
           <div class="services-section-single-service-title">Medicine Aid</div>
           <div class="services-section-single-service-readmore">
@@ -82,7 +100,7 @@
           </div>
         </div>
 
-        <div class="services-section-single-service">
+        <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="300">
           <img src="assets/images/icon/oil-massage.png" alt="" />
 
           <div class="services-section-single-service-title">
@@ -93,7 +111,7 @@
           </div>
         </div>
 
-        <div class="services-section-single-service">
+        <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="500">
           <img src="assets/images/icon/day-care.png" alt="" />
 
           <div class="services-section-single-service-title">Food Relief</div>
@@ -102,7 +120,7 @@
           </div>
         </div>
 
-        <div class="services-section-single-service">
+        <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="700">
           <img src="assets/images/icon/food-bar.png" alt="" />
 
           <div class="services-section-single-service-title">
@@ -117,12 +135,12 @@
 
       <!-- about section begin -->
       <section class="about-section">
-        <div class="about-section-description">
-          <div class="about-section-description-top">
+        <div class="about-section-description" >
+          <div class="about-section-description-top" data-aos="fade-up" data-aos-delay="100">
             <p>About us</p>
             <h2>A Trusted Nonprofit Helping Communities Recover.</h2>
           </div>
-          <div class="about-section-description-text">
+          <div class="about-section-description-text" data-aos="fade-up" data-aos-delay="300">
             <div class="line"></div>
             <p>
               Your involvement can change lives, strengthen communities, and
@@ -130,7 +148,7 @@
             </p>
           </div>
 
-          <div class="about-section-description-bullet">
+          <div class="about-section-description-bullet" data-aos="fade-up" data-aos-delay="5  00">
             <div class="bullet">
               <img src="assets/images/icon/circle-check.png" />
               <p>Support families facing extreme hardship</p>
@@ -149,14 +167,14 @@
             </div>
           </div>
 
-          <div class="about-section-description-bottom">
-            <a href="contact.html" class="btn">
-              Learn More <span class="icon-diagonal-arrow1"> </span
+          <div class="about-section-description-bottom" data-aos="zoom-in" data-aos-delay="100">
+            <a href="about.html" class="btn">
+              Learn More <span class="custom-btn-arrow"> </span
             ></a>
           </div>
         </div>
 
-        <div class="about-section-images" id="about-section">
+        <div class="about-section-images" id="about-section" data-aos="fade-right">
           <div class="custom-layout">
             <!-- Background -->
             <div class="bg-shape"></div>
@@ -180,8 +198,8 @@
       <!-- about section ends -->
 
       <!-- form section begin -->
-      <section class="form-section">
-        <div class="form-section-left">
+      <section class="form-section" >
+        <div class="form-section-left" data-aos="fade-right">
           <div class="form-section-left-title">
             <h2>
               Let’s Help And Make People Smile By
@@ -227,7 +245,7 @@
           </div>
         </div>
 
-        <div class="form-section-right">
+        <div class="form-section-right" data-aos="fade-left">
           <div class="form-section-right-inner">
             <h2>Become A Volunteer</h2>
 
@@ -243,7 +261,7 @@
       <!-- form section ends -->
 
       <!-- event section begin  -->
-      <section class="event-section" id="events-section">
+      <section class="event-section" data-aos="fade-up">
         <div class="event-section-title">
           <h2>Our Events</h2>
         </div>
@@ -260,10 +278,19 @@
     </div>
 
     <!-- footer beign -->
-    <footer class="footer-container"></footer>
+    <footer class="footer-container" data-aos="fade-up"></footer>
     <!-- footer ends -->
 
     <script src="assets/js/eventloader.js"></script>
     <script src="assets/js/script.js"></script>
+    <!-- AOS JavaScript Initialization -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        offset: 100,
+        once: true,
+      });
+    </script>
   </body>
 </html>

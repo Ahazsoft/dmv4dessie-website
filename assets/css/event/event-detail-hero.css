@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper-inner{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.event-detail-hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.event-detail-hero-section .hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 65%;
+
+  /* gap: 20px; */
+}
+
+.event-detail-hero-section .hero-container-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-detail-hero-section .hero-container-top img {
+  width: 90%;
+  aspect-ratio: 16/9;
+}
+
+.event-detail-hero-section .hero-container-bottom {
+  width: 100%;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-container-bottom h2 {
+  margin: 5px 0;
+  font-family: "Raleway";
+  font-size: 34px;
+  color: #7ac70c;
+  font-weight: 700;
+  max-width: 95%;
+  width: 100%;
+}
+
+.hero-container-bottom p {
+  margin: 10px 0;
+  max-width: 95%;
+  font-family: "Raleway";
+  font-size: 15px;
+  color: #989898;
+  font-weight: 500;
+}
+
+.event-detail-hero-section .event-info-container {
+  width: 100%;
+  max-width: 90%;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.event-info-container .title {
+  width: 100%;
+  font-family: "outfit";
+  font-size: 25px;
+  font-weight: 500;
+  border-bottom: 1px solid #989898;
+}
+
+.event-info-container .contact-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 10px 0;
+}
+
+.contact-box .contact-box-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact፟-box-info:hover .image-container{
+background-color: #5aa317;
+}
+
+.contact-box .contact-box-info .image-container {
+  background-color: #7ac70c;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.contact-box .contact-box-info .image-container img {
+  width: 35px;
+  height: 35px;
+  border-radius: 18px;
+}
+.contact-box .contact-box-info .contact-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 60%;
+}
+
+.contact-texts h2 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #7a7a7a;
+  margin: 0;
+}
+
+.contact-texts h3 {
+  margin: 0;
+  font-size: 20px;
+  font-family: "outfit";
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.map-location {
+  width: 30vw;
+  height: 80vh;
+  max-width: 30%;
+  margin: 10px 30px;
+  /* border-radius: 20px;
+  overflow: hidden; */
+}
+
+.map-location iframe {
+  width: 100%;
+  height: 100%;
+
+}

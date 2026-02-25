@@ -55,12 +55,6 @@
   color: #78be20;
 }
 
-/* Hover effect similar to first highlighted item */
-.services-section-single-service:hover {
-  border: 1px solid #78be20;
-  background: #fff;
-}
-
 @media (max-width: 600px) {
   .services-section {
     margin-top: 130px;

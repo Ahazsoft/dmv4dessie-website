@@ -7,19 +7,8 @@
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
 
-    <link
-      rel="stylesheet"
-      href="assets/css/donation/donation-detail-hero.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/css/donation/donation-detail-about.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/css/donation/donation-detail-challenge.css"
-    />
-
+    <link rel="stylesheet" href="assets/css/event/event-detail-hero.css" />
+    <link rel="stylesheet" href="assets/css/event/event-detail-about.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
   <body>
@@ -28,16 +17,14 @@
 
     <!-- header ends  -->
 
-    <section class="donation-detail-hero-section">
-      <div class="hero-container">
-        <div class="hero-container-left" data-aos="fade-right">
+    <section class="event-detail-hero-section">
+      <div class="hero-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="hero-container-top">
           <img src="assets/images/donation/Cause4.png" alt="" srcset="" />
         </div>
-        <div class="hero-container-right">
-          <h2 data-aos="fade-up" data-aos-delay="100">
-            Crisis Hardship Grants for Widows & Elders
-          </h2>
-          <p data-aos="fade-up" data-aos-delay="300">
+        <div class="hero-container-bottom">
+          <h2>Crisis Hardship Grants for Widows & Elders</h2>
+          <p>
             Participate in our fundraising events to help us generate money and
             awareness for particular causes. Take part in special appeals,
             crowdfunding campaigns, and seasonal drives to help us reach our
@@ -49,111 +36,87 @@
             our advocacy work and how you can contribute. Your activism can
             increase our effect and bring about significant change,
           </p>
-          <div
-            class="donation-progress-status"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <div class="progress-tracker">
-              <div class="percentage-display" style="left: 85%">90%</div>
-              <!-- 90 - 5 = 85%-->
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 90%"></div>
+        </div>
+        <div class="event-info-container">
+          <div class="title">Event Info</div>
+          <div class="contact-box">
+            <!-- phone container -->
+            <div class="contact-box-info">
+              <div class="image-container">
+                <img src="assets/images/icon/Phone.png" alt="Call Icon" />
               </div>
-              <div class="progress-tracker-texts">
-                <h2>Raised $400</h2>
-                <h2>Goal $5900</h2>
+
+              <div class="contact-texts">
+                <h2>Call us any time</h2>
+                <h3>+251929792179</h3>
               </div>
             </div>
-            <button class="donate-btn">
-              Donate Now <span class="custom-btn-arrow" />
-            </button>
+
+            <!-- address container -->
+            <div class="contact-box-info">
+              <div class="image-container">
+                <img src="assets/images/icon/Location.png" alt="Call Icon" />
+              </div>
+
+              <div class="contact-texts">
+                <h2>Address</h2>
+                <h3>654 Town Street, 88 United States</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="donation-detail-about-section" data-aos="fade-up">
-      <h2>About</h2>
-      <p>
-        Participate in our fundraising events to help us generate money and
-        awareness for particular causes. Take part in special appeals,
-        crowdfunding campaigns, and seasonal drives to help us reach our
-        objectives and satisfy pressing needs. Keep up with our organization's
-        most recent news, happenings, and impact stories.
-      </p>
-      <div class="image-containers">
-        <img
-          src="assets/images/donation/Detail1.png"
-          alt=""
-          srcset=""
-          data-aos="fade-right"
-          data-aos-delay="200"
-        />
-        <img
-          src="assets/images/donation/Detail2.png"
-          alt=""
-          srcset=""
-          data-aos="fade-left"
-          data-aos-delay="200"
-        />
+      <div class="map-location" >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53746.85571734215!2d39.59341261036671!3d11.128733864064746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x16470b205dbe5969%3A0xda16ad0c78c13db5!2sDese!5e1!3m2!1sen!2set!4v1772022376593!5m2!1sen!2set"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
 
-    <section class="donation-detail-about-section" data-aos="fade-up">
-      <!-- summary section-->
-      <h2>Summary</h2>
-      <p>
-        Participate in our fundraising events to help us generate money and
-        awareness for particular causes. Take part in special appeals,
-        crowdfunding campaigns, and seasonal drives to help us reach our
-        objectives and satisfy pressing needs. Keep up with our organization's
-        most recent news, happenings, and impact stories.
-      </p>
-    </section>
-
-    <section class="donation-detail-challenge-section" data-aos="fade-up">
-      <h2>Challenge</h2>
+    <!-- about section  -->
+    <!-- <section class="event-detail-about-section">
+      <h2>About</h2>
       <p>
         Participate in our fundraising events to help us generate money and
         awareness for particular causes. Take part in special appeals,
         crowdfunding campaigns, and seasonal drives to help
       </p>
       <div class="image-checklist-container">
-        <div class="image-container" data-aos="fade-right">
+        <div class="image-container">
           <img src="assets/images/donation/Detail1.png" alt="" srcset="" />
         </div>
-        <div class="checklist-container" data-aos="fade-left">
+        <div class="checklist-container">
           <div class="checklist-element">
             <img src="assets/images/icon/circle-check.png" alt="" srcset="" />
             <p>We help companies develop social responsibilities</p>
           </div>
-          <!-- checklist element ends -->
           <div class="checklist-element">
             <img src="assets/images/icon/circle-check.png" alt="" srcset="" />
             <p>Community-driven and transparent giving</p>
           </div>
-          <!-- checklist element ends -->
           <div class="checklist-element">
             <img src="assets/images/icon/circle-check.png" alt="" srcset="" />
             <p>Help restore dignity and rebuild lives</p>
           </div>
-          <!-- checklist element ends -->
           <div class="checklist-element">
             <img src="assets/images/icon/circle-check.png" alt="" srcset="" />
             <p>Share compassion with your community</p>
           </div>
-          <!-- checklist element ends -->
         </div>
       </div>
-      <p data-aos="fade-up">
+      <p>
         Participate in our fundraising events to help us generate money and
         awareness for particular causes. Take part in special appeals,
         crowdfunding campaigns, and seasonal drives to help us reach our
         objectives and satisfy pressing needs. Keep up with our organization's
         most recent news, happenings, and impact stories.
       </p>
-    </section>
+    </section> -->
 
     <!-- footer beign -->
     <footer class="footer-container" data-aos="fade-up"></footer>

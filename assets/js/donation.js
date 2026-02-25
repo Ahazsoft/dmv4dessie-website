@@ -56,7 +56,7 @@ function createCard(cause) {
   const percentage = Math.round((cause.raised / cause.goal) * 100);
 
   return `
-    <div class="donation-card">
+    <div class="donation-card" data-aos="zoom-in">
       
       <div class="donation-card-image">
         <img src="${cause.image}" alt="${cause.title}">
@@ -85,7 +85,7 @@ function createCard(cause) {
       </div>
 
       <button class="donate-btn" onClick=(openDonationdetail())>
-        Donate Now ↗
+        Donate Now <span class="custom-btn-arrow"></span>
       </button>
 
     </div>

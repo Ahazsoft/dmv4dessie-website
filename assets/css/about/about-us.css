@@ -167,7 +167,7 @@
 }
 
 .about-hero-description-top > h2 {
-   margin: 0;
+  margin: 0;
   display: inline-block;
   font-weight: 700;
   font-family: "Raleway";
@@ -269,7 +269,7 @@
     flex-direction: column;
   }
 
-  .about-hero-description-middle-container::before{
+  .about-hero-description-middle-container::before {
     display: none;
   }
 }
@@ -298,7 +298,7 @@
 
 /* Discover Button */
 .about-hero-description-bottom-container button {
-  display: flex;
+  display: inline-flex; /* keep flex if you want to row-align text + arrow */
   align-items: center;
   gap: 10px;
   background-color: #7ac717;
@@ -310,16 +310,26 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
-
 .about-hero-description-bottom-container button:hover {
   background-color: #5aa317;
   transform: translateY(-2px);
 }
 
-.about-hero-description-bottom-container button img {
-  width: 10px;
-  height: 18px;
+.about-hero-description-bottom-container button .custom-btn-arrow {
+  display: inline-block;
+  line-height: 1;
+}
+
+.about-hero-description-bottom-container button .custom-btn-arrow::after {
+  content: "↗"; /* default arrow */
+  display: inline-block;
+}
+
+/* On hover, show the thinner rightward arrow */
+.about-hero-description-bottom-container button:hover .custom-btn-arrow::after {
+  content: "➝";
 }
 
 /* Contact Block */
@@ -357,4 +367,3 @@
   margin: 0;
   color: #1e1e1e;
 }
-

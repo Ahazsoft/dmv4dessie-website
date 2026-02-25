@@ -161,3 +161,18 @@
   background-color: #5aa317;
   transform: translateY(-1px);
 }
+
+.donate-btn .custom-btn-arrow {
+  display: inline-block;
+  line-height: 1;
+}
+
+.donate-btn .custom-btn-arrow::after {
+  content: "↗"; /* default arrow */
+  display: inline-block;
+}
+
+/* On hover, show the thinner rightward arrow */
+.donate-btn:hover .custom-btn-arrow::after {
+  content: "➝";
+}

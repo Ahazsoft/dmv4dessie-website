@@ -24,11 +24,12 @@
 .donation-detail-about-section .image-containers {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
     /* align-items: center; */
 
 }
 
 .image-containers img {
-    width: 40%;
+    width: 48%;
 }

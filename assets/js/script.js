@@ -23,7 +23,9 @@ function injectHeader() {
         </div>
         <li><a href="index.html" class="navlinks">Home</a></li>
         <li><a href="about.html" class="navlinks">About us</a></li>
-        <li><a href="index.html#events-section" class="navlinks">Event</a></li>
+        <!--  <li><a href="index.html#events-section" class="navlinks">Event</a></li> -->
+        <li><a href="event.html" class="navlinks">Event</a></li>
+
         <li><a href="contact.html" class="navlinks">Contact</a></li>
     </ul>
 
@@ -149,5 +151,5 @@ document.addEventListener("DOMContentLoaded", () => {
   injectHeader();
   injectFooter();
   initHeaderLogic();
-  displayDimensions();
+//   displayDimensions();
 });
