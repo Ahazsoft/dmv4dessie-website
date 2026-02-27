@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  gap: 0px;
 }
 
 .contact-info-card {
@@ -16,9 +17,9 @@
   flex-direction: row;
   background-color: #eeeeee;
   width: 20%;
-  aspect-ratio: 2;
-  border-radius: 35px;
-  justify-content: space-evenly;
+  aspect-ratio: 2.5;
+  border-radius: 9px;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -39,6 +40,7 @@
 
 .contact-info-card-texts {
   max-width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,6 +64,20 @@
   line-height: 1.2;
 }
 
+/* contact info cards responsiveness */
+@media (max-width: 600px) {
+  .contact-info-cards-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .contact-info-card {
+    width: 80%;
+    padding: 0;
+  }
+}
+
 .contact-info {
   display: flex;
   flex-direction: row-reverse;
@@ -75,7 +91,7 @@
   position: relative;
   margin: 0;
   width: 100%;
-  max-width: 50%;
+  max-width: 50vw;
   padding: 10px;
   padding-right: 0;
 }
@@ -93,10 +109,10 @@
 .contact-info-images .large-back {
   position: absolute;
   border-radius: 10px;
-  width: 60%;
-  height: 210px;
-  top: -180px;
-  left: 50px;
+  width: 30vw;
+  aspect-ratio: 1.8;
+  top: -30vh;
+  left: 3vw;
   background-color: #7ac717;
   opacity: 0.8;
   z-index: 2;
@@ -105,10 +121,10 @@
 .contact-info-images .large-front img {
   position: absolute;
   border-radius: 8px;
-  width: 60%;
-  height: 210px;
-  top: -160px;
-  left: 70px;
+  width: 30vw;
+  aspect-ratio: 1.8;
+  top: -25vh;
+  left: 5vw;
   background-color: #7ac791;
   z-index: 3;
   cursor: pointer;
@@ -118,10 +134,10 @@
   position: absolute;
   border-radius: 10px;
   border: none;
-  width: 50%;
-  height: 170px;
-  bottom: -120px;
-  left: 190px;
+  width: 24vw;
+  aspect-ratio: 1.8;
+  top: 0vh;
+  left: 18vw;
   background-color: #f8991780;
   opacity: 0.8;
   z-index: 4;
@@ -131,20 +147,67 @@
   position: absolute;
   border-radius: 8px;
   border: none;
-  width: 50%;
-  height: 170px;
-  bottom: -140px;
-  left: 210px;
+  width: 24vw;
+  aspect-ratio: 1.8;
+  top: 3vh;
+  left: 19.5vw;
   z-index: 5;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .contact-info {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-info-images {
+    max-width: 90vw;
+    margin-bottom: 300px;
+  }
+  .contact-info-images .bg-shape {
+    width: 90vw;
+    aspect-ratio: 16/7;
+    top: 5vh;
+  }
+  .contact-info-images .large-back {
+    width: 60vw;
+    aspect-ratio: 1.6;
+    top: -2vh;
+    left: 8vw;
+  }
+  .contact-info-images .large-front img {
+    width: 60vw;
+    aspect-ratio: 1.6;
+    top: 0;
+    left: 12vw;
+  }
+  .contact-info-images .small-back {
+    width: 50vw;
+    aspect-ratio: 1.6;
+    top: 12vh;
+    left: 36vw;
+  }
+  .contact-info-images .small-front img {
+    width: 50vw;
+    aspect-ratio: 1.6;
+    top: 14vh;
+    left: 39vw;
+  }
 }
 
 .contact-info-form-container {
   display: flex;
   flex-direction: column;
-  width: 550px;
+  width: 100%;
   padding: 20px 30px;
-  max-width: 50%;
+  max-width: 50vw;
+}
+
+@media (max-width:600px) {
+.contact-info-form-container {
+  max-width: 90vw;
+}
 }
 
 .contact-info-description-top-subtitle {
@@ -179,7 +242,7 @@
 .contact-info-form {
   margin: 20px 0;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   background-color: #ededed;
   padding: 30px;
 }
@@ -237,8 +300,6 @@
   background-color: #5aa317;
   transform: translateY(-2px);
 }
-
-
 
 .contact-info-form button .custom-btn-arrow {
   display: inline-block;

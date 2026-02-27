@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 20px 45px;
-  gap: 20px;    
+  gap: 20px;
 }
 
 .donation-detail-challenge-section h2 {
@@ -21,44 +21,54 @@
   font-weight: 500;
 }
 
-.donation-detail-challenge-section .image-checklist-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+.donation-detail-challenge-section .image-checklist-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .image-checklist-container .image-container {
-    width: 100%;
+  width: 100%;
 }
 .image-container img {
-    width: 100%;
+  width: 100%;
 }
 
-
 .image-checklist-container .checklist-container {
-    width: 100%;    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 10px;
 }
 
 .checklist-container .checklist-element {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 .checklist-container .checklist-element img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .checklist-container .checklist-element p {
-    font-size: 15px;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .donation-detail-challenge-section .image-checklist-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-checklist-container .checklist-container {
+    gap: 0;
+  }
 }

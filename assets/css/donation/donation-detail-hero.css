@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 30px;
 }
 
@@ -15,7 +16,7 @@
   padding: 30px 0;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   /* gap: 20px; */
 }
 
@@ -26,12 +27,13 @@
   justify-content: center;
 }
 .donation-detail-hero-section .hero-container-left img {
-    width: 90%;
+  width: 90%;
 }
 .donation-detail-hero-section .hero-container-right {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0 20px;
 }
 
@@ -55,6 +57,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: row;
+  width: 93%;
   gap: 30px;
   align-items: center;
   padding: 20px;
@@ -73,23 +76,33 @@
   color: #436d0d;
   font-size: 20px;
   position: relative;
+  padding-bottom: 10px;
 }
 
 .progress-bar {
   width: 100%;
   height: 8px;
-  background: #efefee;
+  background: #ffffff;
+  /* border: 1px solid #7ac717; */
   border-radius: 10px;
   overflow: hidden;
 }
-
 .progress-fill {
   height: 100%;
-  width: 90%;
   background: #7ac717;
   border-radius: 10px;
-  transition: width 0.4s ease;
+  width: 0%;
+  animation: draw 2s ease-in-out forwards;
 }
+.progress-bar[aria-valuenow] .progress-fill {
+  width: var(--progress, 0%);
+}
+@keyframes draw {
+  to {
+    width: 90%;
+  }
+}
+
 .donation-progress-status .progress-tracker-texts {
   display: flex;
   flex-direction: row;
@@ -131,8 +144,30 @@
   content: "↗"; /* default arrow */
   display: inline-block;
 }
-
 /* On hover, show the thinner rightward arrow */
 .donate-btn:hover .custom-btn-arrow::after {
   content: "➝";
+}
+@media (max-width: 600px) {
+  .donation-detail-hero-section .hero-container {
+    flex-direction: column;
+  }
+  .donation-detail-hero-section .hero-container img {
+    width: 100%;
+  }
+
+  .donation-detail-hero-section .hero-container-right > h2 {
+    font-size: 30px;
+    margin: 20px 0;
+  }
+  .hero-container-right .donation-progress-status {
+    width: 90%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+   .donation-progress-status .progress-tracker {
+    width: 90%;
+   }
+
 }

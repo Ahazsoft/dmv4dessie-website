@@ -43,6 +43,20 @@
   margin-top: 20px;
 }
 
+@media (max-width: 600px) {
+  .events-section-subtitle .line {
+    width: 40px;
+  }
+  .events-section-subtitle h3 {
+    font-size: 18px;
+  }
+
+  .events-section-title > h2 {
+    font-size: 30px;
+    max-width: 100%;
+  }
+}
+
 .events-section-events-container {
   border-top: 1.5px solid #989898;
   display: flex;
@@ -67,6 +81,7 @@
   width: 20%;
   gap: 20px;
 }
+
 .date-month-year-container .date {
   margin-top: 0;
   margin-bottom: 0;
@@ -98,7 +113,8 @@
   font-family: "Outfit";
   font-size: 35px;
   color: #333333;
-  text-wrap: wrap;
+  align-self: flex-start;
+  /* text-wrap: wrap; */
 }
 .events-section-event-card .description .location-time-container {
   display: flex;
@@ -132,6 +148,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-self: flex-start;
 }
 .image-containers .image-container {
   position: relative;
@@ -143,7 +160,7 @@
   border-radius: 25px;
   /* z-index:1; */
 }
-.image-container:hover{
+.image-container:hover {
   transform: translateY(-10px);
   transition: 0.25s ease-in-out;
 }
@@ -234,4 +251,35 @@
 /* On hover, show the thinner rightward arrow */
 .button-container button:hover .custom-btn-arrow::after {
   content: "➝";
+}
+
+@media (max-width: 600px) {
+  .events-section-events-container .events-section-event-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .events-section-event-card .date-month-year-container,
+  .events-section-event-card .description {
+    width: 90%;
+    justify-content: center;
+  }
+  .events-section-event-card .description .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+  }
+  .events-section-event-card .description .location-time-container {
+    flex-direction: column;
+    align-self: center;
+  }
+  .events-section-event-card .description .image-containers {
+    align-self: flex-end;
+  }
+
+  .events-section-event-card .button-container  {
+    width: 70%;
+  }
 }

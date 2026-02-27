@@ -12,7 +12,7 @@ const causes = [
     title: "Fighting hunger with food distribution drives",
     image: "assets/images/donation/Cause2.png",
     raised: 49500,
-    goal: 55000,    
+    goal: 55000,
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ function createCard(cause) {
   const percentage = Math.round((cause.raised / cause.goal) * 100);
 
   return `
-    <div class="donation-card" data-aos="zoom-in">
+    <div class="donation-card">
       
       <div class="donation-card-image">
         <img src="${cause.image}" alt="${cause.title}">
@@ -70,7 +70,7 @@ function createCard(cause) {
 
         <div class="donation-card-status-progress">
           <div class="progress-bar">
-            <div class="progress-fill" style="width:${percentage}%"></div>
+            <div class="progress-fill" data-percentage="${percentage}"></div>
           </div>
         </div>
 
@@ -93,8 +93,21 @@ function createCard(cause) {
 }
 
 container.innerHTML = causes.map(createCard).join("");
+let count = 0;
+document.querySelectorAll(".progress-fill").forEach((bar) => {
+  const delay = 500;
+  count = count + 1;
+  const percentage = bar.dataset.percentage;
 
+  // slight delay so transition works
+  setTimeout(
+    () => {
+      bar.style.width = percentage + "%";
+    },
+    delay + delay * count,
+  );
+});
 
-function openDonationdetail(){
+function openDonationdetail() {
   window.location.href = "donation-detail.html";
 }
