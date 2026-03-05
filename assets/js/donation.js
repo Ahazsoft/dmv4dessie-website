@@ -1,52 +1,75 @@
-const causes = [
-  {
-    id: 1,
-    title: "Crisis Hardship Grants for Widows & Elders",
-    image: "assets/images/donation/Cause4.png",
-    raised: 49500,
-    goal: 55000,
-  },
+// const causes = [
+//   {
+//     id: 1,
+//     title: "Supporting Widows and the Elderly in Hardship",
+//     image: "assets/images/donation/Cause4.png",
+//     raised: 49500,
+//     goal: 55000,
+//   },
 
-  {
-    id: 2,
-    title: "Fighting hunger with food distribution drives",
-    image: "assets/images/donation/Cause2.png",
-    raised: 49500,
-    goal: 55000,
-  },
-  {
-    id: 3,
-    title: "Providing medical aid to underserved areas",
-    image: "assets/images/donation/Cause3.png",
-    raised: 49500,
-    goal: 55000,
-  },
-  {
-    id: 4,
-    title: "Helping the homeless during hopeless",
-    image: "assets/images/donation/Cause1.png",
-    raised: 49500,
-    goal: 55000,
-  },
-  {
-    id: 5,
-    title: "Aiding the homeless when things seem hopeless",
-    image: "assets/images/donation/Cause5.png",
-    raised: 49500,
-    goal: 55000,
-  },
-  {
-    id: 6,
-    title: "Emergency Nutrition for War-Displaced Families",
-    image: "assets/images/donation/Cause6.png",
-    raised: 49500,
-    goal: 55000,
-  },
-];
+//   {
+//     id: 2,
+//     title: "Standing with Cancer Patients Through Care and Support",
+//     image: "assets/images/donation/Cause2.png",
+//     raised: 49500,
+//     goal: 55000,
+//   },
+//   {
+//     id: 3,
+//     title: "Bringing Hope and Protection to Orphaned Children",
+//     image: "assets/images/donation/Cause3.png",
+//     raised: 49500,
+//     goal: 55000,
+//   },
+//   {
+//     id: 4,
+//     title: "Empowering Orphans and Children with Special Needs",
+//     image: "assets/images/donation/Cause1.png",
+//     raised: 49500,
+//     goal: 55000,
+//   },
+//   {
+//     id: 5,
+//     title: "Supporting People Living with Blindness",
+//     image: "assets/images/donation/Cause5.png",
+//     raised: 49500,
+//     goal: 55000,
+//   },
+//   {
+//     id: 6,
+//     title: "Providing Essential School Supplies to Underfunded Schools",
+//     image: "assets/images/donation/Cause6.png",
+//     raised: 49500,
+//     goal: 55000,
+//   },
+//     {
+//     id: 7,
+//     title: "Emergency Support for Displaced Families in Refugee Camps",
+//     image: "assets/images/donation/Cause6.png",
+//     raised: 49500,
+//     goal: 55000,
+//   },
+// ];
 
-const container = document.querySelector(
-  ".donation-hero-section-donation-causes",
-);
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("./assets/js/donation-causes.json");
+
+    if (!response.ok) {
+      throw new Error("Failed to load donation data");
+    }
+
+    const causes = await response.json();
+
+    const container = document.querySelector(
+      ".donation-hero-section-donation-causes",
+    );
+    container.innerHTML = causes.map(createCard).join("");
+    simulateProgressBar();
+  } catch (error) {
+    console.error("Error:", error);
+  }
+});
 
 function formatCurrency(amount) {
   return `$${amount.toLocaleString()}`;
@@ -84,30 +107,26 @@ function createCard(cause) {
         ${cause.title}
       </div>
 
-      <button class="donate-btn" onClick=(openDonationdetail())>
-        Donate Now <span class="custom-btn-arrow"></span>
-      </button>
-
+<button class="donate-btn" onClick="window.location.href = 'donation-detail.html?id=' + ${cause.id};">
+    Donate Now <span class="custom-btn-arrow"></span>
+</button>
     </div>
   `;
 }
 
-container.innerHTML = causes.map(createCard).join("");
-let count = 0;
-document.querySelectorAll(".progress-fill").forEach((bar) => {
-  const delay = 500;
-  count = count + 1;
-  const percentage = bar.dataset.percentage;
+function simulateProgressBar() {
+  let count = 0;
+  document.querySelectorAll(".progress-fill").forEach((bar) => {
+    const delay = 500;
+    count = count + 1;
+    const percentage = bar.dataset.percentage;
 
-  // slight delay so transition works
-  setTimeout(
-    () => {
-      bar.style.width = percentage + "%";
-    },
-    delay + delay * count,
-  );
-});
-
-function openDonationdetail() {
-  window.location.href = "donation-detail.html";
+    // slight delay so transition works
+    setTimeout(
+      () => {
+        bar.style.width = percentage + "%";
+      },
+      delay + delay * count,
+    );
+  });
 }

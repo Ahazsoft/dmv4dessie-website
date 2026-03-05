@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "title": "Supporting Widows and the Elderly in Dessie",
+    "image": "assets/images/donation/Cause4.png",
+    "description":
+      "Support our mission to care for widows and elderly individuals in Dessie who are facing hardship and isolation. Through community fundraising events, awareness campaigns, and charitable initiatives, DMVFOR Dessie works to provide food, clothing, and essential support to seniors in need. Participate in special appeals, community drives, and seasonal programs that help us reach vulnerable members of our community. Stay informed about our latest initiatives and impact stories as we continue to expand our efforts to care for elderly individuals in Dessie. Your support and advocacy can help restore dignity and bring hope to those who need it most.",
+    "about":
+      "DMVFOR Dessie is committed to helping widows and elderly individuals in the Dessie community who struggle with financial hardship and limited access to basic necessities. Many seniors live alone and lack the support systems needed to maintain a stable and dignified life. Our programs focus on providing essential assistance and emotional support to ensure they are not forgotten.",
+    "summary":
+      "Through donations, community partnerships, and fundraising campaigns, we provide food packages, clothing, and basic assistance to widows and elderly residents in Dessie. Our goal is to build a compassionate community where seniors are valued, respected, and supported.",
+    "challenge":
+      "Participate in our fundraising events to help us generate money and awareness for widows and elderly individuals in Dessie. Take part in special appeals and community initiatives that help us reach those most in need.",
+    "challenges": [
+      "We help companies develop social responsibilities",
+      "Community-driven and transparent giving",
+      "Help restore dignity and rebuild lives",
+      "Share compassion with your community"
+    ],
+    "raised": 49500,
+    "goal": 55000
+  },
+
+  {
+    "id": 2,
+    "title": "Standing with Cancer Patients in Dessie",
+    "image": "assets/images/donation/Cause2.png",
+    "description":
+      "Join DMVFOR Dessie in supporting cancer patients and their families during difficult times. Through fundraising campaigns, community awareness programs, and charitable initiatives, we aim to provide support and encouragement for individuals battling cancer in Dessie. Participate in our events and campaigns to help raise resources that support patients and promote awareness. Stay connected with our organization to learn about new initiatives, impact stories, and ways you can contribute. By standing together and advocating for those affected by cancer, we can create hope and strength within the Dessie community.",
+    "about":
+      "Cancer patients often face emotional, physical, and financial challenges throughout their treatment journey. In Dessie, many individuals struggle to access the support they need. DMVFOR Dessie works to stand with patients and their families by offering encouragement, raising awareness, and connecting community support.",
+    "summary":
+      "Our programs aim to bring attention to the needs of cancer patients and support them through community involvement and charitable efforts. With the help of donors and volunteers, we continue working to bring compassion and assistance to those facing this illness.",
+    "challenge":
+      "Support our campaigns that raise awareness and assistance for cancer patients in Dessie who are facing serious health challenges.",
+    "challenges": [
+      "We help companies develop social responsibilities",
+      "Community-driven and transparent giving",
+      "Help restore dignity and rebuild lives",
+      "Share compassion with your community"
+    ],
+    "raised": 49500,
+    "goal": 55000
+  },
+
+  {
+    "id": 3,
+    "title": "Bringing Hope to Orphaned Children in Dessie",
+    "image": "assets/images/donation/Cause3.png",
+    "description":
+      "Help us support orphaned children in Dessie by participating in fundraising initiatives and community programs organized by DMVFOR Dessie. Through special campaigns, charitable drives, and awareness efforts, we work to provide resources and opportunities that improve the lives of vulnerable children. Stay informed about our latest activities, impact stories, and upcoming projects that focus on supporting children in need. By supporting our mission and spreading awareness, you can help create a brighter and more hopeful future for orphaned children in the Dessie community.",
+    "about":
+      "Many children in Dessie grow up without parental care and face challenges accessing food, education, and emotional support. DMVFOR Dessie is dedicated to helping these children by providing assistance and creating opportunities for growth and stability.",
+    "summary":
+      "Through donations and community involvement, we provide clothing, food support, school materials, and mentorship opportunities that help orphaned children build a stronger future.",
+    "challenge":
+      "Join our efforts to bring hope and support to orphaned children in Dessie through community initiatives and fundraising campaigns.",
+    "challenges": [
+      "We help companies develop social responsibilities",
+      "Community-driven and transparent giving",
+      "Help restore dignity and rebuild lives",
+      "Share compassion with your community"
+    ],
+    "raised": 49500,
+    "goal": 55000
+  },
+
+  {
+    "id": 4,
+    "title": "Empowering Orphans and Children with Special Needs in Dessie",
+    "image": "assets/images/donation/Cause1.png",
+    "description":
+      "Support DMVFOR Dessie in building a more inclusive community for children with special needs. Through fundraising events, community campaigns, and advocacy efforts, we work to provide assistance and opportunities for children with autism and other developmental conditions. Our vision includes establishing an Autism Support Center in Dessie to provide a safe and supportive environment for learning and development. Stay connected with our initiatives and help raise awareness so that every child in Dessie has the opportunity to grow, learn, and thrive.",
+    "about":
+      "Children with special needs often require additional care and resources that may not always be available in their communities. DMVFOR Dessie is dedicated to supporting these children and their families while promoting inclusion and understanding throughout Dessie.",
+    "summary":
+      "Our work focuses on supporting children with special needs through advocacy, community programs, and long-term initiatives such as the Autism Support Center.",
+    "challenge":
+      "Help us raise the resources and awareness needed to support children with special needs and build inclusive programs in Dessie.",
+    "challenges": [
+      "We help companies develop social responsibilities",
+      "Community-driven and transparent giving",
+      "Help restore dignity and rebuild lives",
+      "Share compassion with your community"
+    ],
+    "raised": 49500,
+    "goal": 55000
+  },
+
+  {
+    "id": 5,
+    "title": "Supporting People Living with Blindness in Dessie",
+    "image": "assets/images/donation/Cause5.png",
+    "description":
+      "DMVFOR Dessie works to empower individuals living with blindness or visual impairment by promoting inclusion, awareness, and community support. Through fundraising initiatives and outreach programs, we aim to provide resources that help visually impaired individuals live with dignity and independence. Join our campaigns, follow our impact stories, and help spread awareness about the importance of accessibility and support for people with visual impairments in Dessie.",
+    "about":
+      "Individuals living with blindness often face barriers that limit access to education, employment, and everyday opportunities. DMVFOR Dessie works to raise awareness and promote initiatives that support independence and inclusion.",
+    "summary":
+      "Through community engagement and charitable support, we aim to provide assistance and advocacy that improves the quality of life for visually impaired individuals in Dessie.",
+    "challenge":
+      "Participate in our initiatives that focus on building a more inclusive environment for people living with blindness in Dessie.",
+    "challenges": [
+      "We help companies develop social responsibilities",
+      "Community-driven and transparent giving",
+      "Help restore dignity and rebuild lives",
+      "Share compassion with your community"
+    ],
+    "raised": 49500,
+    "goal": 55000
+  },
+
+  {
+    "id": 6,
+    "title": "Providing School Supplies for Students in Dessie",
+    "image": "assets/images/donation/Cause6.png",
+    "description":
+      "Education is essential for building strong communities and brighter futures. DMVFOR Dessie organizes fundraising initiatives and community programs that help provide essential school supplies for students in Dessie. Through donation drives, seasonal campaigns, and awareness efforts, we work to ensure that children have the tools they need to succeed in school. Stay updated with our programs and see how your support can help empower students and strengthen education within our community.",
+    "about":
+      "Many students in Dessie attend school without the basic materials needed for learning. This lack of resources can create barriers to academic success and limit opportunities for children.",
+    "summary":
+      "Through our school support programs, we provide books, stationery, and other essential supplies that help students focus on learning and reaching their potential.",
+    "challenge":
+      "Support our efforts to provide essential educational resources for students and schools in Dessie.",
+    "challenges": [
+      "We help companies develop social responsibilities",
+      "Community-driven and transparent giving",
+      "Help restore dignity and rebuild lives",
+      "Share compassion with your community"
+    ],
+    "raised": 49500,
+    "goal": 55000
+  },
+
+  {
+    "id": 7,
+    "title": "Emergency Support for Displaced Families Near Dessie",
+    "image": "assets/images/donation/Cause6.png",
+    "description":
+      "DMVFOR Dessie provides humanitarian assistance to families who have been displaced by hardship and are living in difficult conditions. Through fundraising campaigns, community support programs, and emergency relief initiatives, we work to provide essential resources for families in crisis. Stay informed about our humanitarian efforts and learn how your support can help restore hope and stability for displaced families in and around Dessie.",
+    "about":
+      "Displaced families often struggle with limited access to food, shelter, and healthcare. DMVFOR Dessie works to support these families by providing relief and connecting them with community assistance.",
+    "summary":
+      "Our relief efforts focus on providing essential supplies and support to help families recover from hardship and rebuild their lives.",
+    "challenge":
+      "Participate in our humanitarian campaigns to support displaced families and vulnerable communities near Dessie.",
+    "challenges": [
+      "We help companies develop social responsibilities",
+      "Community-driven and transparent giving",
+      "Help restore dignity and rebuild lives",
+      "Share compassion with your community"
+    ],
+    "raised": 49500,
+    "goal": 55000
+  }
+]
