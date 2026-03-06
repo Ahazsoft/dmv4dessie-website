@@ -35,7 +35,7 @@ function injectHeroSection(cause) {
                 <h2>Goal ${cause.goal}</h2>
               </div>
             </div>
-            <button class="donate-btn">
+            <button class="donate-btn" onclick="window.location.href='${cause.donationLink}'"> 
               Donate Now <span class="custom-btn-arrow" />
             </button>
           </div>

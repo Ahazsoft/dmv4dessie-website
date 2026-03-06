@@ -81,11 +81,11 @@ function createCard(cause) {
   return `
     <div class="donation-card">
       
-      <div class="donation-card-image">
+      <div class="donation-card-image" onClick="window.location.href = 'donation-detail.html?id=' + ${cause.id};">
         <img src="${cause.image}" alt="${cause.title}">
       </div>
 
-      <div class="donation-card-status">
+      <div class="donation-card-status" onClick="window.location.href = 'donation-detail.html?id=' + ${cause.id};">
         <div class="donation-card-status-top">
           <h3>Donation</h3>
           <p>${percentage}%</p>
@@ -103,11 +103,13 @@ function createCard(cause) {
         </div>
       </div>
 
-      <div class="donation-card-description">
+      <div class="donation-card-description" onClick="window.location.href = 'donation-detail.html?id=' + ${cause.id};">
         ${cause.title}
       </div>
+<!--  <button class="donate-btn" onClick="window.location.href = 'donation-detail.html?id=' + ${cause.id};"  -->
 
-<button class="donate-btn" onClick="window.location.href = 'donation-detail.html?id=' + ${cause.id};">
+
+<button class="donate-btn" onClick="window.location.href = '${cause.donationLink}'">
     Donate Now <span class="custom-btn-arrow"></span>
 </button>
     </div>

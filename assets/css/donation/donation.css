@@ -168,6 +168,10 @@
   font-family: "Outfit";
 }
 
+.donation-card-description:hover{
+  color: #7ac717;
+}
+
 /* BUTTON */
 .donate-btn {
   align-self: center;
