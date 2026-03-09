@@ -10,6 +10,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   gap: 0px;
+  
 }
 
 .contact-info-card {
@@ -71,6 +72,8 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    
+    
   }
   .contact-info-card {
     width: 80%;
@@ -85,6 +88,9 @@
   gap: 30px;
   margin: 80px 20px;
   margin-bottom: 30px;
+  position: relative;
+  z-index: -5;
+
 }
 
 .contact-info-images {
