@@ -2,7 +2,7 @@ function injectHeader() {
   // JavaScript to inject the header HTML
   const headerHTML = `
     <div class="header-logo-title-container">
-        <img src="assets/images/Logo.png" alt="DMV Logo" />
+        <img src="assets/images/Logo.png"  alt="DMV Logo" />
         <h2>DMV For Dessie</h2>
     </div>
 
@@ -145,11 +145,19 @@ function displayDimensions() {
   document.querySelector(".debug").appendChild(h2);
 }
 
-
 /* === Proper Execution Order === */
 document.addEventListener("DOMContentLoaded", () => {
   injectHeader();
   injectFooter();
   initHeaderLogic();
-//   displayDimensions();
+  //   displayDimensions();
+  const logoContainers = document.querySelectorAll(
+    ".header-logo-title-container img, .footer-container-top-left-title img",
+  );
+
+  logoContainers.forEach((logo) => {
+    logo.addEventListener("click", () => {
+      window.location.href = "/index.html";
+    });
+  });
 });
