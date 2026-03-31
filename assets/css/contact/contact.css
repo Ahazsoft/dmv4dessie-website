@@ -88,8 +88,8 @@
   gap: 30px;
   margin: 80px 20px;
   margin-bottom: 30px;
-  position: relative;
-  z-index: -5;
+  /* position: relative;
+  z-index: -5; */
 
 }
 
