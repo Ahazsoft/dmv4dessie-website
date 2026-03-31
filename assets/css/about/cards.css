@@ -77,7 +77,7 @@
 .volunteers-card-container img {
   width: 20vw;
   aspect-ratio: 3/4;
-
+  object-fit: cover;
   /* height: 270px; */
 }
 

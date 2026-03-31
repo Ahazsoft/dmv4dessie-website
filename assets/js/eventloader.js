@@ -7,7 +7,7 @@ const eventContainer = document.getElementById(
 const events = [
   {
     id: 1,
-    imageurl: "assets/images/events/Event1.png",
+    imageurl: "assets/images/events/Event1.bmp",
     date: { day: 18, month: "June" },
     organizedBy: "Sharmii",
     title: "Education for poor children",
@@ -16,7 +16,7 @@ const events = [
   },
   {
     id: 2,
-    imageurl: "assets/images/events/Event2.png",
+    imageurl: "assets/images/events/Event2.bmp",
     date: { day: 21, month: "June" },
     organizedBy: "Nattasha",
     title: "Healthy food for growing",
@@ -25,16 +25,16 @@ const events = [
   },
   {
     id: 3,
-    imageurl: "assets/images/events/Event3.png",
-    date: { day: 28, month: "June" },
-    organizedBy: "Shanika",
-    title: "Cloth coming",
+    imageurl: "assets/images/events/Event3.bmp",
+    date: { day: 20, month: "September" },
+    organizedBy: "Rithvik",
+    title: "Community Aid: Help the helpless",
     description:
-      "There are many variations of passages of injected Lorem Ipsum available, but the majority have.",
+      "Let’s come together with kindness to support the poor and helpless with food, essentials, and polite community assistance.",
   },
   {
     id: 4,
-    imageurl: "assets/images/events/Event4.png",
+    imageurl: "assets/images/events/Event4.bmp",
     date: { day: 9, month: "July" },
     organizedBy: "Sachin",
     title: "Love to help awarness event",
@@ -42,22 +42,22 @@ const events = [
       "There are many variations of passages of injected Lorem Ipsum available, but the majority have.",
   },
   {
-    id: 5,
-    imageurl: "assets/images/events/Event5.png",
-    date: { day: 23, month: "July" },
+    id: 3,
+    imageurl: "assets/images/events/Event5.bmp",
+    date: { day: 10, month: "August" },
     organizedBy: "Savin",
-    title: "Raise your hands against cancer",
+    title: "Support Children with Autism",
     description:
-      "There are many variations of passages of injected Lorem Ipsum available, but the majority have.",
+      "Join us to raise funds and awareness for children with autism through therapy, resources, and community support.",
   },
   {
     id: 6,
-    imageurl: "assets/images/events/Event6.png",
+    imageurl: "assets/images/events/Event6.bmp",
     date: { day: 15, month: "August" },
     organizedBy: "Rithvik",
-    title: "Compaign: Fund raising for water",
+    title: "Campaign: Support Elderly People",
     description:
-      "There are many variations of passages of injected Lorem Ipsum available, but the majority have.",
+      "Join us to support elderly people through care packages, companionship initiatives, and essential resources for their well-being.",
   },
 ];
 

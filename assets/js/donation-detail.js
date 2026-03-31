@@ -52,14 +52,14 @@ function injectAboutSection(cause) {
       </p>`;
   const aboutsection_content3 = `<div class="image-containers">
         <img
-          src="assets/images/donation/Detail1.png"
+          src="${cause.moreImages}"
           alt=""
           srcset=""
           data-aos="fade-right"
           data-aos-delay="200"
         />
         <img
-          src="assets/images/donation/Detail2.png"
+          src="${cause.moreImages2}"
           alt=""
           srcset=""
           data-aos="fade-left"
@@ -82,7 +82,7 @@ function injectChallengeSection(cause) {
   challengesection_content2 = `<p>${cause.challenge}</p>`;
   challengesection_content3 = `<div class="image-checklist-container">
         <div class="image-container" data-aos="fade-right">
-          <img src="${cause.image}" alt="${cause.title}" srcset="" />
+          <img src="${cause.moreImages3}" alt="${cause.title}" srcset="" />
         </div>
         <div class="checklist-container" id="checklist-container" data-aos="fade-left">
           
