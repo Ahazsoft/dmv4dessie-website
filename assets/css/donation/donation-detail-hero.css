@@ -57,7 +57,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: row;
-  width: 93%;
+  width: 95%;
   gap: 30px;
   align-items: center;
   padding: 20px;
@@ -99,7 +99,7 @@
 }
 @keyframes draw {
   to {
-    width: 90%;
+    /* width: 90%; */
   }
 }
 
