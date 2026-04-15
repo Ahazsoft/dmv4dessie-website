@@ -32,4 +32,6 @@
 
 .image-containers img {
     width: 48%;
+    aspect-ratio: 7/4;
+    object-fit: strech;
 }

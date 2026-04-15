@@ -78,6 +78,7 @@
   color: #7ac70c;
   position: relative;
   left: 25%;
+  width: fit-content;
 }
 
 .progress-info .raised {
