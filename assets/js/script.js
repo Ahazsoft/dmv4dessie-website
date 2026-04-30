@@ -23,8 +23,9 @@ function injectHeader() {
         </div>
         <li><a href="index.html" class="navlinks">Home</a></li>
         <li><a href="about.html" class="navlinks">About us</a></li>
-        <!--  <li><a href="index.html#events-section" class="navlinks">Event</a></li> -->
-        <li><a href="event.html" class="navlinks">Event</a></li>
+       <!--   <li><a href="index.html#events-section" class="navlinks">Event</a></li> -->
+        <!--  <li><a href="event.html" class="navlinks">Event</a></li>-->
+         <li><a href="donation.html" class="navlinks">Donation</a></li>
 
         <li><a href="contact.html" class="navlinks">Contact</a></li>
     </ul>
@@ -66,19 +67,19 @@ function injectFooter() {
             </div>
         </div>
         <div class="footer-container-top-middle">
-            <div class="footer-container-top-middle-title">Get Involved</div>
+            <div class="footer-container-top-middle-title">Quick Links</div>
             <div class="footer-container-top-middle-links">
-                <a href="#">About Us</a>
-                <a href="#">Volunteer</a>
-                <a href="#">Causes</a>
-                <a href="#">Projects</a>
-                <a href="#">Team</a>
+                <a href="/index.html">Home</a>
+                <a href="/about.html">About Us</a>
+                <a href="/donation.html">Donations</a>
+                <a href="/contact.html">Contact Us</a>
+                <!-- <a href="#">Team</a>-->
             </div>
         </div>
         <div class="footer-container-top-right">
             <div class="footer-container-top-right-title">Contacts</div>
             <div class="footer-container-top-right-addresses">
-                <p>654 Town Street, 88 United States</p>
+                <p>Dessie, Amhara, Ethiopia</p>
                 <p>contact_us@dmvfordessie.org</p>
                 <p>0769791991</p>
             </div>
