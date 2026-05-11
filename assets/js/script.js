@@ -30,9 +30,9 @@ function injectHeader() {
         <li><a href="contact.html" class="navlinks">Contact</a></li>
     </ul>
 
-    <div class="header-donate-button">
-        <button class="btn" id="donate-button">Donate</button>
-    </div>
+    <a href="https://www.form.dmvfor-dessie.org/" class="header-donate-button">
+        <button class="btn" id="donate-button">Join Now</button>
+    </a>
 `;
 
   // Injecting the HTML into the header
@@ -79,9 +79,9 @@ function injectFooter() {
         <div class="footer-container-top-right">
             <div class="footer-container-top-right-title">Contacts</div>
             <div class="footer-container-top-right-addresses">
-                <p>Dessie, Amhara, Ethiopia</p>
+                <p>4324 Georgia an Nw Washington DC 20011</p>
                 <p>contact_us@dmvfordessie.org</p>
-                <p>0769791991</p>
+                <p>+1 (571) 622-9455</p>
             </div>
         </div>
     </div>
@@ -104,10 +104,12 @@ function initHeaderLogic() {
   const donateButton = document.getElementById("donate-button");
   const navLinks = document.querySelectorAll("#navMenu a");
 
-  // Donate
-  donateButton.addEventListener("click", () => {
-    window.location.href = "donation.html";
-  });
+  // // Donate
+  // donateButton.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   window.location.href = "https://form.dmvfor-dessie.org/";
+
+  // });
 
   function openDrawer() {
     navMenu.classList.add("active");

@@ -4,7 +4,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
   margin: 0;
@@ -60,8 +61,8 @@ html, body {
   text-decoration: none;
   color: black;
   line-height: 100%;
-  position: relative;     
-  display: inline-block;  
+  position: relative;
+  display: inline-block;
 }
 
 .header-nav-container li a::after {
@@ -87,7 +88,6 @@ html, body {
   transform: scaleX(1);
 }
 
-
 .header-button {
   display: flex;
   justify-content: flex-start;
@@ -112,7 +112,6 @@ html, body {
   margin-right: 50px;
   border: none;
 }
-
 
 .header-container .btn:hover {
   background-color: #5aa317;
@@ -154,6 +153,10 @@ html, body {
 .overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+#donate-button {
+  padding: 0 5px;
 }
 
 @media (max-width: 600px) {
