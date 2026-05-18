@@ -127,6 +127,60 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
+/* ================= CALL NEXT.JS API ================= */
+
+$apiUrl = ($config['api_base_url'] ?? 'https://yourdomain.com') . '/api/members';
+
+// Prepare fee data from the membership string
+$rawTier = $_POST['question_1'] ?? '0';
+if ($rawTier === 'other') {
+    $feeAmount = floatval($_POST['other_membership'] ?? 0);
+} else {
+    // $membership is already formatted like '$25.00'
+    $feeAmount = floatval(str_replace('$', '', $membership));
+}
+$feeTier = $rawTier;
+
+// Build the JSON payload exactly matching the CreateMemberSchema
+$apiData = [
+    'firstName'   => $firstname,
+    'lastName'    => $lastname,
+    'email'       => $email,
+    'cellPhone'   => $cell ?: null,
+    'workPhone'   => $work ?: null,
+    'hasSpouse'   => $hasSpouse === 'yes',
+    'spouseFirstName' => ($hasSpouse === 'yes' && !empty($_POST['spouse_firstname'])) ? htmlspecialchars($_POST['spouse_firstname']) : null,
+    'spouseLastName'  => ($hasSpouse === 'yes' && !empty($_POST['spouse_lastname'])) ? htmlspecialchars($_POST['spouse_lastname']) : null,
+    'spouseEmail'     => ($hasSpouse === 'yes' && !empty($_POST['spouse_email'])) ? htmlspecialchars($_POST['spouse_email']) : null,
+    'spouseCellPhone' => ($hasSpouse === 'yes' && !empty($_POST['spouse_cell_phone'])) ? htmlspecialchars($_POST['spouse_cell_phone']) : null,
+    'spouseWorkPhone' => ($hasSpouse === 'yes' && !empty($_POST['spouse_work_phone'])) ? htmlspecialchars($_POST['spouse_work_phone']) : null,
+    'feeTier'    => $feeTier,
+    'feeAmount'  => $feeAmount,
+];
+
+// Send to the API using cURL
+$ch = curl_init($apiUrl);
+curl_setopt_array($ch, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+    CURLOPT_POSTFIELDS     => json_encode($apiData),
+    CURLOPT_TIMEOUT        => 5,
+]);
+
+$apiResponse = curl_exec($ch);
+$httpCode    = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+$curlError   = curl_error($ch);
+curl_close($ch);
+
+// If the API didn't return 201 Created, log the failure (does not stop the script)
+if ($httpCode !== 201) {
+    error_log("DMV API call failed. HTTP $httpCode. Response: " . $apiResponse . " Error: " . $curlError);
+}
+
+
+
+
 /* ================= GOOGLE SHEETS ================= */
 $sheetUrl = 'https://script.google.com/macros/s/AKfycbxb2pC__2RL6KLGin8_FTX8J075ZQh5jqyk-WAJR83LZbRHA-8BHSM9gPPyR2YvAaBx/exec';
 
@@ -153,3 +207,4 @@ $context = stream_context_create($options);
 file_get_contents($sheetUrl, false, $context);
 
 ?>
+
