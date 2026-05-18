@@ -129,7 +129,7 @@ try {
 
 /* ================= CALL NEXT.JS API ================= */
 
-$apiUrl = ($config['api_base_url'] ?? 'http://192.168.0.142:3000') . '/api/members';
+$apiUrl = ($config['api_base_url'] ?? 'https://dmvfor-dessie-dashboard.vercel.app/') . '/api/members';
 
 // Prepare fee data from the membership string
 $rawTier = $_POST['question_1'] ?? '0';
@@ -176,6 +176,13 @@ curl_close($ch);
 // If the API didn't return 201 Created, log the failure (does not stop the script)
 if ($httpCode !== 201) {
     error_log("DMV API call failed. HTTP $httpCode. Response: " . $apiResponse . " Error: " . $curlError);
+    // Also write a debug log file in the same directory for cPanel access
+    $logEntry = date('c') . " | DMV API call failed\n";
+    $logEntry .= "URL: " . $apiUrl . "\n";
+    $logEntry .= "HTTP Code: " . $httpCode . "\n";
+    $logEntry .= "Curl Error: " . ($curlError ?: '[none]') . "\n";
+    $logEntry .= "Response: " . ($apiResponse ?: '[empty]') . "\n\n";
+    @file_put_contents(__DIR__ . '/api_debug.log', $logEntry, FILE_APPEND | LOCK_EX);
 }
 
 
