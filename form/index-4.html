@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DMV For Dessie | Membership Form">
+    <meta name="author" content="Ansonika">
+    <title>DMV For Dessie | Membership Form</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/logodmv.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+    <link href="css/style_conference.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!-- MODERNIZR MENU -->
+	<script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+	
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<div class="container-fluid">
+	    <div class="row row-height">
+			<div class="col-lg-6 background-image p-0" style="background-color:#7BC816;">
+	            <div class="content-left-wrapper opacity-mask d-flex align-items-center text-left" data-opacity-mask="rgba(0, 0, 0, 0.2)">
+	                <!-- <a href="#0" id="logo"><img src="img/logodmv.png" alt="" width="44" height="44"></a> -->
+	                <div class="social">
+	                    <ul>
+	                        <li><a href="#0"><i class="bi bi-facebook"></i></a></li>
+	                        <li><a href="#0"><i class="bi bi-twitter"></i></a></li>
+	                        <li><a href="#0"><i class="bi bi-instagram"></i></a></li>
+	                    </ul>
+	                </div>
+	                <!-- /social -->
+	                <div>
+	                    <!-- <h1><small>Science Conference</small><em>Big data</em></h1> -->
+	                    <div class="countdown">
+
+							<h2 style="color:#2B420A;">DMV For Dessie</h2>
+	                        <h4 style="color:#2B420A;">January 2026</h4>
+							<figure class="img_content">
+								<img src="img/logodmv.png" class="img-fluid" alt="">
+							</figure>
+	                        <!-- <div class="container_count">
+	                            <div id="days">00</div>day
+	                        </div>
+	                        <div class="container_count">
+	                            <div id="hours">00</div>hours
+	                        </div>
+	                        <div class="container_count">
+	                            <div id="minutes">00</div>minutes
+	                        </div>
+	                        <div class="container_count last">
+	                            <div id="seconds">00</div>seconds
+	                        </div> -->
+	                    </div>
+	                    <!-- <p><a href="#panel_info" class="btn_info">Program and Info <i class="bi bi-arrow-right-short"></i></a></p> -->
+	                </div>
+	                <a class="smoothscroll btn_scroll_to Bounce infinite" href="#wizard_container"><i class="bi bi-arrow-down-short"></i></a>
+	            </div>
+	        </div>
+	        <div class="col-lg-6 d-flex flex-column content-right" >
+	            <div class="container my-auto py-5">
+	                <div class="row">
+	                    <div class="col-lg-9 col-xl-7 mx-auto">
+	                        <div id="wizard_container">
+	                            <div id="top-wizard">
+	                                <span id="location"></span>
+	                                <div id="progressbar"></div>
+	                            </div>
+	                            <!-- /top-wizard -->
+	                            <h3>Membership Form</h3>
+								<form id="wrapped" method="POST" action="phpmailer/mailernew.php">
+	                                <input id="website" name="website" type="text" value="">
+	                                <!-- Leave for security protection, read docs for details -->
+	                                <div id="middle-wizard">
+	                                    <div class="step">
+	                                        <!-- <h2 class="main_question">Please fill with your details</h2> -->
+											<h3 class="main_question">Personal Information</h3>
+	                                        <div class="mb-3 form-floating">
+	                                            <input type="text" name="firstname" id="firstname" class="form-control required" placeholder="First Name">
+	                                            <label for="firstname">First Name</label>
+	                                        </div>
+	                                        <div class="mb-3 form-floating">
+	                                            <input type="text" name="lastname" id="lastname" class="form-control required" placeholder="Last Name">
+	                                            <label for="lastname">Last Name</label>
+	                                        </div>
+	                                        <div class="mb-3 form-floating">
+	                                            <input type="email" name="email" id="email" class="form-control required" placeholder="Your Email">
+	                                            <label for="email">Email</label>
+	                                        </div>
+											<div class="row mb-4">
+												<div class="col-md-6">
+													<div class="form-floating">
+														<input type="text" name="cell_phone" id="cell_phone" class="form-control" placeholder="Cell Phone">
+														<label for="cell_phone">Cell Phone</label>
+													</div>
+												</div>
+
+												<div class="col-md-6">
+													<div class="form-floating">
+														<input type="text" name="work_phone" id="work_phone" class="form-control" placeholder="Work Phone">
+														<label for="work_phone">Work Phone</label>
+													</div>
+												</div>
+											</div>
+
+	                                    </div>
+	                                    <!-- /step-->
+	                                    <div class="step">
+											<h3 class="main_question">Do you have a spouse?</h3>
+
+											<div class="list_block mb-4">
+												<ul>
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="has_spouse_yes" name="has_spouse" value="yes">
+															<label class="radio" for="has_spouse_yes"></label>
+															<label for="has_spouse_yes" class="wrapper">Yes</label>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="has_spouse_no" name="has_spouse" value="no">
+															<label class="radio" for="has_spouse_no"></label>
+															<label for="has_spouse_no" class="wrapper">No</label>
+														</div>
+													</li>
+												</ul>
+											</div>
+
+											<!-- Spouse info (hidden by default) -->
+											<div id="spouse_info" class="d-none">
+												<h3 class="main_question">Spouse Information</h3>
+
+												<div class="mb-3 form-floating">
+													<input type="text" name="spouse_firstname" id="spouse_firstname" class="form-control" placeholder="First Name">
+													<label for="spouse_firstname">First Name</label>
+												</div>
+
+												<div class="mb-3 form-floating">
+													<input type="text" name="spouse_lastname" id="spouse_lastname" class="form-control" placeholder="Last Name">
+													<label for="spouse_lastname">Last Name</label>
+												</div>
+
+												<div class="mb-3 form-floating">
+													<input type="email" name="spouse_email" id="spouse_email" class="form-control" placeholder="Email">
+													<label for="spouse_email">Email</label>
+												</div>
+
+												<div class="row mb-4">
+													<div class="col-md-6">
+														<div class="form-floating">
+															<input type="text" name="spouse_cell_phone" id="spouse_cell_phone" class="form-control" placeholder="Cell Phone">
+															<label for="spouse_cell_phone">Cell Phone</label>
+														</div>
+													</div>
+
+													<div class="col-md-6">
+														<div class="form-floating">
+															<input type="text" name="spouse_work_phone" id="spouse_work_phone" class="form-control" placeholder="Work Phone">
+															<label for="spouse_work_phone">Work Phone</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+	                                    <!-- /step-->
+	                                    <div class="step">
+	                                        <h3 class="main_question">Membership Fee</h3>
+											<div class="list_block">
+												<ul>
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="question_1_opt_1" name="question_1" class="required" value="20">
+															<label class="radio" for="question_1_opt_1"></label>
+															<label for="question_1_opt_1" class="wrapper">$20.00</label>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="question_1_opt_2" name="question_1" class="required" value="30">
+															<label class="radio" for="question_1_opt_2"></label>
+															<label for="question_1_opt_2" class="wrapper">$30.00</label>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="question_1_opt_3" name="question_1" class="required" value="50">
+															<label class="radio" for="question_1_opt_3"></label>
+															<label for="question_1_opt_3" class="wrapper">$50.00</label>
+														</div>
+													</li>
+
+													<!-- Other -->
+													<li>
+														<div class="checkbox_radio_container">
+															<input type="radio" id="question_1_opt_other" name="question_1" class="required" value="other">
+															<label class="radio" for="question_1_opt_other"></label>
+															<label for="question_1_opt_other" class="wrapper">Other</label>
+														</div>
+
+														<div class="form-floating mt-2 d-none" id="other_membership_wrapper">
+															<input type="number" name="other_membership" id="other_membership" class="form-control" placeholder="Enter amount">
+															<label for="other_membership">Enter amount ($)</label>
+														</div>
+													</li>
+												</ul>
+
+												<small><em>Single selection *</em></small>
+											</div>
+
+
+	                                    </div>
+	                                    <!-- /step-->
+	                                    <div class="submit step">
+	                                        <div class="summary">
+	                                            <div class="wrapper">
+	                                                <h3>Thank you<br>for your time!</h3>
+	                                                <p>We will contact you shorly and a summary email will be sent to your email address</p>
+	                                            </div>
+	                                            <div class="text-center">
+	                                                <div class="form-group terms">
+	                                                    <label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Privacy terms</a> before Submit
+	                                                        <input type="checkbox" name="terms" value="Yes" class="required">
+	                                                        <span class="checkmark"></span>
+	                                                    </label>
+	                                                </div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                    <!-- /step-->
+	                                </div>
+	                                <!-- /middle-wizard -->
+	                                <div id="bottom-wizard">
+	                                    <button type="button" name="backward" class="backward">Prev</button>
+	                                    <button type="button" name="forward" class="forward">Next</button>
+	                                    <button type="submit" name="process" class="submit">Submit</button>
+	                                </div>
+	                                <!-- /bottom-wizard -->
+	                            </form>
+	                        </div>
+	                        <!-- /Wizard container -->
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="container pb-4 copy">
+				    <!-- <span class="float-start">© Imno</span> -->
+				    <!-- <a class="btn_help float-end" href="#modal-help" id="modal_h"><i class="bi bi-question-circle"></i> Help</a><br> -->
+				</div>
+	        </div>
+	    </div>
+	    <!-- /row -->
+	</div>
+	<!-- /container -->
+	
+	<!-- <nav>
+		<ul class="cd-primary-nav">
+			<li><a href="index.html" class="animated_link">Wedding Version</a></li>
+			<li><a href="index-2.html" class="animated_link">Workshop Version</a></li>
+			<li><a href="index-3.html" class="animated_link">Party Version</a></li>
+			<li><a href="index-4.html" class="animated_link">Conference Version</a></li>
+			<li><a href="#0" class="animated_link">Purchase Template</a></li>
+		</ul>
+	</nav> -->
+	<!-- /menu -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<!-- /menu button -->
+
+	<div class="panel" id="panel_info">
+	    <div class="panel__content">
+	        <a href="#" class="close_panel">
+	            <i class="bi bi-x-circle"></i>
+	        </a>
+	        <div class="container">
+	            <h2 class="mb-5">Conference Program</h2>
+	            <div class="strip_info">
+	                <div class="row">
+	                    <div class="col-lg-3">
+	                        <h3>Registration</h3>
+	                    </div>
+	                    <div class="col-lg-3">
+	                        <p class="date_event">18.10.2023 <small>11.00am - 02.00pm</small></p>
+	                    </div>
+	                    <div class="col-lg-6">
+	                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="strip_info">
+	                <div class="row">
+	                    <div class="col-lg-3">
+	                        <h3>Data and Business Strategy</h3>
+	                    </div>
+	                    <div class="col-lg-3">
+	                        <p class="date_event">18.10.2023 <small>8.00pm - 11.00.pm</small></p>
+	                    </div>
+	                    <div class="col-lg-6">
+	                        <p><strong>Relators:</strong> Mark Twain <em>(CEO of Impres.com)</em>, Laura Finch <em>(Professor at UCLA University)</em>, Andrea Smith <em>(Data Engineering).</em></p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="strip_info">
+	                <div class="row">
+	                    <div class="col-lg-3">
+	                        <h3>Manipulating Big Data</h3>
+	                    </div>
+	                    <div class="col-lg-3">
+	                        <p class="date_event">18.10.2023 <small>11.30pm - 03.00am</small></p>
+	                    </div>
+	                    <div class="col-lg-6">
+	                        <p><strong>Relators:</strong> Mark Twain <em>(CEO of Impres.com)</em>, Laura Finch <em>(Professor at UCLA University)</em>, Andrea Smith <em>(Data Engineering).</em></p>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <div class="row mt-5 d-flex align-items-center">
+	                <div class="col-lg-6">
+	                    <div class="map_contact">
+	                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.4364241114604!2d-73.96780638459853!3d40.774418641731515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a29d3847f5%3A0x564dfbba0141774a!2s5th%20Ave%2C%20New%20York%2C%20NY%2C%20Stati%20Uniti!5e0!3m2!1sit!2ses!4v1661414716655!5m2!1sit!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	                    </div>
+	                </div>
+	                <div class="col-lg-6">
+	                    <div class="row">
+	                        <div class="col-md-6">
+	                            <h5 class="mb-3">Address</h5>
+	                            <div class="list_icons">
+	                                <ul>
+	                                    <li><i class="bi bi-geo-alt"></i> 11 Fifth Ave - New York 2863 <br><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361" target="_blank">Get directions</a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                        <div class="col-md-6">
+	                            <h5 class="mb-3">Contacts</h5>
+	                            <div class="list_icons">
+	                                <ul>
+	                                    <li><i class="bi bi-telephone"></i> +45 9483 2344</li>
+	                                    <li><i class="bi bi-envelope"></i> <a href="mailto:event@domain.com">event@domain.com</a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- /panel_info  -->
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Privacy data terms</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>
+						We respect your privacy and are committed to protecting the personal information you share with us. Any information collected through our website, including your name, email address, phone number, or other contact details, is used solely for the purpose of providing our services, responding to inquiries, and communicating with you about matters related to our organization.
+					</p>
+					<p>
+						We do not sell, rent, or share your personal information with third parties except when required by law or when necessary to operate our services (such as processing membership requests or communications you have authorized). All information is handled using reasonable administrative, technical, and physical safeguards to protect against unauthorized access, loss, or misuse.
+					</p>
+					<p>
+						By using our website and submitting your information, you consent to the collection and use of your data as outlined in this policy. If you have any questions about our privacy practices or wish to request access, correction, or deletion of your personal information, please contact us directly.
+					</p>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- Help form Popup -->
+	<div id="modal-help" class="custom-modal zoom-anim-dialog mfp-hide">
+	    <div class="small-dialog-header">
+	        <h3>Ask Us Anything</h3>
+	        <p class="mb-3">Please fill the form with your questions and<br>we will reply soon!</p>
+	    </div>
+	    <div id="message-help"></div>
+	    <form method="post" action="phpmailer/help.php" id="helpform" autocomplete="off">
+	        <div class="modal-wrapper">
+	            <div class="mb-3 form-floating">
+	                <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Full Name">
+	                <label for="fullname">Full Name</label>
+	            </div>
+	            <div class="mb-3 form-floating">
+	                <input type="email" name="email_help" id="email_help" class="form-control" placeholder="Email Address">
+	                <label for="email_help">Email Address</label>
+	            </div>
+	            <div class="mb-3 form-floating">
+	                <textarea name="message_help" id="message_help" class="form-control short" placeholder="Your Message"></textarea>
+	                <label for="message_help">Your Message</label>
+	            </div>
+	            <div class="mb-5 form-floating">
+	                <input class="form-control" type="text" name="verify_help" id="verify_help" placeholder="Are you human? 3 + 1 =">
+	                <label for="verify_help">Are you human? 3 + 1 =</label>
+	            </div>
+	            <div class="text-center submit"><input type="submit" value="Submit" class="btn_1" id="submit-help"></div>
+	        </div>
+	    </form>
+	</div>
+	<!-- /Help form Popup -->
+	
+	<!-- COMMON SCRIPTS -->
+	<script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="phpmailer/validate.js"></script>
+
+	<script>
+	const spouseInfo = document.getElementById('spouse_info');
+	const spouseFields = [
+		'spouse_firstname',
+		'spouse_lastname',
+		'spouse_email',
+		'spouse_cell_phone',
+		'spouse_work_phone'
+	];
+
+	function setSpouseRequired(isRequired) {
+		spouseFields.forEach(id => {
+			const field = document.getElementById(id);
+			if (isRequired) {
+				field.classList.add('required');
+				field.setAttribute('required', 'required');
+			} else {
+				field.classList.remove('required');
+				field.removeAttribute('required');
+				field.value = '';
+			}
+		});
+	}
+
+	document.querySelectorAll('input[name="has_spouse"]').forEach(radio => {
+		radio.addEventListener('change', function () {
+			if (this.value === 'yes') {
+				spouseInfo.classList.remove('d-none');
+				setSpouseRequired(true);
+			} else {
+				spouseInfo.classList.add('d-none');
+				setSpouseRequired(false);
+			}
+		});
+	});
+	</script>
+
+
+
+	<script>
+	document.querySelectorAll('input[name="question_1"]').forEach(radio => {
+		radio.addEventListener('change', function () {
+			const otherField = document.getElementById('other_membership_wrapper');
+
+			if (this.id === 'question_1_opt_other') {
+				otherField.classList.remove('d-none');
+			} else {
+				otherField.classList.add('d-none');
+				document.getElementById('other_membership').value = '';
+			}
+		});
+	});
+	</script>
+
+	
+
+
+</body>
+</html>
