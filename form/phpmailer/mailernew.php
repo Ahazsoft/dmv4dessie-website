@@ -15,21 +15,21 @@ try {
 
     /* ================= SMTP SETTINGS ================= */
     $mail->isSMTP();
-    $mail->Host       = $config['host'];
-    $mail->SMTPAuth   = true;
-    $mail->Username   = $config['username'];
-    $mail->Password   = $config['password'];
+    $mail->Host = $config['host'];
+    $mail->SMTPAuth = true;
+    $mail->Username = $config['username'];
+    $mail->Password = $config['password'];
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = $config['port'];
+    $mail->Port = $config['port'];
     $mail->isHTML(true);
     $mail->CharSet = 'UTF-8';
 
     /* ================= SANITIZE INPUT ================= */
     $firstname = htmlspecialchars($_POST['firstname'] ?? '');
-    $lastname  = htmlspecialchars($_POST['lastname'] ?? '');
-    $email     = htmlspecialchars($_POST['email'] ?? '');
-    $cell      = htmlspecialchars($_POST['cell_phone'] ?? '');
-    $work      = htmlspecialchars($_POST['work_phone'] ?? '');
+    $lastname = htmlspecialchars($_POST['lastname'] ?? '');
+    $email = htmlspecialchars($_POST['email'] ?? '');
+    $cell = htmlspecialchars($_POST['cell_phone'] ?? '');
+    $work = htmlspecialchars($_POST['work_phone'] ?? '');
     $hasSpouse = htmlspecialchars($_POST['has_spouse'] ?? '');
 
     /* ================= MEMBERSHIP ================= */
@@ -67,7 +67,7 @@ try {
     $mail->addAddress($config['to_email'], $config['to_name']);
     $mail->Subject = 'New DMV For Dessie Membership';
     $mail->Body = $adminMessage;
-    $mail->send();
+    $mail->send();  // Re-enabled sending
 
     /* ================= THANK YOU EMAIL ================= */
     $mail->clearAddresses();
@@ -99,7 +99,111 @@ try {
     ";
 
     $mail->Body = $thankYouMessage;
-    $mail->send();
+    $mail->send();  // Re-enabled sending
+
+    /* ================= CALL NEXT.JS API ================= */
+    $apiUrl = ($config['api_base_url'] ?? 'https://dmvfor-dessie-dashboard.vercel.app') . '/api/members';
+    echo "<!-- API URL: {$apiUrl} -->";  // Debug line, can be removed later
+
+    
+    // Prepare fee data
+    $rawTier = $_POST['question_1'] ?? '0';
+    if ($rawTier === 'other') {
+        $feeAmount = floatval($_POST['other_membership'] ?? 0);
+    } else {
+        $feeAmount = floatval(str_replace('$', '', $membership));
+    }
+    $feeTier = '$' . $rawTier;
+
+    $apiData = [
+        'firstName' => $firstname,
+        'lastName' => $lastname,
+        'email' => $email,
+        'cellPhone' => $cell ?: null,
+        'workPhone' => $work ?: null,
+        'hasSpouse' => $hasSpouse === 'yes',
+        'spouseFirstName' => ($hasSpouse === 'yes' && !empty($_POST['spouse_firstname'])) ? htmlspecialchars($_POST['spouse_firstname']) : null,
+        'spouseLastName' => ($hasSpouse === 'yes' && !empty($_POST['spouse_lastname'])) ? htmlspecialchars($_POST['spouse_lastname']) : null,
+        'spouseEmail' => ($hasSpouse === 'yes' && !empty($_POST['spouse_email'])) ? htmlspecialchars($_POST['spouse_email']) : null,
+        'spouseCellPhone' => ($hasSpouse === 'yes' && !empty($_POST['spouse_cell_phone'])) ? htmlspecialchars($_POST['spouse_cell_phone']) : null,
+        'spouseWorkPhone' => ($hasSpouse === 'yes' && !empty($_POST['spouse_work_phone'])) ? htmlspecialchars($_POST['spouse_work_phone']) : null,
+        'feeTier' => $feeTier,
+        'feeAmount' => $feeAmount,
+    ];
+
+    $jsonPayload = json_encode($apiData);
+
+    /**
+     * Send a POST request; try cURL first, then fallback to file_get_contents.
+     */
+    function postJson($url, $jsonPayload)
+    {
+        // 1. Try cURL
+        if (function_exists('curl_init')) {
+            $ch = curl_init($url);
+            curl_setopt_array($ch, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST => true,
+                CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+                CURLOPT_POSTFIELDS => $jsonPayload,
+                CURLOPT_TIMEOUT => 5,
+                CURLOPT_FOLLOWLOCATION => true,  // Follow 308/301 redirects
+                
+            ]);
+            $response = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $error = curl_error($ch);
+            // curl_close() is a no-op since PHP 8.0, deprecated in 8.5 – just don't call it
+            return [
+                'http_code' => $httpCode,
+                'response' => $response,
+                'error' => $error,
+                'method' => 'cURL'
+            ];
+        }
+
+        // 2. Fallback to file_get_contents
+        $options = [
+            'http' => [
+                'method' => 'POST',
+                'header' => "Content-Type: application/json\r\n",
+                'content' => $jsonPayload,
+                'timeout' => 5,
+                'follow_location' => true,  // Follow redirects for stream context
+            ],
+           
+        ];
+        $context = stream_context_create($options);
+        $response = @file_get_contents($url, false, $context);
+
+        // Extract HTTP code using non‑deprecated function
+        $httpCode = null;
+        if ($response !== false) {
+            $headers = http_get_last_response_headers();
+            if ($headers) {
+                $statusLine = $headers[0] ?? '';
+                preg_match('{HTTP\/\S*\s(\d{3})}', $statusLine, $match);
+                $httpCode = $match[1] ?? null;
+            }
+        }
+
+        return [
+            'http_code' => $httpCode,
+            'response' => $response,
+            'error' => ($response === false) ? error_get_last()['message'] ?? 'Unknown stream error' : null,
+            'method' => 'file_get_contents'
+        ];
+    }
+
+    $result = postJson($apiUrl, $jsonPayload);
+
+    // Log or output the result for debugging
+    if ($result['http_code'] != 201) {
+        $logMsg = "API call failed ({$result['method']}). HTTP: {$result['http_code']}, Response: {$result['response']}, Error: {$result['error']}";
+        error_log($logMsg);
+        // Uncomment next line only while testing
+        // echo "<!-- {$logMsg} -->";
+    }
 
     /* ================= SUCCESS MESSAGE ================= */
     echo '
@@ -118,7 +222,7 @@ try {
 
     <script>
         setTimeout(function () {
-            window.location.href = "/form/index-4.html";
+            window.location.href = "/index-4.html";
         }, 5000);
     </script>
     ';
@@ -126,67 +230,6 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
-/* ================= CALL NEXT.JS API ================= */
-
-$apiUrl = ($config['api_base_url'] ?? 'https://dmvfor-dessie-dashboard.vercel.app/') . '/api/members';
-
-// Prepare fee data from the membership string
-$rawTier = $_POST['question_1'] ?? '0';
-if ($rawTier === 'other') {
-    $feeAmount = floatval($_POST['other_membership'] ?? 0);
-} else {
-    // $membership is already formatted like '$25.00'
-    $feeAmount = floatval(str_replace('$', '', $membership));
-}
-$feeTier = $rawTier;
-
-// Build the JSON payload exactly matching the CreateMemberSchema
-$apiData = [
-    'firstName'   => $firstname,
-    'lastName'    => $lastname,
-    'email'       => $email,
-    'cellPhone'   => $cell ?: null,
-    'workPhone'   => $work ?: null,
-    'hasSpouse'   => $hasSpouse === 'yes',
-    'spouseFirstName' => ($hasSpouse === 'yes' && !empty($_POST['spouse_firstname'])) ? htmlspecialchars($_POST['spouse_firstname']) : null,
-    'spouseLastName'  => ($hasSpouse === 'yes' && !empty($_POST['spouse_lastname'])) ? htmlspecialchars($_POST['spouse_lastname']) : null,
-    'spouseEmail'     => ($hasSpouse === 'yes' && !empty($_POST['spouse_email'])) ? htmlspecialchars($_POST['spouse_email']) : null,
-    'spouseCellPhone' => ($hasSpouse === 'yes' && !empty($_POST['spouse_cell_phone'])) ? htmlspecialchars($_POST['spouse_cell_phone']) : null,
-    'spouseWorkPhone' => ($hasSpouse === 'yes' && !empty($_POST['spouse_work_phone'])) ? htmlspecialchars($_POST['spouse_work_phone']) : null,
-    'feeTier'    => $feeTier,
-    'feeAmount'  => $feeAmount,
-];
-
-// Send to the API using cURL
-$ch = curl_init($apiUrl);
-curl_setopt_array($ch, [
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST           => true,
-    CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
-    CURLOPT_POSTFIELDS     => json_encode($apiData),
-    CURLOPT_TIMEOUT        => 5,
-]);
-
-$apiResponse = curl_exec($ch);
-$httpCode    = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-$curlError   = curl_error($ch);
-curl_close($ch);
-
-// If the API didn't return 201 Created, log the failure (does not stop the script)
-if ($httpCode !== 201) {
-    error_log("DMV API call failed. HTTP $httpCode. Response: " . $apiResponse . " Error: " . $curlError);
-    // Also write a debug log file in the same directory for cPanel access
-    $logEntry = date('c') . " | DMV API call failed\n";
-    $logEntry .= "URL: " . $apiUrl . "\n";
-    $logEntry .= "HTTP Code: " . $httpCode . "\n";
-    $logEntry .= "Curl Error: " . ($curlError ?: '[none]') . "\n";
-    $logEntry .= "Response: " . ($apiResponse ?: '[empty]') . "\n\n";
-    @file_put_contents(__DIR__ . '/api_debug.log', $logEntry, FILE_APPEND | LOCK_EX);
-}
-
-
-
 
 /* ================= GOOGLE SHEETS ================= */
 $sheetUrl = 'https://script.google.com/macros/s/AKfycbxb2pC__2RL6KLGin8_FTX8J075ZQh5jqyk-WAJR83LZbRHA-8BHSM9gPPyR2YvAaBx/exec';
@@ -203,15 +246,13 @@ $data = [
 
 $options = [
     'http' => [
-        'header'  => "Content-Type: application/json\r\n",
-        'method'  => 'POST',
+        'header' => "Content-Type: application/json\r\n",
+        'method' => 'POST',
         'content' => json_encode($data),
         'timeout' => 5
     ]
 ];
 
 // $context = stream_context_create($options);
-// file_get_contents($sheetUrl, false, $context);
-
+// file_get_contents($sheetUrl, false, $context);  // Re-enabled Google Sheets
 ?>
-
