@@ -222,7 +222,7 @@ try {
 
     <script>
         setTimeout(function () {
-            window.location.href = "/index-4.html";
+            window.location.href = "/form/index-4.html";
         }, 5000);
     </script>
     ';
