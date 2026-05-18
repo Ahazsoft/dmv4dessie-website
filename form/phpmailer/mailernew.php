@@ -118,7 +118,7 @@ try {
 
     <script>
         setTimeout(function () {
-            window.location.href = "/index-4.html";
+            window.location.href = "/form/index-4.html";
         }, 5000);
     </script>
     ';
@@ -129,7 +129,7 @@ try {
 
 /* ================= CALL NEXT.JS API ================= */
 
-$apiUrl = ($config['api_base_url'] ?? 'https://yourdomain.com') . '/api/members';
+$apiUrl = ($config['api_base_url'] ?? 'http://192.168.0.142:3000') . '/api/members';
 
 // Prepare fee data from the membership string
 $rawTier = $_POST['question_1'] ?? '0';
@@ -203,8 +203,8 @@ $options = [
     ]
 ];
 
-$context = stream_context_create($options);
-file_get_contents($sheetUrl, false, $context);
+// $context = stream_context_create($options);
+// file_get_contents($sheetUrl, false, $context);
 
 ?>
 
