@@ -87,7 +87,7 @@ function injectFooter() {
     </div>
     <div class="footer-container-copyright">
         <p>
-            Copyright &copy; Dmv For Dessie | Designed by <a href="https://www.ahaz.io/">Ahaz Solutions</a>          
+            Copyright &copy; Dmv For Dessie | Powered By <a href="https://www.ahaz.io/" style="color: #57B3E5">Ahaz Solutions</a>          
         </p>
     </div>
 `;
