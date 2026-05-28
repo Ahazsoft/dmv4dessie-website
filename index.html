@@ -1,9 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DMV For Dessie</title>
+    <meta name="description" content="DMV For Dessie is an Ethiopian diaspora community organization supporting development projects, humanitarian initiatives, education, healthcare, and fundraising efforts for Dessie, Ethiopia.">
+    <meta property="og:title" content="DMV For Dessie">
+    <meta property="og:description" content="Supporting Dessie through community development and humanitarian initiatives.">
+    <meta property="og:image" content="https://dmvfor-dessie.org/assets/images/preview.jpg">
+    <meta property="og:url" content="https://dmvfor-dessie.org/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DMV For Dessie">
+    <meta name="twitter:description" content="Community development and support initiatives for Dessie, Ethiopia.">
+    <link rel="canonical" href="https://dmvfor-dessie.org">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NonProfit",
+        "name": "DMV For Dessie",
+        "url": "https://dmvfor-dessie.org",
+        "logo": "https://dmvfor-dessie.org/assets/images/logo.png",
+        "sameAs": [
+          "https://facebook.com/...",
+          "https://instagram.com/..."
+        ],
+        "description": "Community organization supporting Dessie, Ethiopia through humanitarian and development initiatives."
+      }
+      </script>
+    <title>DMV For Dessie | Ethiopian Community Development & Humanitarian Support</title>
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
 
@@ -12,8 +36,184 @@
     <link rel="stylesheet" href="assets/css/index/service.css" />
     <link rel="stylesheet" href="assets/css/index/form.css" />
     <link rel="stylesheet" href="assets/css/index/events.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    
+    <!-- Simple inline styles for the new FAQ accordion (attractive & modern) -->
+    <style>
+      /* FAQ section styling — clean, cohesive, matches DMV For Dessie branding */
+      .faq-attractive-section {
+        max-width: 700px;
+        margin: 3rem auto 4rem auto;
+        padding: 0 1.5rem;
+        font-family: 'Outfit', sans-serif;
+      }
+
+      .faq-attractive-container {
+        background: #ffffff;
+        border-radius: 2rem;
+        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
+        overflow: hidden;
+        transition: all 0.2s;
+      }
+
+      .faq-header-custom {
+        background: linear-gradient(115deg, #7ac717 0%, #2a5a3a 100%);
+        padding: 2rem 2rem 1.6rem;
+        text-align: center;
+      }
+
+      .faq-header-custom h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        color: white;
+        margin: 0 0 0.5rem 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .faq-header-custom h2 i {
+        font-size: 1.8rem;
+        opacity: 0.9;
+      }
+
+      .faq-subhead {
+        color: #e0f0da;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 0.3rem;
+      }
+
+      .faq-items-list {
+        padding: 1.2rem 1.8rem 2rem 1.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      /* individual faq card */
+      .faq-card {
+        background: #fefefe;
+        border-radius: 1.25rem;
+        border: 1px solid #eef2f0;
+        transition: all 0.2s ease;
+        overflow: hidden;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+      }
+
+      .faq-card:hover {
+        border-color: #d4e0da;
+        box-shadow: 0 6px 14px -8px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-question-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: white;
+        border: none;
+        padding: 1.2rem 1.5rem;
+        font-family: inherit;
+        font-size: 1.05rem;
+        font-weight: 600;
+        text-align: left;
+        color: #1a2e28;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .faq-question-btn h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 700;          /* Raleway looks better with 700 */
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: -0.2px;
+        flex: 1;
+        padding-right: 1rem;
+        color: #1d3b32;
+      }
+      .faq-icon-wrapper {
+        font-size: 1.3rem;
+        color: #f9a65a;
+        transition: transform 0.2s;
+        min-width: 28px;
+        text-align: center;
+      }
+
+      .faq-answer-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        background: #fefef9;
+        border-top: 1px solid transparent;
+      }
+
+      .faq-answer-panel.open {
+        max-height: 420px;   /* enough space for content */
+        border-top-color: #e2ecd9;
+      }
+
+      .faq-answer-panel p {
+        margin: 0;
+        padding: 1.2rem 1.8rem 1.5rem 1.8rem;
+        font-size: 0.98rem;
+        line-height: 1.55;
+        color: #2e423c;
+        background: #fefef9;
+        font-weight: 450;
+      }
+
+      /* responsive tweaks */
+      @media (max-width: 680px) {
+        .faq-attractive-section {
+          padding: 0 1rem;
+          margin: 2rem auto;
+        }
+        .faq-items-list {
+          padding: 1rem 1.2rem 1.5rem 1.2rem;
+        }
+        .faq-question-btn {
+          padding: 1rem 1.2rem;
+        }
+        .faq-question-btn h3 {
+          font-size: 0.95rem;
+        }
+        .faq-answer-panel p {
+          padding: 1rem 1.4rem 1.2rem 1.4rem;
+          font-size: 0.92rem;
+        }
+        .faq-header-custom {
+          padding: 1.5rem 1rem;
+        }
+        .faq-header-custom h2 {
+          font-size: 1.6rem;
+        }
+      }
+
+      /* small fade-in for items */
+      .faq-card {
+        animation: gentleSlide 0.4s ease backwards;
+      }
+      .faq-card:nth-child(1) { animation-delay: 0.05s; }
+      .faq-card:nth-child(2) { animation-delay: 0.1s; }
+      .faq-card:nth-child(3) { animation-delay: 0.15s; }
+      .faq-card:nth-child(4) { animation-delay: 0.2s; }
+
+      @keyframes gentleSlide {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- header begin-->
@@ -30,17 +230,17 @@
             data-aos-delay="100"
           >
             <div class="line"></div>
-            <p>Hope, Help, and Humanity for Dessie.</p>
+            <p>Hope, Help, and Humanity <br> for Dessie , Ethiopia.</p>
           </div>
           <div
             class="hero-section-descriptions-middle"
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <h2>
-              A small act of giving <br />
+            <h1>
+              A small act of giving 
               can create countless smiles.
-            </h2>
+            </h1>
           </div>
           <div
             class="hero-section-descriptions-text"
@@ -48,9 +248,10 @@
             data-aos-delay="500"
           >
             <p>
-              Even the smallest donation can mean the world to someone in
-              <br />
-              need. Donate today and help change a life.
+            DMV For Dessie was created by members of the Ethiopian diaspora community who share a common mission: supporting
+             the people and future of Dessie through collective action, compassion, and sustainable community initiatives.
+            Our organization focuses on creating long-term positive impact by supporting education, healthcare access, humanitarian 
+            assistance, youth empowerment, and local development efforts.
             </p>
           </div>
           <div
@@ -58,13 +259,25 @@
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            <img
-              src="assets/images/icon/play-button.png"
-              alt="Learn More button"
-            />
-            <a href="contact.html" class="thm-btn">
-              Learn More <span class="icon-diagonal-arrow1"> </span
-            ></a>
+            
+          
+           <a href="contact.html" 
+            class="thm-btn" 
+          style="display:inline-block; 
+          padding:12px 24px; 
+          background-color:#f9a65a; 
+          color:#fff; 
+          text-decoration:none; 
+          border:none; 
+          border-radius:0; 
+          font-size:16px; 
+          font-weight:600; 
+          cursor:pointer;">
+            <i class="fas fa-play" ></i>
+          Learn More about DMV 
+          <span class="icon-diagonal-arrow1"></span>
+        </a>
+
           </div>
         </div>
         <!-- hero section description ends here -->
@@ -76,13 +289,13 @@
 
             <div class="large-back"></div>
             <div class="large-front">
-              <img src="assets/images/hero/Hero-big.bmp" alt="Main Image" />
+              <img src="assets/images/hero/Hero-big.png" alt="Main Image" />
             </div>
 
             <!-- Small Overlap -->
             <div class="small-back"></div>
             <div class="small-front">
-              <img src="assets/images/hero/Hero-small.bmp" alt="Small Image" />
+              <img src="assets/images/hero/Hero-small.png" alt="Small Image" />
             </div>
           </div>
         </div>
@@ -96,7 +309,7 @@
           <img src="assets/images/icon/medicine.png" alt="" />
           <div class="services-section-single-service-title">Medicine Aid</div>
           <div class="services-section-single-service-readmore">
-            <a href="#">READ MORE ↗</a>
+            <a href="about.html">READ MORE ↗</a>
           </div>
         </div>
 
@@ -107,7 +320,7 @@
             Clean Water Access
           </div>
           <div class="services-section-single-service-readmore">
-            <a href="#">READ MORE ↗</a>
+            <a href="about.html">READ MORE ↗</a>
           </div>
         </div>
 
@@ -116,7 +329,7 @@
 
           <div class="services-section-single-service-title">Food Relief</div>
           <div class="services-section-single-service-readmore">
-            <a href="#">READ MORE ↗</a>
+            <a href="about.html">READ MORE ↗</a>
           </div>
         </div>
 
@@ -127,7 +340,7 @@
             Humanitarian Support
           </div>
           <div class="services-section-single-service-readmore">
-            <a href="#">READ MORE ↗</a>
+            <a href="about.html">READ MORE ↗</a>
           </div>
         </div>
       </section>
@@ -150,7 +363,7 @@
 
           <div class="about-section-description-bullet" data-aos="fade-up" data-aos-delay="5  00">
             <div class="bullet">
-              <img src="assets/images/icon/circle-check.png" />
+              <img src="assets/images/icon/circle-check.png"  />
               <p>Support families facing extreme hardship</p>
             </div>
             <div class="bullet">
@@ -169,7 +382,7 @@
 
           <div class="about-section-description-bottom" data-aos="zoom-in" data-aos-delay="100">
             <a href="about.html" class="btn">
-              Learn More <span class="custom-btn-arrow"> </span
+              Learn More about DMV <span class="custom-btn-arrow"> </span
             ></a>
           </div>
         </div>
@@ -183,14 +396,14 @@
             <div class="large-group">
               <div class="large-back"></div>
               <div class="large-front">
-                <img src="assets/images/about/About-big.bmp" alt="Main Image" />
+                <img src="assets/images/about/About-big.png" alt="DMV for Dessie volunteers distributing food aid in Dessie, Ethiopia" />
               </div>
             </div>
 
             <!-- Small Overlap -->
             <div class="small-back"></div>
             <div class="small-front">
-              <img src="assets/images/about/About-small.bmp" alt="Small Image" />
+              <img src="assets/images/about/About-small.png" alt="DMV for Dessie volunteers distributing food aid to families in Dessie, Amhara Region, Ethiopia" />
             </div>
           </div>
         </div>
@@ -260,25 +473,72 @@
       </section>
       <!-- form section ends -->
 
-      <!-- event section begin  -->
-      <!-- <section class="event-section" data-aos="fade-up">
-        <div class="event-section-title">
-          <h2>Our Events</h2>
-        </div>
-        <div class="event-section-event-container">
-          <div id="event-section-event-inner-container">
-          </div>
-        </div>
-        
-      </section> -->
+      <!-- event section begin (commented) -->
+      <!-- <section class="event-section" data-aos="fade-up"> ... </section> -->
       <!-- event section ends -->
     </div>
+    <!-- wrapper ends -->
+
+    <!-- ========== NEW ATTRACTIVE FAQ SECTION (Dropdown / Accordion) ========== -->
+    <section class="faq-attractive-section">
+      <div class="faq-attractive-container">
+        <div class="faq-header-custom">
+          <h2>
+            <i class="fas fa-circle-question"></i> 
+            Frequently Asked Questions
+          </h2>
+          <div class="faq-subhead">Everything you need to know about DMV for Dessie</div>
+        </div>
+        <div class="faq-items-list">
+          <!-- FAQ 1 -->
+          <div class="faq-card">
+            <button class="faq-question-btn" aria-expanded="false">
+              <h3>What does "DMV for Dessie" mean?</h3>
+              <span class="faq-icon-wrapper"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>"DMV" refers to the Washington, DC metropolitan area — commonly known as the DMV area, covering Washington DC, Maryland, and Virginia. "Dessie" refers to the city of Dessie in the Wollo Zone of the Amhara Region in northern Ethiopia. <strong>DMV for Dessie</strong> is a nonprofit organization founded in 2021 by Ethiopian diaspora members living in the DC, Maryland, and Virginia area who came together to support families, children, and elderly residents affected by conflict in Dessie, Ethiopia.</p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-card">
+            <button class="faq-question-btn" aria-expanded="false">
+              <h3>Where is DMV for Dessie based, and where does it operate?SEO</h3>
+              <span class="faq-icon-wrapper"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>The organization is based in <strong>Silver Spring, Maryland</strong>, in the Washington DC metropolitan area. Its humanitarian programs and aid distribution operate primarily in <strong>Dessie</strong>, a city in the Wollo Zone of the Amhara Region in northern Ethiopia, as well as surrounding communities affected by conflict and displacement.</p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="faq-card">
+            <button class="faq-question-btn" aria-expanded="false">
+              <h3>How does the aid reach people in Dessie, Ethiopia?</h3>
+              <span class="faq-icon-wrapper"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>DMV for Dessie works through a network of trusted community members and local contacts in Dessie to identify the most vulnerable individuals and families. Funds raised in the United States are transferred and distributed on the ground in Dessie, ensuring aid reaches recipients directly. The organization maintains accountability through regular reporting and community oversight.</p>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="faq-card">
+            <button class="faq-question-btn" aria-expanded="false">
+              <h3>How can I donate to DMV for Dessie?</h3>
+              <span class="faq-icon-wrapper"><i class="fas fa-plus"></i></span>
+            </button>
+            <div class="faq-answer-panel">
+              <p>You can donate through several methods: online via <strong>dmvfordessie.org/donate</strong>, or by cash, check, or bank transfer by contacting the organization at <strong>+1 (571) 622-9455</strong>. All donations to DMV for Dessie are tax-deductible as the organization is a registered 501(c)(3) charity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== END FAQ SECTION ========== -->
 
     <!-- footer beign -->
     <footer class="footer-container"></footer>
     <!-- footer ends -->
 
-    <!-- <script src="assets/js/eventloader.js"></script> -->
     <script src="assets/js/script.js"></script>
     <!-- AOS JavaScript Initialization -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -288,6 +548,67 @@
         offset: 100,
         once: true,
       });
+    </script>
+
+    <!-- Simple vanilla JS for dropdown accordion (no external dependencies) -->
+    <script>
+      (function() {
+        const faqButtons = document.querySelectorAll('.faq-question-btn');
+        
+        function toggleFaq(button) {
+          const faqCard = button.closest('.faq-card');
+          const answerPanel = faqCard.querySelector('.faq-answer-panel');
+          const iconSpan = button.querySelector('.faq-icon-wrapper i');
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+          
+          if (!isExpanded) {
+            // Close any other open FAQs? For better UX we keep independent (can have multiple open)
+            // but we also allow independent. (attractive and usable)
+            answerPanel.classList.add('open');
+            button.setAttribute('aria-expanded', 'true');
+            if (iconSpan) {
+              iconSpan.classList.remove('fa-plus');
+              iconSpan.classList.add('fa-minus');
+            }
+          } else {
+            answerPanel.classList.remove('open');
+            button.setAttribute('aria-expanded', 'false');
+            if (iconSpan) {
+              iconSpan.classList.remove('fa-minus');
+              iconSpan.classList.add('fa-plus');
+            }
+          }
+        }
+        
+        faqButtons.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleFaq(btn);
+          });
+          
+          // keyboard accessibility
+          btn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              toggleFaq(btn);
+            }
+          });
+        });
+        
+        // initial state: all panels closed, plus icons, aria-expanded false
+        // ensure any existing open class is removed
+        document.querySelectorAll('.faq-answer-panel').forEach(panel => {
+          panel.classList.remove('open');
+        });
+        document.querySelectorAll('.faq-question-btn').forEach(btn => {
+          btn.setAttribute('aria-expanded', 'false');
+          const icon = btn.querySelector('.faq-icon-wrapper i');
+          if (icon) {
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+          }
+        });
+      })();
     </script>
   </body>
 </html>

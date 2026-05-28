@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Supporting Widows and the Elderly in Dessie",
-    "image": "assets/images/donation/Cause1.bmp",
+    "image": "assets/images/donation/Cause1.png",
     "description":
       "Support our mission to care for widows and elderly individuals in Dessie who are facing hardship and isolation. Through community fundraising events, awareness campaigns, and charitable initiatives, DMVFOR Dessie works to provide food, clothing, and essential support to seniors in need. Participate in special appeals, community drives, and seasonal programs that help us reach vulnerable members of our community. Stay informed about our latest initiatives and impact stories as we continue to expand our efforts to care for elderly individuals in Dessie. Your support and advocacy can help restore dignity and bring hope to those who need it most.",
     "about":
@@ -28,7 +28,7 @@
   {
     "id": 2,
     "title": "Standing with Cancer Patients in Dessie",
-    "image": "assets/images/donation/Cause2.bmp",
+    "image": "assets/images/donation/Cause2.png",
     "description":
       "Join DMVFOR Dessie in supporting cancer patients and their families during difficult times. Through fundraising campaigns, community awareness programs, and charitable initiatives, we aim to provide support and encouragement for individuals battling cancer in Dessie. Participate in our events and campaigns to help raise resources that support patients and promote awareness. Stay connected with our organization to learn about new initiatives, impact stories, and ways you can contribute. By standing together and advocating for those affected by cancer, we can create hope and strength within the Dessie community.",
     "about":
@@ -43,9 +43,9 @@
       "Help restore dignity and rebuild lives",
       "Share compassion with your community"
     ],
-    "moreImages": "assets/images/donation/Cause2.bmp",
-    "moreImages2": "assets/images/donation/Cause2.bmp",
-    "moreImages3": "assets/images/donation/Cause2.bmp",
+    "moreImages": "assets/images/donation/Cause2.png",
+    "moreImages2": "assets/images/donation/Cause2.png",
+    "moreImages3": "assets/images/donation/Cause2.png",
     "raised": 21500,
     "goal": 55000,
     "donationLink": "https://donate.stripe.com/6oU14o4yh43R1iH7Ed8Vi01"
@@ -54,7 +54,7 @@
   {
     "id": 3,
     "title": "Bringing Hope to Orphaned Children in Dessie",
-    "image": "assets/images/donation/Cause3.bmp",
+    "image": "assets/images/donation/Cause3.png",
     "description":
       "Help us support orphaned children in Dessie by participating in fundraising initiatives and community programs organized by DMVFOR Dessie. Through special campaigns, charitable drives, and awareness efforts, we work to provide resources and opportunities that improve the lives of vulnerable children. Stay informed about our latest activities, impact stories, and upcoming projects that focus on supporting children in need. By supporting our mission and spreading awareness, you can help create a brighter and more hopeful future for orphaned children in the Dessie community.",
     "about":
@@ -69,9 +69,9 @@
       "Help restore dignity and rebuild lives",
       "Share compassion with your community"
     ],
-    "moreImages": "assets/images/donation/Cause3.bmp",
-    "moreImages2": "assets/images/donation/Cause3.bmp",
-    "moreImages3": "assets/images/donation/Cause3.bmp",
+    "moreImages": "assets/images/donation/Cause3.png",
+    "moreImages2": "assets/images/donation/Cause3.png",
+    "moreImages3": "assets/images/donation/Cause3.png",
     "raised": 9500,
     "goal": 55000,
     "donationLink":"https://donate.stripe.com/bJeeVe6GpdEr5yX1fP8Vi02"
@@ -80,7 +80,7 @@
   {
     "id": 4,
     "title": "Empowering Orphans and Children with Special Needs in Dessie",
-    "image": "assets/images/donation/Cause4.bmp",
+    "image": "assets/images/donation/Cause4.png",
     "description":
       "Support DMVFOR Dessie in building a more inclusive community for children with special needs. Through fundraising events, community campaigns, and advocacy efforts, we work to provide assistance and opportunities for children with autism and other developmental conditions. Our vision includes establishing an Autism Support Center in Dessie to provide a safe and supportive environment for learning and development. Stay connected with our initiatives and help raise awareness so that every child in Dessie has the opportunity to grow, learn, and thrive.",
     "about":
@@ -95,9 +95,9 @@
       "Help restore dignity and rebuild lives",
       "Share compassion with your community"
     ],
-    "moreImages": "assets/images/donation/Cause4.bmp",
-    "moreImages2": "assets/images/donation/Cause4.bmp",
-    "moreImages3": "assets/images/donation/Cause4.bmp",
+    "moreImages": "assets/images/donation/Cause4.png",
+    "moreImages2": "assets/images/donation/Cause4.png",
+    "moreImages3": "assets/images/donation/Cause4.png",
     "raised": 15500,
     "goal": 55000,
     "donationLink":"https://donate.stripe.com/6oU6oId4N2ZNd1paQp8Vi03"
@@ -106,7 +106,7 @@
   {
     "id": 5,
     "title": "Supporting People Living with Blindness in Dessie",
-    "image": "assets/images/donation/Cause5.bmp",
+    "image": "assets/images/donation/Cause5.png",
     "description":
       "DMVFOR Dessie works to empower individuals living with blindness or visual impairment by promoting inclusion, awareness, and community support. Through fundraising initiatives and outreach programs, we aim to provide resources that help visually impaired individuals live with dignity and independence. Join our campaigns, follow our impact stories, and help spread awareness about the importance of accessibility and support for people with visual impairments in Dessie.",
     "about":
@@ -121,9 +121,9 @@
       "Help restore dignity and rebuild lives",
       "Share compassion with your community"
     ],
-    "moreImages": "assets/images/donation/Cause5.bmp",
-    "moreImages2": "assets/images/donation/Cause5.bmp",
-    "moreImages3": "assets/images/donation/Cause5.bmp",
+    "moreImages": "assets/images/donation/Cause5.png",
+    "moreImages2": "assets/images/donation/Cause5.png",
+    "moreImages3": "assets/images/donation/Cause5.png",
     "raised": 27500,
     "goal": 55000,
     "donationLink":"https://donate.stripe.com/fZuaEY0i18k7e5te2B8Vi04"
@@ -132,7 +132,7 @@
   {
     "id": 6,
     "title": "Providing School Supplies for Students in Dessie",
-    "image": "assets/images/donation/Cause6.bmp",
+    "image": "assets/images/donation/Cause6.png",
     "description":
       "Education is essential for building strong communities and brighter futures. DMVFOR Dessie organizes fundraising initiatives and community programs that help provide essential school supplies for students in Dessie. Through donation drives, seasonal campaigns, and awareness efforts, we work to ensure that children have the tools they need to succeed in school. Stay updated with our programs and see how your support can help empower students and strengthen education within our community.",
     "about":
@@ -149,7 +149,7 @@
     ],
     "moreImages": "assets/images/donation/Detail7.bmp",
     "moreImages2": "assets/images/donation/Detail8.bmp",
-    "moreImages3": "assets/images/donation/Cause6.bmp",
+    "moreImages3": "assets/images/donation/Cause6.png",
     "raised": 11500,
     "goal": 55000,
     "donationLink":"https://donate.stripe.com/14A14ofcVeIv5yX8Ih8Vi05"
@@ -158,7 +158,7 @@
   {
     "id": 7,
     "title": "Emergency Support for Displaced Families Near Dessie",
-    "image": "assets/images/donation/Cause7.bmp",
+    "image": "assets/images/donation/Cause7.png",
     "description":
       "DMVFOR Dessie provides humanitarian assistance to families who have been displaced by hardship and are living in difficult conditions. Through fundraising campaigns, community support programs, and emergency relief initiatives, we work to provide essential resources for families in crisis. Stay informed about our humanitarian efforts and learn how your support can help restore hope and stability for displaced families in and around Dessie.",
     "about":
@@ -175,7 +175,7 @@
     ],
     "moreImages": "assets/images/donation/Detail5.bmp",
     "moreImages2": "assets/images/donation/Detail6.bmp",
-    "moreImages3": "assets/images/donation/Cause7.bmp",
+    "moreImages3": "assets/images/donation/Cause7.png",
     "raised": 6500,
     "goal": 55000,
     "donationLink":"https://donate.stripe.com/6oU7sM5Cl8k75yX0bL8Vi06"
