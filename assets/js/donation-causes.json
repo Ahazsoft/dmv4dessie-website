@@ -19,7 +19,7 @@
     ],
     "moreImages": "assets/images/donation/Detail1.bmp",
     "moreImages2": "assets/images/donation/Detail2.bmp",
-    "moreImages3": "assets/images/donation/Detail3.bmp",
+    "moreImages3": "assets/images/donation/Detail3.jpg",
     "raised": 12500,
     "goal": 55000,
     "donationLink":"https://donate.stripe.com/5kQ6oI4yh7g39Pd8Ih8Vi00"
@@ -43,9 +43,9 @@
       "Help restore dignity and rebuild lives",
       "Share compassion with your community"
     ],
-    "moreImages": "assets/images/donation/Cause2.png",
-    "moreImages2": "assets/images/donation/Cause2.png",
-    "moreImages3": "assets/images/donation/Cause2.png",
+    "moreImages": "assets/images/donation/Detail9.jpg",
+    "moreImages2": "assets/images/donation/Detail8.jpg",
+    "moreImages3": "assets/images/donation/Detail10.jpg",
     "raised": 21500,
     "goal": 55000,
     "donationLink": "https://donate.stripe.com/6oU14o4yh43R1iH7Ed8Vi01"
@@ -69,8 +69,8 @@
       "Help restore dignity and rebuild lives",
       "Share compassion with your community"
     ],
-    "moreImages": "assets/images/donation/Cause3.png",
-    "moreImages2": "assets/images/donation/Cause3.png",
+    "moreImages": "assets/images/donation/Detail11.jpg",
+    "moreImages2": "assets/images/donation/Detail12.jpg",
     "moreImages3": "assets/images/donation/Cause3.png",
     "raised": 9500,
     "goal": 55000,
@@ -95,8 +95,8 @@
       "Help restore dignity and rebuild lives",
       "Share compassion with your community"
     ],
-    "moreImages": "assets/images/donation/Cause4.png",
-    "moreImages2": "assets/images/donation/Cause4.png",
+    "moreImages": "assets/images/donation/Detail13.jpg",
+    "moreImages2": "assets/images/donation/Detail19.BMP",
     "moreImages3": "assets/images/donation/Cause4.png",
     "raised": 15500,
     "goal": 55000,
@@ -121,9 +121,9 @@
       "Help restore dignity and rebuild lives",
       "Share compassion with your community"
     ],
-    "moreImages": "assets/images/donation/Cause5.png",
-    "moreImages2": "assets/images/donation/Cause5.png",
-    "moreImages3": "assets/images/donation/Cause5.png",
+    "moreImages": "assets/images/donation/Detail15.png",
+    "moreImages2": "assets/images/donation/Detail16.jpg",
+    "moreImages3": "assets/images/donation/Detail17.BMP",
     "raised": 27500,
     "goal": 55000,
     "donationLink":"https://donate.stripe.com/fZuaEY0i18k7e5te2B8Vi04"
@@ -149,7 +149,7 @@
     ],
     "moreImages": "assets/images/donation/Detail7.bmp",
     "moreImages2": "assets/images/donation/Detail8.bmp",
-    "moreImages3": "assets/images/donation/Cause6.png",
+    "moreImages3": "assets/images/donation/Detail20.jpg",
     "raised": 11500,
     "goal": 55000,
     "donationLink":"https://donate.stripe.com/14A14ofcVeIv5yX8Ih8Vi05"
