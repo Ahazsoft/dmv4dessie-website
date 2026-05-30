@@ -46,10 +46,10 @@ function injectFooter() {
         <div class="footer-container-top-left">
             <div class="footer-container-top-left-title">
                 <img src="assets/images/Logo.png" alt="DMV Logo" />
-                <h2>DMV For Dessie</h2>
+                <h2 style="font-family: Work Sans">DMV For Dessie</h2>
             </div>
             <div class="footer-container-top-left-description">
-                <p>A nonprofit organization committed to humanitarian aid and community recovery.</p>
+                <p style="font-family: Work Sans">A nonprofit organization committed to humanitarian aid and community recovery.</p>
             </div>
             <div class="footer-container-top-left-socials">
                 <div class="icon-box">
@@ -67,26 +67,26 @@ function injectFooter() {
             </div>
         </div>
         <div class="footer-container-top-middle">
-            <div class="footer-container-top-middle-title">Quick Links</div>
+            <div class="footer-container-top-middle-title" style="font-family: Work Sans">Quick Links</div>
             <div class="footer-container-top-middle-links">
-                <a href="/index.html">Home</a>
-                <a href="/about.html">About Us</a>
-                <a href="/donation.html">Donations</a>
-                <a href="/contact.html">Contact Us</a>
-                <!-- <a href="#">Team</a>-->
+                <a href="/index.html" style="font-family: Work Sans">Home</a>
+                <a href="/about.html" style="font-family: Work Sans">About Us</a>
+                <a href="/donation.html" style="font-family: Work Sans">Donations</a>
+                <a href="/contact.html" style="font-family: Work Sans">Contact Us</a>
+                <!-- <a href="#" style="font-family: Work Sans">Team</a>-->
             </div>
         </div>
         <div class="footer-container-top-right">
-            <div class="footer-container-top-right-title">Contacts</div>
+            <div class="footer-container-top-right-title" style="font-family: Work Sans">Contacts</div>
             <div class="footer-container-top-right-addresses">
-                <p>4324 Georgia an Nw Washington DC 20011</p>
-                <p>contact_us@dmvfordessie.org</p>
-                <p>+1 (571) 622-9455</p>
+                <p style="font-family: Work Sans">4324 Georgia an Nw Washington DC 20011</p>
+                <p style="font-family: Work Sans">contact_us@dmvfordessie.org</p>
+                <p style="font-family: Work Sans">+1 (571) 622-9455</p>
             </div>
         </div>
     </div>
     <div class="footer-container-copyright">
-        <p>
+        <p style="font-family: Work Sans">
             Copyright &copy; Dmv For Dessie | Powered By <a href="https://www.ahaz.io/" style="color: #57B3E5">Ahaz Solutions</a>          
         </p>
     </div>
