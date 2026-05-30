@@ -2,7 +2,7 @@ name: Deploy to cPanel via FTP
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "maintenance" ]
 
 jobs:
   deploy:
@@ -17,11 +17,30 @@ jobs:
           BUILD=$(date +%s)
           find . -name "*.html" -exec sed -i "s/__BUILD__/$BUILD/g" {} +
 
-      - name: Deploy to cPanel via FTP
+      # 🚀 Deploy to MAIN domain (dmvfor-dessie.org) when pushing to main
+      - name: Deploy to dmvfor-dessie.org
+        if: github.ref_name == 'main'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          secure: true
+          passive: true
+          local-dir: ./
+          server-dir: ./public_html/   #  adjust this to your main domain's document root
+
+      # 🧪 Deploy to DEMO subdomain when pushing to maintenance
+      - name: Deploy to demo.dmvfor-dessie.org
+        if: github.ref_name == 'maintenance'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          secure: true
+          passive: true
           local-dir: ./
           server-dir: ./demo.dmvfor-dessie.org/
