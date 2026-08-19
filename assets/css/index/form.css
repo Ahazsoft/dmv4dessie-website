@@ -134,7 +134,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  flex: 1; /* Makes both buttons share the full width equally */
+  flex: 1; 
   height: 54px;
   border: 1px solid #e5e7eb;
   background: #ffffff;
@@ -156,9 +156,6 @@
   transform: translateY(-2px);
 }
 
-/* ========================================================
-   RIGHT FORM SECTION (Redesigned Interactive Look)
-   ======================================================== */
 .form-section-right {
   flex: 1;
   background: transparent;
@@ -166,6 +163,7 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  width: 100%;
 }
 
 .form-section-right-inner {
@@ -265,14 +263,11 @@
   box-shadow: 0 14px 25px rgba(122, 199, 23, 0.35);
 }
 
-/* ========================================================
-   RESPONSIVE DESIGN (<= 768px)
-   ======================================================== */
 @media (max-width: 768px) {
   .form-section {
     flex-direction: column;
     gap: 40px;
-    padding: 0 16px;
+    padding: 0 20px; /* Added comfortable left and right margins */
     margin: 40px auto;
   }
 
@@ -285,14 +280,21 @@
   }
 
   .buttons {
-    flex-direction: row; /* Keeps them side by side on smaller screens, change to column if you want them stacked vertically on mobile */
+    flex-direction: row; 
     gap: 10px;
     width: 100%;
   }
 
+  .form-section-right {
+    width: 100%;
+  }
+
   .form-section-right-inner {
-    padding: 24px;
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
     border-radius: 18px;
+    box-sizing: border-box;
   }
 
   .form-section-right-inner h2 {

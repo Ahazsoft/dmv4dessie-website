@@ -41,11 +41,9 @@
 
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     
-    <!-- Simple inline styles for the new FAQ accordion (attractive & modern) -->
+   
     <style>
-      /* ========================================================
-   FAQ SECTION CONTAINER (Interactive & Modern Redesign)
-   ======================================================== */
+  
 .faq-attractive-section {
   max-width: 750px;
   margin: 3rem auto 4rem auto;
@@ -205,9 +203,6 @@
   background: #2a5a3a;
 }
 
-/* ========================================================
-   SMOOTH ACCORDION PANEL ANIMATION
-   ======================================================== */
 .faq-answer-panel {
   max-height: 0;
   overflow: hidden;
@@ -243,13 +238,11 @@
   }
 }
 
-/* ========================================================
-   RESPONSIVE MEDIA QUERIES
-   ======================================================== */
 @media (max-width: 680px) {
   .faq-attractive-section {
     padding: 0 1rem;
     margin: 2rem auto;
+    
   }
   .faq-items-list {
     padding: 1rem 1.2rem 1.5rem 1.2rem;
@@ -542,15 +535,9 @@
           </div>
         </div>
       </section>
-      <!-- form section ends -->
-
-      <!-- event section begin (commented) -->
-      <!-- <section class="event-section" data-aos="fade-up"> ... </section> -->
-      <!-- event section ends -->
+      
     </div>
-    <!-- wrapper ends -->
-
-    <!-- ========== NEW ATTRACTIVE FAQ SECTION (Dropdown / Accordion) ========== -->
+  
     <section class="faq-attractive-section">
       <div class="faq-attractive-container">
         <div class="faq-header-custom">
@@ -604,7 +591,7 @@
         </div>
       </div>
     </section>
-    <!-- ========== END FAQ SECTION ========== -->
+    
 
     <!-- footer beign -->
     <footer class="footer-container"></footer>
@@ -621,7 +608,6 @@
       });
     </script>
 
-    <!-- Simple vanilla JS for dropdown accordion (no external dependencies) -->
     <script>
       (function() {
         const faqButtons = document.querySelectorAll('.faq-question-btn');
@@ -633,8 +619,7 @@
           const isExpanded = button.getAttribute('aria-expanded') === 'true';
           
           if (!isExpanded) {
-            // Close any other open FAQs? For better UX we keep independent (can have multiple open)
-            // but we also allow independent. (attractive and usable)
+        
             answerPanel.classList.add('open');
             button.setAttribute('aria-expanded', 'true');
             if (iconSpan) {
@@ -666,8 +651,6 @@
           });
         });
         
-        // initial state: all panels closed, plus icons, aria-expanded false
-        // ensure any existing open class is removed
         document.querySelectorAll('.faq-answer-panel').forEach(panel => {
           panel.classList.remove('open');
         });

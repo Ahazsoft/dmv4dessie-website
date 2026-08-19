@@ -4,9 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* ========================================================
-   SERVICES SECTION STYLES
-   ======================================================== */
 
 .services-section {
   display: flex;
@@ -16,6 +13,10 @@
   padding: 60px 40px;
   gap: 40px;
   margin-top: 0;
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .services-section-single-service {
@@ -26,7 +27,6 @@
   transition: 0.3s ease;
 }
 
-/* Vertical divider */
 .services-section-single-service:not(:last-child)::after {
   content: "";
   position: absolute;
@@ -42,7 +42,7 @@
   width: 70px;
   height: 70px;
   margin-bottom: 20px;
-  color: #6b6b6b;
+  object-fit: contain;
 }
 
 .services-section-single-service-title {
@@ -50,6 +50,7 @@
   font-weight: 500;
   margin-bottom: 15px;
   color: #2f3e46;
+  font-family: "Outfit", sans-serif;
 }
 
 .services-section-single-service-readmore a {
@@ -58,6 +59,7 @@
   color: #333;
   letter-spacing: 1px;
   transition: 0.3s ease;
+  font-family: "Outfit", sans-serif;
 }
 
 .services-section-single-service-readmore a:hover {
@@ -65,44 +67,44 @@
 }
 
 
-/* ========================================================
-   ABOUT SECTION STYLES
-   ======================================================== */
-
 .about-section {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 30px;
-  margin: 40px 20px;
-  margin-bottom: 30px;
+  gap: 40px;
+  margin: 60px auto;
+  max-width: 1280px;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .about-section-images {
-  flex-grow: 1;
+  flex: 1;
   position: relative;
   width: 100%;
-  padding: 10px;
-  padding-right: 0;
+  height: 420px;
+  min-height: 350px;
+  box-sizing: border-box;
 }
 
 .about-section-images .bg-shape {
   position: absolute;
-  width: 100%;
-  height: 210px;
-  bottom: -70px;
-  right: 0;
+  width: 75%;
+  height: 60%;
+  bottom: 5%;
+  right: 10%;
   background-color: #f8991780;
   z-index: 1;
+  border-radius: 12px;
 }
 
 .about-section-images .large-back {
   position: absolute;
   border-radius: 10px;
   width: 60%;
-  height: 210px;
-  top: -180px;
-  left: 50px;
+  height: 55%;
+  top: 0;
+  left: 10%;
   background-color: #7ac717;
   opacity: 0.8;
   z-index: 2;
@@ -112,10 +114,9 @@
   position: absolute;
   border-radius: 8px;
   width: 60%;
-  height: 210px;
-  top: -160px;
-  left: 70px;
-  background-color: #7ac791;
+  height: 55%;
+  top: 4%;
+  left: 15%;
   z-index: 3;
   cursor: pointer;
   object-fit: cover;
@@ -125,10 +126,10 @@
   position: absolute;
   border-radius: 10px;
   border: none;
-  width: 50%;
-  height: 170px;
-  bottom: -120px;
-  left: 190px;
+  width: 55%;
+  height: 48%;
+  bottom: 0;
+  right: 10%;
   background-color: #f8991780;
   opacity: 0.8;
   z-index: 4;
@@ -138,36 +139,37 @@
   position: absolute;
   border-radius: 8px;
   border: none;
-  width: 50%;
-  height: 170px;
-  bottom: -140px;
-  left: 210px;
+  width: 55%;
+  height: 48%;
+  bottom: -4%;
+  right: 12%;
   z-index: 5;
   cursor: pointer;
   object-fit: cover;
 }
 
 .about-section-description {
+  flex: 1;
   max-width: 650px;
-  padding: 30px 80px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .about-section-description-top p {
   color: #7ac717;
   font-weight: 600;
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   font-size: 20px;
   line-height: 26px;
-  
+  margin: 0 0 10px 0;
 }
 
 .about-section-description-top h2 {
-  font-family: "Outfit";
-  font-size: 36px;
-  line-height: 46px;
+  font-family: "Outfit", sans-serif;
+  font-size: 38px;
+  line-height: 48px;
   margin: 0;
   color: #1d1d1d;
 }
@@ -181,10 +183,10 @@
 }
 
 .about-section-description-text p {
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 22px;
+  line-height: 24px;
   color: #6f7775;
   margin: 0;
 }
@@ -197,23 +199,26 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  margin-bottom: 12px;
 }
 
 .about-section-description-bullet .bullet img {
   width: 24px;
   height: 24px;
+  object-fit: contain;
 }
 
 .about-section-description-bullet .bullet p {
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   font-weight: bold;
   font-size: 16px;
-  line-height: 26px;
+  color: #1d1d1d;
+  margin: 0;
 }
 
 .about-section-description-bottom {
-  padding: 30px 0;
+  margin-top: 25px;
 }
 
 .about-section-description-bottom a {
@@ -223,14 +228,14 @@
   background-color: #7ac717;
   color: #ffffff;
   border: none;
-  padding: 18px 32px;
+  padding: 16px 30px;
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
 }
 
 .about-section-description-bottom a:hover {
@@ -253,14 +258,10 @@
 }
 
 
-/* ========================================================
-   RESPONSIVE MEDIA QUERIES FOR SMALL SCREENS (<= 600px)
-   ======================================================== */
-
-@media (max-width: 600px) {
-  /* Services Section Mobile Layout */
+@media (max-width: 850px) {
+  /* Services Section Tablet/Mobile Layout */
   .services-section {
-    margin-top: 130px;
+    margin-top: 20px;
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 16px !important;
@@ -287,63 +288,83 @@
     display: none !important;
   }
 
-  /* About Section Mobile Layout & Diagonal Overlapping Images */
+  /* About Section Stacked & Centered Layout */
   .about-section {
-    flex-direction: column;
-    margin-top: 0;
+    display: flex;
+    flex-direction: column !important;
+    margin-top: 30px;
     gap: 40px;
+    padding: 0 20px;
   }
   
+  .about-section-description {
+    order: 1;
+    max-width: 100%;
+    padding: 0;
+    text-align: center; /* Center aligns main text */
+    align-items: center; /* Center aligns flex children like bullets and line */
+  }
+
+  .about-section-description-text .line {
+    margin-left: auto;
+    margin-right: auto; /* Centers the green divider line */
+  }
+  
+  .about-section-description-top h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  /* Centers the bullet list items nicely */
+  .about-section-description-bullet .bullet {
+    justify-content: center;
+    text-align: left;
+  }
+
   .about-section-images {
+    order: 2;
     height: 380px;
     width: 100%;
+    max-width: 400px;
     padding: 0;
+    margin: 10px auto 0 auto;
+    position: relative;
   }
   
   .about-section-images .bg-shape {
     width: 85%;
-    height: 240px;
-    bottom: 40px;
-    right: 10%;
+    height: 180px;
+    top: 50px;
+    left: 15px;
   }
   
   .about-section-images .large-back {
-    width: 68%;
-    height: 195px;
+    width: 65%;
+    height: 150px;
     top: 10px;
-    left: 12%;
+    left: 20px;
   }
   
   .about-section-images .large-front img {
-    width: 68%;
-    height: 195px;
-    top: 18px;
-    left: 16%;
+    width: 65%;
+    height: 150px;
+    top: 15px;
+    left: 26px;
     object-fit: cover;
   }
 
   .about-section-images .small-back {
-    width: 62%;
-    height: 165px;
-    bottom: 25px;
-    left: 32%;
+    width: 65%;
+    height: 150px;
+    top: 150px;
+    right: 20px;
   }
   
   .about-section-images .small-front img {
-    width: 62%;
-    height: 165px;
-    bottom: 30px;
-    left: 35%;
+    width: 65%;
+    height: 150px;
+    top: 155px;
+    right: 26px;
     object-fit: cover;
-  }
-
-  .about-section-description {
-    max-width: 100%;
-    padding: 15px 20px;
-  }
-  
-  .about-section-description-top h2 {
-    font-size: 26px;
-    line-height: 34px;
   }
 }
