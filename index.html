@@ -43,177 +43,253 @@
     
     <!-- Simple inline styles for the new FAQ accordion (attractive & modern) -->
     <style>
-      /* FAQ section styling — clean, cohesive, matches DMV For Dessie branding */
-      .faq-attractive-section {
-        max-width: 700px;
-        margin: 3rem auto 4rem auto;
-        padding: 0 1.5rem;
-        font-family: 'Outfit', sans-serif;
-      }
+      /* ========================================================
+   FAQ SECTION CONTAINER (Interactive & Modern Redesign)
+   ======================================================== */
+.faq-attractive-section {
+  max-width: 750px;
+  margin: 3rem auto 4rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Outfit', sans-serif;
+}
 
-      .faq-attractive-container {
-        background: #ffffff;
-        border-radius: 2rem;
-        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
-        overflow: hidden;
-        transition: all 0.2s;
-      }
+.faq-attractive-container {
+  background: #ffffff;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  border: 1px solid #edf2ef;
+  transition: all 0.3s ease;
+}
 
-      .faq-header-custom {
-        background: linear-gradient(115deg, #7ac717 0%, #2a5a3a 100%);
-        padding: 2rem 2rem 1.6rem;
-        text-align: center;
-      }
+.faq-header-custom {
+  background: linear-gradient(135deg, #7ac717 0%, #2a5a3a 100%);
+  padding: 2.2rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-      .faq-header-custom h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: -0.3px;
-        color: white;
-        margin: 0 0 0.5rem 0;
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-      }
+/* Subtle background accent glow */
+.faq-header-custom::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
 
-      .faq-header-custom h2 i {
-        font-size: 1.8rem;
-        opacity: 0.9;
-      }
+.faq-header-custom h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
 
-      .faq-subhead {
-        color: #e0f0da;
-        font-size: 1rem;
-        font-weight: 500;
-        margin-top: 0.3rem;
-      }
+.faq-header-custom h2 i {
+  font-size: 1.8rem;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
 
-      .faq-items-list {
-        padding: 1.2rem 1.8rem 2rem 1.8rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
+.faq-header-custom:hover h2 i {
+  transform: scale(1.1) rotate(5deg);
+}
 
-      /* individual faq card */
-      .faq-card {
-        background: #fefefe;
-        border-radius: 1.25rem;
-        border: 1px solid #eef2f0;
-        transition: all 0.2s ease;
-        overflow: hidden;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
-      }
+.faq-subhead {
+  color: #e2f4da;
+  font-size: 1.02rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
 
-      .faq-card:hover {
-        border-color: #d4e0da;
-        box-shadow: 0 6px 14px -8px rgba(0, 0, 0, 0.1);
-      }
+.faq-items-list {
+  padding: 1.5rem 2rem 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
 
-      .faq-question-btn {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        background: white;
-        border: none;
-        padding: 1.2rem 1.5rem;
-        font-family: inherit;
-        font-size: 1.05rem;
-        font-weight: 600;
-        text-align: left;
-        color: #1a2e28;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
+/* ========================================================
+   INTERACTIVE FAQ CARD STYLING
+   ======================================================== */
+.faq-card {
+  background: #fcfcfc;
+  border-radius: 1.25rem;
+  border: 1.5px solid #edf2f0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+}
 
-      .faq-question-btn h3 {
-        margin: 0;
-        font-size: 1.05rem;
-        font-weight: 700;          /* Raleway looks better with 700 */
-        font-family: 'Raleway', sans-serif;
-        letter-spacing: -0.2px;
-        flex: 1;
-        padding-right: 1rem;
-        color: #1d3b32;
-      }
-      .faq-icon-wrapper {
-        font-size: 1.3rem;
-        color: #f9a65a;
-        transition: transform 0.2s;
-        min-width: 28px;
-        text-align: center;
-      }
+/* Left accent indicator bar when active */
+.faq-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #7ac717;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-      .faq-answer-panel {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        background: #fefef9;
-        border-top: 1px solid transparent;
-      }
+.faq-card.active::before {
+  opacity: 1;
+}
 
-      .faq-answer-panel.open {
-        max-height: 420px;   /* enough space for content */
-        border-top-color: #e2ecd9;
-      }
+.faq-card:hover {
+  border-color: #7ac717;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px -8px rgba(122, 199, 23, 0.15);
+  background: #ffffff;
+}
 
-      .faq-answer-panel p {
-        margin: 0;
-        padding: 1.2rem 1.8rem 1.5rem 1.8rem;
-        font-size: 0.98rem;
-        line-height: 1.55;
-        color: #2e423c;
-        background: #fefef9;
-        font-weight: 450;
-      }
+.faq-question-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 1.25rem 1.5rem;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
 
-      /* responsive tweaks */
-      @media (max-width: 680px) {
-        .faq-attractive-section {
-          padding: 0 1rem;
-          margin: 2rem auto;
-        }
-        .faq-items-list {
-          padding: 1rem 1.2rem 1.5rem 1.2rem;
-        }
-        .faq-question-btn {
-          padding: 1rem 1.2rem;
-        }
-        .faq-question-btn h3 {
-          font-size: 0.95rem;
-        }
-        .faq-answer-panel p {
-          padding: 1rem 1.4rem 1.2rem 1.4rem;
-          font-size: 0.92rem;
-        }
-        .faq-header-custom {
-          padding: 1.5rem 1rem;
-        }
-        .faq-header-custom h2 {
-          font-size: 1.6rem;
-        }
-      }
+.faq-question-btn h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: -0.2px;
+  flex: 1;
+  padding-right: 1rem;
+  color: #1a2e28;
+  transition: color 0.2s ease;
+}
 
-      /* small fade-in for items */
-      .faq-card {
-        animation: gentleSlide 0.4s ease backwards;
-      }
-      .faq-card:nth-child(1) { animation-delay: 0.05s; }
-      .faq-card:nth-child(2) { animation-delay: 0.1s; }
-      .faq-card:nth-child(3) { animation-delay: 0.15s; }
-      .faq-card:nth-child(4) { animation-delay: 0.2s; }
+.faq-card:hover .faq-question-btn h3 {
+  color: #7ac717;
+}
 
-      @keyframes gentleSlide {
-        from {
-          opacity: 0;
-          transform: translateY(8px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+.faq-icon-wrapper {
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: #7ac717;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 10px rgba(122, 199, 23, 0.2);
+}
+
+/* Interactive rotation and background change for the toggle icon */
+.faq-card.active .faq-icon-wrapper {
+  transform: rotate(45deg);
+  background: #2a5a3a;
+}
+
+/* ========================================================
+   SMOOTH ACCORDION PANEL ANIMATION
+   ======================================================== */
+.faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  background: #ffffff;
+  padding: 0 1.8rem;
+}
+
+.faq-answer-panel.open {
+  max-height: 350px; 
+  padding-bottom: 1.5rem;
+  border-top: 1px solid #f0f4f1;
+}
+
+.faq-answer-panel p {
+  margin: 0;
+  padding-top: 1rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #4a5d55;
+  font-weight: 400;
+  animation: fadeInText 0.4s ease;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================================
+   RESPONSIVE MEDIA QUERIES
+   ======================================================== */
+@media (max-width: 680px) {
+  .faq-attractive-section {
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+  .faq-items-list {
+    padding: 1rem 1.2rem 1.5rem 1.2rem;
+  }
+  .faq-question-btn {
+    padding: 1rem 1.2rem;
+  }
+  .faq-question-btn h3 {
+    font-size: 0.95rem;
+  }
+  .faq-answer-panel p {
+    font-size: 0.92rem;
+  }
+  .faq-header-custom {
+    padding: 1.6rem 1rem;
+  }
+  .faq-header-custom h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Staggered load animation */
+.faq-card {
+  animation: gentleSlide 0.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+.faq-card:nth-child(1) { animation-delay: 0.05s; }
+.faq-card:nth-child(2) { animation-delay: 0.1s; }
+.faq-card:nth-child(3) { animation-delay: 0.15s; }
+.faq-card:nth-child(4) { animation-delay: 0.2s; }
+
+@keyframes gentleSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     </style>
   </head>
   <body>
@@ -261,7 +337,7 @@
             data-aos-delay="500"
           >
             
-          
+           
            <a href="contact.html" 
             class="thm-btn" 
           style="display:inline-block; 
@@ -303,49 +379,43 @@
         <!-- hero section images ends  -->
       </section>
       <!-- hero section ends -->
+<section class="services-section">
+  <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="100">
+    <img src="assets/images/icon/medicine.png" alt="" />
+    <div class="services-section-single-service-title" style="font-family: Work Sans">Medicine Aid</div>
+    <div class="service-btn services-section-single-service-readmore">
+      <a href="about.html" style="font-family: Work Sans">READ MORE ↗</a>
+    </div>
+  </div>
 
-      <!-- services-section begin-->
-      <section class="services-section">
-        <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="100">
-          <img src="assets/images/icon/medicine.png" alt="" />
-          <div class="services-section-single-service-title" style="font-family: Work Sans">Medicine Aid</div>
-          <div class="services-section-single-service-readmore">
-            <a href="about.html" style="font-family: Work Sans">READ MORE ↗</a>
-          </div>
-        </div>
+  <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="300">
+    <img src="assets/images/icon/oil-massage.png" alt="" />
+    <div class="services-section-single-service-title" style="font-family: Work Sans">
+      Clean Water Access
+    </div>
+    <div class="service-btn services-section-single-service-readmore">
+      <a href="about.html" style="font-family: Work Sans">READ MORE ↗</a>
+    </div>
+  </div>
 
-        <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="300">
-          <img src="assets/images/icon/oil-massage.png" alt="" />
+  <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="500">
+    <img src="assets/images/icon/day-care.png" alt="" />
+    <div class="services-section-single-service-title" style="font-family: Work Sans">Food Relief</div>
+    <div class="service-btn services-section-single-service-readmore">
+      <a href="about.html" style="font-family: Work Sans">READ MORE ↗</a>
+    </div>
+  </div>
 
-          <div class="services-section-single-service-title" style="font-family: Work Sans">
-            Clean Water Access
-          </div>
-          <div class="services-section-single-service-readmore">
-            <a href="about.html" style="font-family: Work Sans">READ MORE ↗</a>
-          </div>
-        </div>
-
-        <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="500">
-          <img src="assets/images/icon/day-care.png" alt="" />
-
-          <div class="services-section-single-service-title" style="font-family: Work Sans">Food Relief</div>
-          <div class="services-section-single-service-readmore">
-            <a href="about.html" style="font-family: Work Sans">READ MORE ↗</a>
-          </div>
-        </div>
-
-        <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="700">
-          <img src="assets/images/icon/food-bar.png" alt="" />
-
-          <div class="services-section-single-service-title" style="font-family: Work Sans">
-            Humanitarian Support
-          </div>
-          <div class="services-section-single-service-readmore">
-            <a href="about.html" style="font-family: Work Sans">READ MORE ↗</a>
-          </div>
-        </div>
-      </section>
-      <!-- service section ends -->
+  <div class="services-section-single-service" data-aos="fade-left" data-aos-delay="700">
+    <img src="assets/images/icon/food-bar.png" alt="" />
+    <div class="services-section-single-service-title" style="font-family: Work Sans">
+      Humanitarian Support
+    </div>
+    <div class="service-btn services-section-single-service-readmore">
+      <a href="about.html" style="font-family: Work Sans">READ MORE ↗</a>
+    </div>
+  </div>
+</section>
 
       <!-- about section begin -->
       <section class="about-section">

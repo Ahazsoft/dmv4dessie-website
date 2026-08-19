@@ -19,14 +19,29 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  border-bottom: 2px solid black;
+  border-bottom: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 97;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+body {
+  padding-top: 67px; 
 }
 
 .header-logo-title-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 12px;
   flex-grow: 5;
+  cursor: pointer;
 }
 
 .header-logo-title-container img {
@@ -36,10 +51,10 @@ body {
 
 .header-logo-title-container h2 {
   font-family: "Shippori Mincho";
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 800;
   line-height: 100%;
-  /* margin-left: 30px; */
+  margin: 0;
 }
 
 .header-nav-container {
@@ -49,6 +64,8 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 50px;
+  margin: 0;
+  padding: 0;
 }
 
 .header-nav-container li {
@@ -69,17 +86,15 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px; /* space under text */
+  bottom: -4px;
   width: 100%;
   height: 2px;
   background-color: #7ac717;
-
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
 }
 
-/* hover animation */
 .header-nav-container li a:hover::after {
   transform: scaleX(1);
 }
@@ -111,23 +126,29 @@ body {
   margin: 10px 0px;
   margin-right: 50px;
   border: none;
+  box-shadow: 0 4px 10px rgba(122, 199, 23, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .header-container .btn:hover {
   background-color: #5aa317;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(90, 163, 23, 0.4);
 }
 
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 6px;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
 }
 
 .hamburger span {
-  width: 28px;
-  height: 3px;
+  width: 24px;
+  height: 2.5px;
   background: black;
   border-radius: 2px;
 }
@@ -159,8 +180,8 @@ body {
   padding: 0 5px;
 }
 
-@media (max-width: 600px) {
-  .header-nav-container,
+@media (max-width: 768px) {
+  .header-button,
   .header-donate-button {
     display: none;
   }
@@ -171,7 +192,25 @@ body {
   }
 
   .header-container {
-    padding: 10px 20px;
+    padding: 8px 15px;
+  }
+
+  body {
+    padding-top: 55px;
+  }
+
+  .header-logo-title-container img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-logo-title-container h2 {
+    font-size: 17px;
+  }
+
+  .hamburger span {
+    width: 21px;
+    height: 2.2px;
   }
 
   /* DRAWER STYLE */
@@ -203,7 +242,7 @@ body {
   }
 
   .close-btn {
-    display: inline;
+    display: inline-block;
     font-size: 28px;
     background: none;
     border: none;

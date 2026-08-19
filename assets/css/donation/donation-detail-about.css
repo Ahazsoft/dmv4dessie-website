@@ -3,35 +3,67 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 20px 45px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .donation-detail-about-section h2 {
   margin: 5px 0;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: 35px;
   color: #7ac70c;
   font-weight: 700;
 }
 
 .donation-detail-about-section p {
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   color: #989898;
   font-weight: 500;
+  line-height: 1.6;
 }
 
-
 .donation-detail-about-section .image-containers {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* justify-content: space-evenly; */
-    /* align-items: center; */
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .image-containers img {
-    width: 48%;
-    aspect-ratio: 7/4;
-    object-fit: strech;
+  width: 48%;
+  aspect-ratio: 7/4;
+  object-fit: cover; /* Fixed from 'strech' to prevent image distortion */
+  border-radius: 8px;
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN FOR SMALL SCREENS
+   ======================================================== */
+@media (max-width: 768px) {
+  .donation-detail-about-section {
+    padding: 15px 20px; /* Reduce side padding for mobile screens */
+  }
+
+  .donation-detail-about-section h2 {
+    font-size: 26px; /* Scale down heading size */
+  }
+
+  .donation-detail-about-section p {
+    font-size: 15px; /* Scale down paragraph text for readability */
+  }
+
+  .donation-detail-about-section .image-containers {
+    flex-direction: column; /* Stack images vertically on mobile */
+    gap: 15px;
+  }
+
+  .image-containers img {
+    width: 100%; /* Make images span full width of the container */
+    aspect-ratio: 16/9; /* Adjust aspect ratio nicely for mobile viewing */
+  }
 }

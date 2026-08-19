@@ -87,14 +87,12 @@
   width: 100%;
   max-width: 50%;
   padding: 10px 0;
-  /* padding-right: 0; */
 }
 
 .hero-section-images .bg-shape {
   position: absolute;
   width: 90%;
   aspect-ratio: 2.5;
-  /* height: 213px; */
   bottom: -12rem;
   right: -1rem;
   background-color: #f8991780;
@@ -108,7 +106,6 @@
   border: none;
   width: 50%;
   aspect-ratio: 1.5;
-  /* height: 349px; */
   bottom: -8rem;
   left: 10rem;
   background-color: #7ac717;
@@ -120,8 +117,6 @@
   position: absolute;
   border-radius: 8px;
   border: none;
-  /* width: 326px;
-  height: 349px; */
   width: 50%;
   aspect-ratio: 1.5;
   bottom: -9.5rem;
@@ -129,6 +124,7 @@
   background-color: #7ac791;
   z-index: 3;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .hero-section-images .small-back {
@@ -137,12 +133,9 @@
   border: none;
   width: 40%;
   aspect-ratio: 1.5;
-  /* width: 194px;
-  height: 144px; */
   bottom: -15.5rem;
   left: 24rem;
   background-color: #f8991780;
-  /* opacity: 1; */
   z-index: 4;
 }
 
@@ -154,21 +147,139 @@
   aspect-ratio: 1.5;
   bottom: -17rem;
   left: 25.5rem;
-  /* width: 194px;
-  height: 144px;
-  bottom: -210px;
-  left: 330px; */
   z-index: 1111;
   cursor: pointer;
+  object-fit: cover;
 }
+
+/* ========================================================
+   CARD GRID LAYOUT (DESKTOP DEFAULT: 4 COLUMNS)
+   ======================================================== */
+
+.services-section {
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #fdfefe 0%, #f4f8f2 100%);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(122, 199, 23, 0.15);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(122, 199, 23, 0.15);
+  border-color: #7ac717;
+  background: #ffffff;
+}
+
+/* Floating Icon Wrapper with Soft Background */
+.service-icon-wrapper {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(122, 199, 23, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.35s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+  background: #7ac717;
+  transform: scale(1.08);
+}
+
+.service-card img.service-icon,
+.service-card .service-icon-wrapper img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: none;
+  transition: filter 0.35s ease;
+}
+
+.service-card:hover .service-icon-wrapper img {
+  filter: brightness(0) invert(1);
+}
+
+/* Service Card Title */
+.service-card h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: #7ac717;
+}
+
+/* Service Card Description */
+.service-card p {
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #777777;
+  margin-bottom: 20px;
+}
+
+/* Transparent button style */
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none !important;
+  background-color: transparent !important;
+  color: #333333 !important;
+  padding: 0;
+  border-radius: 0;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: none !important;
+  transition: color 0.3s ease;
+  margin-top: auto;
+}
+
+.service-btn:hover {
+  background-color: transparent !important;
+  color: #7ac717 !important;
+  box-shadow: none !important;
+  transform: none;
+}
+
+/* ========================================================
+   RESPONSIVE MEDIA QUERIES (1 BOX PER ROW, CENTERED, WITH MOBILE SHADOW)
+   ======================================================== */
+
 @media (max-width: 1281px) {
   .hero-section-images .bg-shape {
     bottom: -9rem;
   }
-
   .hero-section-images .large-back {
     bottom: -5rem;
-
     left: 8rem;
   }
   .hero-section-images .large-front img {
@@ -185,66 +296,192 @@
   }
 }
 
-/* mobile screen  < 600px width */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+  .hero-section-descriptions {
+    max-width: 100%;
+    margin: 40px 20px 0 20px;
+  }
+  .hero-section-images {
+    max-width: 100%;
+    height: 350px;
+    margin-top: 60px;
+  }
+  .hero-section-images .bg-shape {
+    width: 80%;
+    bottom: -5rem;
+    right: 10%;
+  }
+  .hero-section-images .large-back {
+    width: 45%;
+    left: 15%;
+    bottom: -3rem;
+  }
+  .hero-section-images .large-front img {
+    width: 45%;
+    left: 18%;
+    bottom: -4rem;
+  }
+  .hero-section-images .small-back {
+    width: 35%;
+    left: 52%;
+    bottom: -8rem;
+  }
+  .hero-section-images .small-front img {
+    width: 35%;
+    left: 55%;
+    bottom: -9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 40px 20px;
+  }
+
+  /* Force 1 box per row, centered layout */
+  .services-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .service-card {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(122, 199, 23, 0.12) !important;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-section {
     width: 100%;
     flex-direction: column;
-    gap: 240px;
-    z-index: -5;
+    gap: 30px;
+    padding-bottom: 40px;
+    z-index: 1;
+    align-items: center;
+    text-align: center;
   }
+  
   .hero-section-descriptions {
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 0;
-    padding: 0 20px;
     margin-right: 0;
+    padding: 0 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-section-descriptions-top {
+    justify-content: center;
+    width: 100%;
   }
 
   .hero-section-descriptions-top p {
-    font-size: 18px;
+    width: auto;
+    font-size: 16px;
+    height: auto;
+    margin-left: 15px;
+    margin-right: 15px;
   }
+  
   .hero-section-descriptions-middle h2 {
-    font-size: 35px;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .hero-section-descriptions-text p {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .hero-section-descriptions-bottom {
+    justify-content: center;
+    width: 100%;
     margin-top: 10px;
   }
 
   .hero-section-images {
-    margin-top: -50px;
+    margin-top: 20px;
     width: 100%;
+    height: 280px;
+    position: relative;
+    padding: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-section-images .bg-shape {
-    width: 100%;
-    height: 160px;
+    width: 85%;
+    height: 140px;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .hero-section-images .large-back {
-    width: 226px;
-    height: 259px;
-    left: 65px;
-    bottom: -130px;
+    width: 55%;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
+    left: 10%;
+    bottom: 40px;
   }
+  
   .hero-section-images .large-front img {
-    width: 226px;
-    height: 259px;
-    left: 80px;
-    bottom: -145px;
+    width: 55%;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
+    left: 13%;
+    bottom: 25px;
   }
 
   .hero-section-images .small-back {
-    width: 150px;
-    height: 135px;
-    left: 195px;
-    bottom: -190px;
+    width: 40%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    left: 50%;
+    bottom: 0px;
   }
+  
   .hero-section-images .small-front img {
-    width: 150px;
-    height: 125px;
-    left: 210px;
-    bottom: -200px;
+    width: 40%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    left: 53%;
+    bottom: -15px;
+  }
+
+  .services-section {
+    padding: 30px 15px;
+  }
+
+  .services-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    max-width: 100% !important;
+  }
+
+  .service-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1), 0 3px 10px rgba(122, 199, 23, 0.12) !important;
   }
 }

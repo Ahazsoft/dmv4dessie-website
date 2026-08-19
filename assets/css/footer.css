@@ -1,43 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 .footer-container {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
-  background-color: #294208;
-  color: white;
+  background: linear-gradient(135deg, #1b3005 0%, #294208 50%, #172904 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative top accent border */
+.footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7ac717, #f89917);
 }
 
 .footer-container-top {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  border-bottom: 1px solid #465a64;
-  padding: 100px 0;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 80px 20px;
+  gap: 40px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer-container-top {
-    padding: 50px 30px;
+    padding: 50px 20px;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
   }
 }
 
 /* DMV LOGO AND TITLE */
-
 .footer-container-top-left {
   display: flex;
   flex-direction: column;
-  max-width: 30%;
+  max-width: 320px;
+  width: 100%;
   gap: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .footer-container-top-left {
     max-width: 100%;
   }
@@ -46,111 +62,118 @@
 .footer-container-top-left-title {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .footer-container-top-left-title h2 {
-  font-family: "Shippori Mincho";
-  font-size: 45px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 38px;
   font-weight: 800;
   margin: 0;
-  line-height: 100%;
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
 
 .footer-container-top .footer-container-top-left-description p {
-  font-family: "Work Sans";
-  font-size: 20px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 130%;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0;
 }
 
-@media (max-width: 1423px) {
-  .footer-container-top-left-title h2 {
-    font-size: 32px;
-  }
-  .footer-container-top-left-description p {
-    font-size: 10px;
-  }
-}
 .footer-container-top-left-socials {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 12px;
+  margin-top: 5px;
 }
 
 .footer-container-top-left-socials .icon-box {
-  background-color: #7bc816;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
+  background-color: rgba(123, 200, 22, 0.15);
+  border: 1px solid rgba(123, 200, 22, 0.3);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-container-top-left-socials .icon-box:hover {
+  background-color: #7bc816;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(123, 200, 22, 0.3);
 }
 
 .icon-box img {
   width: 20px;
   height: 20px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
 }
 
-/* Get Involved */
-
+/* Get Involved Links Section */
 .footer-container-top-middle {
   width: 100%;
-  max-width: 20%;
+  max-width: 220px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 768px) {
   .footer-container-top-middle {
     max-width: 100%;
-    align-items: flex-start;
   }
 }
 
 .footer-container-top-middle-title {
-  font-family: "Shippori Mincho";
-  font-size: 30px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 100%;
-}
-
-@media (max-width: 1400px) {
-  .footer-container-top-middle-title {
-    font-size: 25px;
-  }
-  .footer-container-top-middle .footer-container-top-middle-links a {
-    font-size: 15px;
-  }
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 5px;
 }
 
 .footer-container-top-middle-links {
-  padding-top: 20px;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 12px;
 }
+
 .footer-container-top-middle-links a {
   text-decoration: none;
-  color: white;
+  color: #cbd5e1;
   font-weight: 400;
-  font-size: 20px;
-  font-family: "Work Sans";
+  font-size: 15.5px;
+  font-family: "Work Sans", sans-serif;
+  transition: all 0.2s ease;
+  position: relative;
+  width: fit-content;
 }
+
 .footer-container-top-middle-links a:hover {
-  text-decoration: underline;
+  color: #7bc816;
+  transform: translateX(4px);
+  text-decoration: none;
 }
 
-/* Contacts */
-
+/* Contacts Section */
 .footer-container-top-right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  max-width: 20%;
+  max-width: 260px;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 768px) {
   .footer-container-top-right {
     max-width: 100%;
   }
@@ -158,50 +181,46 @@
 
 .footer-container-top-right-title {
   color: #f89917;
-  font-family: "Shippori Mincho";
-  font-size: 30px;
+  font-family: "Shippori Mincho", serif;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 100%;
-}
-
-@media (max-width: 1400px) {
-  .footer-container-top-right-title {
-    font-size: 25px;
-  }
-  .footer-container-top-right .footer-container-top-right-addresses p {
-    font-size: 15px;
-  }
+  line-height: 1.2;
+  margin-bottom: 5px;
 }
 
 .footer-container-top-right-addresses {
-  padding-top: 20px;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .footer-container-top-right-addresses p {
-  font-size: 20px;
-  color: white;
+  font-size: 15.5px;
+  color: #cbd5e1;
   font-weight: 400;
-  margin: 2.5px 0;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.5;
 }
 
+/* Copyright Section */
 .footer-container-copyright {
   text-align: center;
-  font-size: 25px;
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  color: #94a3b8;
+  padding: 25px 20px;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .footer-container-copyright a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-@media (max-width: 1400px) {
-  .footer-container-copyright {
-    font-size: 15px;
-  }
-}
-
-.footer-container-copyright {
-  text-align: center;
+.footer-container-copyright a:hover {
+  color: #7bc816;
 }

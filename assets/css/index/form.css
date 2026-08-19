@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 .form-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
-  padding: 80px 8%;
-  gap: 150px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  gap: 60px;
 }
 
 .form-section-left {
@@ -18,34 +19,34 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
-  padding: 0 10px;
+  gap: 20px;
+  padding: 0;
 }
 
 .form-section-left-title h2 {
   margin: 0;
-  font-family: "Outfit";
-  font-size: 39px;
-  font-weight: 600;
-  line-height: 100%;
-  color: #1d1d1d;
-  margin-bottom: 25px;
+  font-family: "Outfit", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 15px;
   max-width: 550px;
 }
 
 .green-text {
-  color: #7ac70c;
+  color: #7ac717;
 }
 
 .form-section-left-description p {
   margin: 0;
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   font-weight: 400;
-  color: #777;
-  font-size: 18px;
+  color: #718096;
+  font-size: 16px;
   max-width: 510px;
-  line-height: 1.7;
-  margin-bottom: 40px;
+  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
 .form-section-left-bottom {
@@ -55,173 +56,246 @@
 }
 
 .progress-wrapper {
-  background: #f0f0f0;
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 35px;
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 25px;
   max-width: 520px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-sizing: border-box;
 }
 
 .progress-info {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+  font-family: "Work Sans", sans-serif;
 }
 
 .progress-percentage {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-weight: 600;
-  color: #7ac70c;
+  color: #7ac717;
   position: relative;
   left: 25%;
   width: fit-content;
 }
 
 .progress-info .raised {
-  color: #7ac70c;
+  color: #7ac717;
   font-weight: 600;
 }
 
 .progress-info .goal {
-  color: #7ac70c;
+  color: #718096;
+  font-weight: 500;
 }
+
 .progress-bar-container {
   width: 100%;
   height: 8px;
-  background: #e0e0e0;
+  background: #e5e7eb;
   border-radius: 10px;
   overflow: hidden;
 }
+
 .form-progress-bar {
   width: 0%;
   height: 100%;
-  background: #7ac70c;
+  background: #7ac717;
   border-radius: 10px;
-  /* animate from 0 to 29% when added to DOM */
   animation: draw 1.5s ease-in-out forwards;
 }
+
 @keyframes draw {
   to {
     width: 29%;
   }
 }
+
 .progress-bar-container[aria-valuenow] .form-progress-bar {
   width: var(--progress, 0%);
 }
+
 .buttons {
   display: flex;
-  justify-content: space-between;
+  gap: 15px;
+  max-width: 520px;
+  width: 100%;
 }
 
 .pay-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  width: 160px;
-  height: 64px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 6px;
+  gap: 12px;
+  flex: 1; /* Makes both buttons share the full width equally */
+  height: 54px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .pay-btn img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 .pay-btn:hover {
-  background: #f7f7f7;
+  background: #f9fafb;
+  border-color: #7ac717;
+  transform: translateY(-2px);
 }
 
+/* ========================================================
+   RIGHT FORM SECTION (Redesigned Interactive Look)
+   ======================================================== */
 .form-section-right {
   flex: 1;
-  background: #ededed;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 0;
 }
 
 .form-section-right-inner {
   width: 100%;
-  max-width: 450px;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  background: #ffffff;
   padding: 40px;
-  border: 1px solid #000000;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid #f3f4f6;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Subtle top brand accent line */
+.form-section-right-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7ac717, #f89917);
 }
 
 .form-section-right-inner h2 {
-  font-family: "Raleway";
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 30px;
-  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: left;
+  color: #111827;
 }
 
 .form-section-right-inner input,
 .form-section-right-inner textarea {
   width: 100%;
-  background-color: transparent;
-  padding: 14px 15px;
-  margin-bottom: 20px;
-  border: 1px solid #000000;
+  background-color: #f9fafb;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
   outline: none;
-  font-size: 14px;
+  font-size: 14.5px;
+  font-family: "Work Sans", sans-serif;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-section-right-inner input::placeholder,
+.form-section-right-inner textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-section-right-inner input:focus,
+.form-section-right-inner textarea:focus {
+  border-color: #7ac717;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(122, 199, 23, 0.12);
 }
 
 .form-section-right-inner textarea {
   height: 130px;
-  resize: none;
+  resize: vertical;
 }
 
 .form-section-right-inner .submit-btn {
-  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background-color: #7ac717;
   color: white;
-  font-family: "Lato";
-  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 100%;
-  width: 190px;
-  height: 60px;
-  border-radius: 8px;
-  padding: 22px 0px;
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  padding: 0;
   cursor: pointer;
-  margin-top: 10px;
-  margin-right: 50px;
+  margin-top: 5px;
+  margin-right: 0;
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .form-section-right-inner .submit-btn:hover {
-  background: #68af0a;
+  background: #68ad12;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 25px rgba(122, 199, 23, 0.35);
 }
 
-@media (max-width: 600px) {
+/* ========================================================
+   RESPONSIVE DESIGN (<= 768px)
+   ======================================================== */
+@media (max-width: 768px) {
   .form-section {
     flex-direction: column;
-    gap: 70px;
+    gap: 40px;
+    padding: 0 16px;
+    margin: 40px auto;
+  }
+
+  .form-section-left-title h2 {
+    font-size: 30px;
   }
 
   .pay-btn {
-    width: 130px;
-    height: 40px;
+    height: 48px;
   }
 
-  .form-section-right {
-    padding: 25px;
+  .buttons {
+    flex-direction: row; /* Keeps them side by side on smaller screens, change to column if you want them stacked vertically on mobile */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .form-section-right-inner {
+    padding: 24px;
+    border-radius: 18px;
   }
 
   .form-section-right-inner h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
