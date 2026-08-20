@@ -65,7 +65,7 @@
   flex-direction: column;
   gap: 10px;
   border: 1px solid #e5e7eb;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   box-sizing: border-box;
 }
 
@@ -141,7 +141,7 @@
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .pay-btn img {
@@ -175,7 +175,7 @@
   background: #ffffff;
   padding: 40px;
   border-radius: 24px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: 1px solid #f3f4f6;
   position: relative;
   overflow: hidden;
@@ -216,7 +216,7 @@
   color: #1f2937;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
 }
 
 .form-section-right-inner input::placeholder,
@@ -228,7 +228,6 @@
 .form-section-right-inner textarea:focus {
   border-color: #7ac717;
   background-color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(122, 199, 23, 0.12);
 }
 
 .form-section-right-inner textarea {
@@ -253,7 +252,7 @@
   margin-top: 5px;
   margin-right: 0;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
