@@ -43,4 +43,4 @@ jobs:
           secure: true
           passive: true
           local-dir: ./
-          server-dir: demo./dmvfor-dessie.org/
+          server-dir: /demo.dmvfor-dessie.org/
