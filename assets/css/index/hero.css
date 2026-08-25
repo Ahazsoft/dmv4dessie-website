@@ -348,7 +348,7 @@
     padding-bottom: 20px; 
   } 
 
-  /* Using padding: 0 24px ensures text is strictly forced away from phone borders */
+  
   .hero-section-descriptions { 
     max-width: 100% !important; 
     margin-top: 20px !important; 
