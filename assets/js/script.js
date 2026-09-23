@@ -30,7 +30,7 @@ function injectHeader() {
         <li><a href="contact.html" class="navlinks">Contact</a></li>
     </ul>
 
-    <a href="https://demo.dmvfor-dessie.org/form/index.html" class="header-donate-button">
+    <a href="https://dmvfor-dessie.org/form/index.html" class="header-donate-button">
         <button class="btn" id="donate-button">Join Now</button>
     </a>
 `;
