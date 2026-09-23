@@ -194,7 +194,7 @@
 
 
 	                                    <!-- /step-->
-	                                    <div class="step">
+	                                    <div class="submit step">
 	                                        <h3 class="main_question">Membership Fee</h3>
 											<div class="list_block">
 												<ul>
@@ -239,23 +239,12 @@
 
 												<small><em>Single selection *</em></small>
 											</div>
-
-
-	                                    </div>
-	                                    <!-- /step-->
-	                                    <div class="submit step">
-	                                        <div class="summary">
-	                                            <div class="wrapper">
-	                                                <h3>Thank you<br>for your time!</h3>
-	                                                <p>We will contact you shortly and a summary email will be sent to your email address</p>
-	                                            </div>
-	                                            <div class="text-center">
-	                                                <div class="form-group terms">
-	                                                    <label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Privacy terms</a> before Submit
-	                                                        <input type="checkbox" name="terms" value="Yes" class="required">
-	                                                        <span class="checkmark"></span>
-	                                                    </label>
-	                                                </div>
+	                                        <div class="text-center mt-4">
+	                                            <div class="form-group terms">
+	                                                <label class="container_check">Please accept our <a href="#" data-bs-toggle="modal" data-bs-target="#terms-txt">Privacy terms</a> before continuing
+	                                                    <input type="checkbox" name="terms" value="Yes" class="required">
+	                                                    <span class="checkmark"></span>
+	                                                </label>
 	                                            </div>
 	                                        </div>
 	                                    </div>
@@ -265,7 +254,7 @@
 	                                <div id="bottom-wizard">
 	                                    <button type="button" name="backward" class="backward">Prev</button>
 	                                    <button type="button" name="forward" class="forward">Next</button>
-	                                    <button type="submit" name="process" class="submit">Submit</button>
+	                                    <button type="submit" name="process" class="submit">Select</button>
 	                                </div>
 	                                <!-- /bottom-wizard -->
 	                            </form>
@@ -289,7 +278,7 @@
 			<li><a href="index.html" class="animated_link">Wedding Version</a></li>
 			<li><a href="index-2.html" class="animated_link">Workshop Version</a></li>
 			<li><a href="index-3.html" class="animated_link">Party Version</a></li>
-			<li><a href="index-4.html" class="animated_link">Conference Version</a></li>
+			<li><a href="index.html" class="animated_link">Conference Version</a></li>
 			<li><a href="#0" class="animated_link">Purchase Template</a></li>
 		</ul>
 	</nav> -->
@@ -490,6 +479,44 @@
 				setSpouseRequired(false);
 			}
 		});
+	});
+	</script>
+
+	<script>
+	const membershipForm = document.getElementById('wrapped');
+
+	membershipForm.addEventListener('submit', async function (event) {
+		const selectedTier = membershipForm.querySelector('input[name="question_1"]:checked');
+
+		if (!selectedTier || selectedTier.value !== 'other') {
+			return;
+		}
+
+		event.preventDefault();
+
+		const submitButton = membershipForm.querySelector('button[name="process"]');
+		submitButton.disabled = true;
+
+		try {
+			const response = await fetch(membershipForm.action, {
+				method: 'POST',
+				body: new FormData(membershipForm),
+				headers: { 'X-Requested-With': 'XMLHttpRequest' }
+			});
+			const responseHtml = await response.text();
+
+			if (response.ok && responseHtml.includes('Membership Submitted')) {
+				window.location.replace('thankyou.html');
+				return;
+			}
+
+			document.open();
+			document.write(responseHtml);
+			document.close();
+		} catch (error) {
+			submitButton.disabled = false;
+			window.alert('We could not process your membership request. Please try again.');
+		}
 	});
 	</script>
 

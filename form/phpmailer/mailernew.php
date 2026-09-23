@@ -251,7 +251,7 @@ function renderError($message)
 
             <a
                 class="button"
-                href="../index-4.html"
+                href="../index.html"
             >
                 Go Back
             </a>
@@ -448,7 +448,7 @@ function renderCustomMembership(
 
             <a
                 class="button"
-                href="../index-4.html"
+                href="../index.html"
             >
                 Return to Homepage
             </a>

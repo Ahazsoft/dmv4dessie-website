@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DMV For Dessie membership confirmation">
+    <title>Thank You | DMV For Dessie</title>
+    <link rel="shortcut icon" href="img/logodmv.png" type="image/x-icon">
+    <style>
+        :root {
+            color-scheme: light;
+            --green: #2b420a;
+            --lime: #7bc816;
+            --ink: #243015;
+            --paper: #fbfcf7;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: linear-gradient(135deg, var(--paper), #eef6df);
+            color: var(--ink);
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        main {
+            width: min(100%, 560px);
+            padding: 56px 40px;
+            text-align: center;
+            background: #fff;
+            border-top: 6px solid var(--lime);
+            box-shadow: 0 18px 50px rgba(43, 66, 10, .12);
+        }
+
+        img {
+            width: 92px;
+            height: 92px;
+            object-fit: contain;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            margin: 0 0 16px;
+            color: var(--green);
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            font-weight: 500;
+        }
+
+        p {
+            margin: 0 auto;
+            max-width: 420px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .redirect-note {
+            margin-top: 28px;
+            color: #637052;
+            font-family: Arial, sans-serif;
+            font-size: .9rem;
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 42px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <img src="img/logodmv.png" alt="DMV For Dessie">
+        <h1>Thank you for your time!</h1>
+        <p>Your membership request has been received. We will contact you shortly.</p>
+        <p class="redirect-note">Returning to DMV For Dessie in 5 seconds.</p>
+    </main>
+
+    <script>
+        window.setTimeout(function () {
+            window.location.replace('../index.html');
+        }, 5000);
+    </script>
+</body>
+
+</html>
