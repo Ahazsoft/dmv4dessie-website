@@ -30,7 +30,7 @@
     
 	<script type="text/javascript">
     function delayedRedirect(){
-        window.location = "../index-4.html"
+        window.location = "../index.html"
     }
     </script>
 

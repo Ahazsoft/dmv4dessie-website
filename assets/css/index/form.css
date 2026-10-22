@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 .form-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 80px auto;
-  padding: 0 20px;
-  gap: 60px;
+  align-items: stretch;
+  padding: 80px 8%;
+  gap: 150px;
 }
 
 .form-section-left {
@@ -19,34 +18,40 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  padding: 0;
+  align-items: center;
+  gap: 30px;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .form-section-left-title h2 {
   margin: 0;
-  font-family: "Outfit", sans-serif;
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #111827;
-  margin-bottom: 15px;
+  font-family: "Outfit";
+  font-size: 39px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #1d1d1d;
+  margin-bottom: 25px;
   max-width: 550px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .green-text {
-  color: #7ac717;
+  color: #7ac70c;
 }
 
 .form-section-left-description p {
   margin: 0;
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit";
   font-weight: 400;
-  color: #718096;
-  font-size: 16px;
+  color: #777;
+  font-size: 18px;
   max-width: 510px;
-  line-height: 1.6;
-  margin-bottom: 25px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .form-section-left-bottom {
@@ -56,248 +61,177 @@
 }
 
 .progress-wrapper {
-  background: #f9fafb;
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 25px;
+  background: #f0f0f0;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 35px;
   max-width: 520px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border: 1px solid #e5e7eb;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  box-sizing: border-box;
 }
 
 .progress-info {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  font-family: "Work Sans", sans-serif;
 }
 
 .progress-percentage {
   font-size: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   font-weight: 600;
-  color: #7ac717;
-  position: relative;
-  left: 25%;
-  width: fit-content;
+  color: #7ac70c;
+  text-align: center;
 }
 
 .progress-info .raised {
-  color: #7ac717;
+  color: #7ac70c;
   font-weight: 600;
 }
 
 .progress-info .goal {
-  color: #718096;
-  font-weight: 500;
+  color: #7ac70c;
 }
-
 .progress-bar-container {
   width: 100%;
   height: 8px;
-  background: #e5e7eb;
+  background: #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
 }
-
 .form-progress-bar {
   width: 0%;
   height: 100%;
-  background: #7ac717;
+  background: #7ac70c;
   border-radius: 10px;
+  /* animate from 0 to 29% when added to DOM */
   animation: draw 1.5s ease-in-out forwards;
 }
-
 @keyframes draw {
   to {
     width: 29%;
   }
 }
-
 .progress-bar-container[aria-valuenow] .form-progress-bar {
   width: var(--progress, 0%);
 }
-
 .buttons {
   display: flex;
-  gap: 15px;
-  max-width: 520px;
-  width: 100%;
+  justify-content: center;
 }
 
-.pay-btn {
+.buttons .pay-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  flex: 1; 
-  height: 54px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-  border-radius: 12px;
+  gap: 8px;
+  flex: 0 0 160px;
+  height: 64px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
+  color: #1d1d1d;
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.pay-btn img {
-  width: 32px;
-  height: 32px;
+.buttons .pay-btn img {
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
 
-.pay-btn:hover {
-  background: #f9fafb;
-  border-color: #7ac717;
-  transform: translateY(-2px);
+.buttons .pay-btn:hover {
+  background: #f7f7f7;
 }
 
 .form-section-right {
   flex: 1;
-  background: transparent;
+  background: #ededed;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  width: 100%;
+  padding: 40px;
 }
 
 .form-section-right-inner {
   width: 100%;
-  max-width: 520px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  background: #ffffff;
+  align-items: center;
+  justify-content: center;
   padding: 40px;
-  border-radius: 24px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border: 1px solid #f3f4f6;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Subtle top brand accent line */
-.form-section-right-inner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #7ac717, #f89917);
+  border: 1px solid #000000;
 }
 
 .form-section-right-inner h2 {
-  font-family: "Raleway", sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 24px;
-  text-align: left;
-  color: #111827;
+  font-family: "Raleway";
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .form-section-right-inner input,
 .form-section-right-inner textarea {
   width: 100%;
-  background-color: #f9fafb;
-  padding: 16px 18px;
-  margin-bottom: 18px;
-  border: 1.5px solid #e5e7eb;
-  border-radius: 12px;
+  background-color: transparent;
+  padding: 14px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
   outline: none;
-  font-size: 14.5px;
-  font-family: "Work Sans", sans-serif;
-  color: #1f2937;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.form-section-right-inner input::placeholder,
-.form-section-right-inner textarea::placeholder {
-  color: #9ca3af;
-}
-
-.form-section-right-inner input:focus,
-.form-section-right-inner textarea:focus {
-  border-color: #7ac717;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(122, 199, 23, 0.12);
+  font-size: 14px;
 }
 
 .form-section-right-inner textarea {
   height: 130px;
-  resize: vertical;
+  resize: none;
 }
 
 .form-section-right-inner .submit-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   background-color: #7ac717;
   color: white;
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
+  font-family: "Lato";
+  font-size: 18px;
   font-weight: 600;
-  width: 100%;
-  height: 56px;
-  border-radius: 12px;
-  padding: 0;
+  line-height: 100%;
+  width: 190px;
+  height: 60px;
+  border-radius: 8px;
+  padding: 22px 0px;
   cursor: pointer;
-  margin-top: 5px;
-  margin-right: 0;
+  margin-top: 10px;
+  margin-right: 50px;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .form-section-right-inner .submit-btn:hover {
-  background: #68ad12;
-  transform: translateY(-2px);
-  box-shadow: 0 14px 25px rgba(122, 199, 23, 0.35);
+  background: #68af0a;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .form-section {
     flex-direction: column;
-    gap: 40px;
-    padding: 0 20px; /* Added comfortable left and right margins */
-    margin: 40px auto;
-  }
-
-  .form-section-left-title h2 {
-    font-size: 30px;
+    gap: 70px;
   }
 
   .pay-btn {
-    height: 48px;
-  }
-
-  .buttons {
-    flex-direction: row; 
-    gap: 10px;
-    width: 100%;
+    width: 130px;
+    height: 40px;
   }
 
   .form-section-right {
-    width: 100%;
-  }
-
-  .form-section-right-inner {
-    width: 100%;
-    max-width: 100%;
-    padding: 24px 20px;
-    border-radius: 18px;
-    box-sizing: border-box;
+    padding: 25px;
   }
 
   .form-section-right-inner h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }

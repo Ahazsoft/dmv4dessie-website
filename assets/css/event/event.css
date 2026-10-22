@@ -38,7 +38,7 @@
 .events-section-title > h2 {
   font-weight: 700;
   font-family: "Raleway";
-  font-size: 50px;
+  font-size: 40px;
   color: #333333;
   max-width: 70vw;
   margin-bottom: 40px;
@@ -54,7 +54,7 @@
   }
 
   .events-section-title > h2 {
-    font-size: 30px;
+    font-size: 26px;
     max-width: 100%;
   }
 }
