@@ -19,7 +19,11 @@ function injectHeader() {
     <!-- DRAWER NAV -->
     <ul class="header-nav-container" id="navMenu">
         <div class="drawer-header">
-            <button class="close-btn" id="closeBtn">&times;</button>
+            <button class="close-btn" id="closeBtn" aria-label="Close menu">
+                <svg class="close-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+            </button>
         </div>
         <li><a href="index.html" class="navlinks">Home</a></li>
         <li><a href="about.html" class="navlinks">About us</a></li>

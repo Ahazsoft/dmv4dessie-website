@@ -39,7 +39,7 @@
 .donation-hero-section-title h2 {
   font-family: "outfit";
   font-weight: 600;
-  font-size: 45px;
+  font-size: 36px;
   text-align: center;
   margin: 0;
 }
@@ -58,7 +58,10 @@
 
   .donation-hero-section-title {
     width: 90%;
-    font-size: 30px;
+  }
+
+  .donation-hero-section-title h2 {
+    font-size: 28px;
   }
 }
 
@@ -122,9 +125,17 @@
   color: black;
 }
 
+.donation-hero-section-donation-causes .donation-card-status-top h3 {
+  font-size: 17px !important;
+}
+
 .donation-card-status-top p {
   font-weight: 600;
   color: #436d0d;
+}
+
+.donation-hero-section-donation-causes .donation-card-status-top p {
+  font-size: 17px !important;
 }
 
 /* PROGRESS BAR */
@@ -158,6 +169,10 @@
   color: #111;
 }
 
+.donation-hero-section-donation-causes .donation-card-status-bottom h2 {
+  font-size: 17px !important;
+}
+
 /* DESCRIPTION */
 .donation-card-description {
   margin: 15px 0;
@@ -166,6 +181,10 @@
   color: #111;
   line-height: 1.4;
   font-family: "Outfit";
+}
+
+.donation-hero-section-donation-causes .donation-card-description {
+  font-size: 17px !important;
 }
 
 .donation-card-description:hover{
@@ -189,6 +208,10 @@
 .donate-btn:hover {
   background-color: #5aa317;
   transform: translateY(-1px);
+}
+
+.donation-hero-section-donation-causes .donate-btn {
+  font-size: 18px;
 }
 
 .donate-btn .custom-btn-arrow {

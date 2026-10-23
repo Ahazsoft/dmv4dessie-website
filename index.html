@@ -83,7 +83,7 @@
 
       .faq-subhead {
         color: #e0f0da;
-        font-size: 1rem;
+        font-size: 20px;
         font-weight: 500;
         margin-top: 0.3rem;
       }
@@ -129,7 +129,7 @@
 
       .faq-question-btn h3 {
         margin: 0;
-        font-size: 1.05rem;
+        font-size: 19px !important;
         font-weight: 700;          /* Raleway looks better with 700 */
         font-family: 'Raleway', sans-serif;
         letter-spacing: -0.2px;
@@ -181,7 +181,7 @@
           padding: 1rem 1.2rem;
         }
         .faq-question-btn h3 {
-          font-size: 0.95rem;
+          font-size: 19px !important;
         }
         .faq-answer-panel p {
           padding: 1rem 1.4rem 1.2rem 1.4rem;
@@ -215,6 +215,8 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
   <body>
     <!-- header begin-->
@@ -264,19 +266,24 @@
           
            <a href="contact.html" 
             class="thm-btn" 
-          style="display:inline-block; 
-          padding:12px 24px; 
-          background-color:#f9a65a; 
+          style="display:inline-flex; 
+          align-items:center;
+          justify-content:center;
+          gap:10px;
+          box-sizing:border-box;
+          min-width:238px;
+          min-height:57px;
+          padding:16px 28px; 
+          background-color:#7ac717; 
           color:#fff; 
           text-decoration:none; 
           border:none; 
-          border-radius:0; 
+          border-radius:8px; 
           font-size:16px; 
           font-weight:600; 
           cursor:pointer;">
-            <i class="fas fa-play" ></i>
           Learn More about DMV 
-          <span class="icon-diagonal-arrow1"></span>
+          <span aria-hidden="true">↗</span>
         </a>
 
           </div>
@@ -443,17 +450,9 @@
             </div>
 
             <div class="buttons">
-              <button class="pay-btn">
-                <img
-                  src="assets/images/icon/apple-pay-96.png"
-                  alt="Apple Pay"
-                />
-              </button>
-              <button class="pay-btn">
-                <img
-                  src="assets/images/icon/google-pay-96.png"
-                  alt="Google Pay"
-                />
+              <button class="pay-btn" type="button">
+                <img src="assets/images/about/stripe.jpg" alt="" />
+                Stripe
               </button>
             </div>
           </div>

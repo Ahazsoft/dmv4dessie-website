@@ -87,7 +87,16 @@
   align-items: center;
 }
 
+.footer-container-top-left-socials .icon-box a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .icon-box img {
+  display: block;
   width: 20px;
   height: 20px;
 }
@@ -110,14 +119,14 @@
 
 .footer-container-top-middle-title {
   font-family: "Shippori Mincho";
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 100%;
 }
 
 @media (max-width: 1400px) {
   .footer-container-top-middle-title {
-    font-size: 25px;
+    font-size: 15px;
   }
   .footer-container-top-middle .footer-container-top-middle-links a {
     font-size: 15px;
@@ -159,14 +168,14 @@
 .footer-container-top-right-title {
   color: #f89917;
   font-family: "Shippori Mincho";
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 100%;
 }
 
 @media (max-width: 1400px) {
   .footer-container-top-right-title {
-    font-size: 25px;
+    font-size: 20px;
   }
   .footer-container-top-right .footer-container-top-right-addresses p {
     font-size: 15px;

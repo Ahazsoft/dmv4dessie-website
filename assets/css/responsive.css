@@ -1,0 +1,1202 @@
+.hero-section-descriptions-middle h1 {
+  font-size: 50px !important;
+}
+
+body .about-section-description-top h2,
+body .form-section-left-title h2,
+body .about-hero-description-top > h2,
+body .donation-hero-section-title h2,
+body .contact-info-description-top h2 {
+  font-size: 50px !important;
+}
+
+body .about-hero-description-bottom > h2 {
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  color: #7a7a7a !important;
+}
+
+body .bottom-container-contact-texts h2 {
+  font-size: 18px !important;
+}
+
+body .contact-info-card-texts h2 {
+  font-size: 15px !important;
+}
+
+body .contact-info-card-texts h3 {
+  font-size: 15px !important;
+}
+
+body .donation-card-status-bottom h2,
+body .progress-tracker .progress-tracker-texts h2 {
+  font-size: 16px !important;
+}
+
+body .hero-section-descriptions-top p,
+body .about-section-description-top > p,
+body .about-hero-description-top-subtitle h2,
+body .contact-info-description-top-subtitle h3,
+body .donation-hero-section-subtitle h3,
+body .events-section-subtitle h3,
+body .volunteers-section-subtitle-container h3,
+body .donors-section-subtitle-container h3 {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 800px) {
+  body .about-section-description-top h2,
+  body .form-section-left-title h2,
+  body .about-hero-description-top > h2,
+  body .donation-hero-section-title h2,
+  body .contact-info-description-top h2 {
+    font-size: 36px !important;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    z-index: auto;
+    gap: clamp(180px, 32vw, 240px);
+  }
+
+  .hero-section-descriptions {
+    max-width: 100%;
+    margin: 40px 0 0;
+    padding: 0 24px;
+  }
+
+  .hero-section-images {
+    max-width: 100%;
+    min-height: 280px;
+  }
+
+  .about-hero,
+  .contact-info {
+    flex-direction: column-reverse;
+    gap: 24px;
+    margin: 40px 16px 24px;
+  }
+
+  .about-hero-images,
+  .contact-info-images {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-hero-description,
+  .contact-info-form-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .contact-info-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 16px;
+  }
+
+  .contact-info-card {
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+    min-height: 112px;
+    height: auto;
+    aspect-ratio: auto;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .contact-info-card-icon {
+    flex: 0 0 40px;
+    width: 40px;
+    min-width: 40px;
+    border-radius: 12px;
+  }
+
+  .contact-info-card-texts {
+    min-width: 0;
+    max-width: none;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-info-form-top {
+    gap: 12px;
+  }
+
+  .contact-info-form-top input {
+    min-width: 0;
+  }
+
+  .contact-info-form button {
+    width: min(100%, 280px);
+  }
+
+  .volunteers-card-container,
+  .donors-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .volunteers-card,
+  .donors-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .volunteers-card-container img,
+  .donors-card-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .donation-hero-section-donation-causes {
+    box-sizing: border-box;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    padding: 24px;
+  }
+
+  .donation-detail-hero-section .hero-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .donation-detail-hero-section .hero-container-left img {
+    max-width: 100%;
+  }
+
+  .event-detail-hero-section {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .event-detail-hero-section .hero-container,
+  .event-detail-hero-section .event-info-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .map-location {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: 360px;
+    margin: 16px 0;
+  }
+
+  .form-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 48px 24px;
+  }
+
+  .footer-container-top {
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 48px 24px;
+  }
+
+  .footer-container-top-left,
+  .footer-container-top-middle,
+  .footer-container-top-right {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .faq-attractive-section {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    gap: 150px;
+    z-index: auto;
+  }
+
+  .hero-section-descriptions {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .hero-section-images {
+    box-sizing: border-box;
+    width: 100%;
+    height: 320px;
+    min-height: 320px;
+    margin-top: -50px;
+    padding: 0;
+  }
+
+  .hero-section-images .custom-layout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section-images .bg-shape {
+    top: 96px;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: 160px;
+    margin: 0;
+  }
+
+  .hero-section-images .large-back,
+  .hero-section-images .large-front img {
+    width: min(62vw, 226px);
+    height: auto;
+    aspect-ratio: 0.87;
+  }
+
+  .hero-section-images .large-back,
+  .hero-section-images .large-front img {
+    top: 0;
+    bottom: auto;
+  }
+
+  .hero-section-images .large-back {
+    left: 8vw;
+  }
+
+  .hero-section-images .large-front img {
+    left: 12vw;
+    object-fit: cover;
+  }
+
+  .hero-section-images .small-back,
+  .hero-section-images .small-front img {
+    width: min(42vw, 150px);
+    height: auto;
+    aspect-ratio: 1.2;
+    top: 185px;
+    bottom: auto;
+  }
+
+  .hero-section-images .small-back {
+    left: 53vw;
+  }
+
+  .hero-section-images .small-front img {
+    left: 58vw;
+    object-fit: cover;
+  }
+
+  .about-hero,
+  .contact-info {
+    margin: 28px 12px 20px;
+  }
+
+  .contact-info-cards-container {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 20px 16px;
+  }
+
+  .contact-info-card {
+    min-height: 88px;
+  }
+
+  .contact-info-images {
+    max-width: 90vw;
+    margin-bottom: 220px;
+  }
+
+  .contact-info-form {
+    padding: 16px;
+  }
+
+  .contact-info-form-inner {
+    padding: 14px;
+  }
+
+  .contact-info-form-top {
+    flex-direction: column;
+  }
+
+  .contact-info-form-top input,
+  .contact-info-form input,
+  .contact-info-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .volunteers-section,
+  .donors-section {
+    box-sizing: border-box;
+    padding: 24px 16px;
+  }
+
+  .volunteers-card-container,
+  .donors-card-container {
+    gap: 16px;
+  }
+
+  .volunteers-card,
+  .donors-card {
+    min-width: 0;
+    padding: 8px;
+  }
+
+  .donation-hero-section {
+    margin: 32px 0;
+  }
+
+  .donation-hero-section-subtitle,
+  .donation-hero-section-title {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .donation-hero-section-donation-causes {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .donation-detail-hero-section,
+  .event-detail-hero-section {
+    box-sizing: border-box;
+    padding: 20px 16px;
+  }
+
+  .event-detail-hero-section .hero-container-bottom,
+  .event-detail-hero-section .event-info-container {
+    padding: 0;
+  }
+
+  .event-detail-hero-section .event-info-container {
+    width: 100%;
+  }
+
+  .event-info-container .contact-box {
+    gap: 20px;
+  }
+
+  .form-section {
+    gap: 28px;
+    padding: 32px 16px;
+  }
+
+  .form-section-left,
+  .form-section-right {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .pay-btn {
+    flex: 1 1 120px;
+    min-width: 0;
+  }
+
+  .faq-attractive-section {
+    padding: 0 12px;
+  }
+
+  .faq-question-btn {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .footer-container-top {
+    padding: 36px 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 15px !important;
+  }
+
+  body p,
+  body li {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  body h1,
+  body .hero-section-descriptions-middle h1 {
+    font-size: 32px !important;
+  }
+
+  body .hero-section-descriptions-middle h2 {
+    font-size: 26px !important;
+  }
+
+  body h2,
+  body .about-section-description-top h2,
+  body .form-section-left-title h2,
+  body .about-hero-description-top > h2,
+  body .donation-hero-section-title h2,
+  body .contact-info-description-top h2 {
+    font-size: 28px !important;
+  }
+
+  body h3 {
+    font-size: 19px !important;
+  }
+
+  body h4,
+  body h5,
+  body h6,
+  body [class*="title"],
+  body [class*="subtitle"] {
+    font-size: 15px !important;
+  }
+
+  body .about-hero-description-bottom > h2 {
+    font-size: 20px !important;
+  }
+
+  body .bottom-container-contact-texts h2 {
+    font-size: 16px !important;
+  }
+
+  body .contact-info-card-texts h2,
+  body .contact-info-card-texts h3 {
+    font-size: 14px !important;
+  }
+
+  body .donation-card-status-bottom h2,
+  body .progress-tracker .progress-tracker-texts h2 {
+    font-size: 15px !important;
+  }
+
+  body .hero-section-descriptions-top p,
+  body .about-section-description-top > p,
+  body .about-hero-description-top-subtitle h2,
+  body .contact-info-description-top-subtitle h3,
+  body .donation-hero-section-subtitle h3,
+  body .events-section-subtitle h3,
+  body .volunteers-section-subtitle-container h3,
+  body .donors-section-subtitle-container h3 {
+    font-size: 16px !important;
+  }
+
+  body .header-nav-container a {
+    font-size: 18px !important;
+  }
+
+  body button,
+  body input[type="button"],
+  body input[type="submit"],
+  body input[type="reset"],
+  body [role="button"],
+  body [class*="btn"],
+  body [class*="button"] {
+    font-size: 15px !important;
+  }
+
+  body .footer-container-top-middle-links a,
+  body .footer-container-top-right-addresses p {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px !important;
+  }
+
+  body p,
+  body li {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  body h1,
+  body .hero-section-descriptions-middle h1 {
+    font-size: 28px !important;
+  }
+
+  body .hero-section-descriptions-middle h2 {
+    font-size: 22px !important;
+  }
+
+  body h2,
+  body .about-section-description-top h2,
+  body .form-section-left-title h2,
+  body .about-hero-description-top > h2,
+  body .donation-hero-section-title h2,
+  body .contact-info-description-top h2 {
+    font-size: 24px !important;
+  }
+
+  body h3 {
+    font-size: 17px !important;
+  }
+
+  body h4,
+  body h5,
+  body h6,
+  body [class*="title"],
+  body [class*="subtitle"] {
+    font-size: 14px !important;
+  }
+
+  body .about-hero-description-bottom > h2 {
+    font-size: 18px !important;
+  }
+
+  body .bottom-container-contact-texts h2,
+  body .contact-info-card-texts h2,
+  body .contact-info-card-texts h3 {
+    font-size: 14px !important;
+  }
+
+  body .donation-card-status-bottom h2,
+  body .progress-tracker .progress-tracker-texts h2 {
+    font-size: 14px !important;
+  }
+
+  body .hero-section-descriptions-top p,
+  body .about-section-description-top > p,
+  body .about-hero-description-top-subtitle h2,
+  body .contact-info-description-top-subtitle h3,
+  body .donation-hero-section-subtitle h3,
+  body .events-section-subtitle h3,
+  body .volunteers-section-subtitle-container h3,
+  body .donors-section-subtitle-container h3 {
+    font-size: 15px !important;
+  }
+
+  body .header-nav-container a {
+    font-size: 16px !important;
+  }
+
+  body button,
+  body input[type="button"],
+  body input[type="submit"],
+  body input[type="reset"],
+  body [role="button"],
+  body [class*="btn"],
+  body [class*="button"] {
+    font-size: 14px !important;
+  }
+
+  body .footer-container-top-middle-links a,
+  body .footer-container-top-right-addresses p {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  body img,
+  body video {
+    max-width: 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-section,
+  .about-hero,
+  .contact-info {
+    width: auto;
+    max-width: calc(100% - 40px);
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+
+  .about-section {
+    gap: 28px;
+    margin-top: 32px;
+  }
+
+  .about-hero {
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .contact-info {
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .about-section-description,
+  .about-hero-description,
+  .contact-info-form-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .about-section-images,
+  .about-hero-images {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: clamp(220px, 58vw, 300px);
+  }
+
+  .contact-info-images {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: clamp(200px, 58vw, 280px);
+    min-width: 0;
+    margin: 0;
+  }
+
+  .about-section-images .large-back,
+  .about-section-images .large-front img {
+    width: min(62vw, 270px);
+    height: auto;
+    aspect-ratio: 1.6;
+  }
+
+  .about-section-images .large-back {
+    left: 8vw;
+  }
+
+  .about-section-images .large-front img {
+    left: 12vw;
+    object-fit: cover;
+  }
+
+  .about-section-images .small-back,
+  .about-section-images .small-front img {
+    width: min(46vw, 190px);
+    height: auto;
+    aspect-ratio: 1.75;
+  }
+
+  .about-section-images .small-back {
+    left: 43vw;
+  }
+
+  .about-section-images .small-front img {
+    left: 47vw;
+    object-fit: cover;
+  }
+
+  .about-hero-images .bg-shape,
+  .contact-info-images .bg-shape {
+    max-width: 100%;
+  }
+
+  .about-hero-images .large-back,
+  .about-hero-images .large-front img,
+  .contact-info-images .large-back,
+  .contact-info-images .large-front img {
+    max-width: 72%;
+  }
+
+  .about-hero-images .small-back,
+  .about-hero-images .small-front img,
+  .contact-info-images .small-back,
+  .contact-info-images .small-front img {
+    max-width: 58%;
+  }
+
+  .contact-info-cards-container {
+    box-sizing: border-box;
+    width: auto;
+    max-width: calc(100% - 32px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .contact-info-card,
+  .contact-info-card-texts {
+    min-width: 0;
+  }
+
+  .contact-info-card-texts {
+    overflow-wrap: anywhere;
+  }
+
+  .contact-info-form,
+  .contact-info-form-inner {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contact-info-form-top {
+    gap: 12px;
+  }
+
+  .contact-info-form-top input {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .contact-info-form button {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .event-section {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 48px 16px;
+  }
+
+  .event-section-title {
+    padding: 0;
+  }
+
+  .event-section-event-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
+  }
+
+  #event-section-event-inner-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .event-card,
+  .event-card-top {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .event-card-top img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .event-detail-hero-section,
+  .donation-detail-hero-section,
+  .donation-hero-section,
+  .form-section {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .event-detail-hero-section .hero-container,
+  .event-detail-hero-section .hero-container-bottom,
+  .event-detail-hero-section .event-info-container,
+  .donation-detail-hero-section .hero-container,
+  .donation-detail-hero-section .hero-container-left,
+  .donation-detail-hero-section .hero-container-right,
+  .form-section-left,
+  .form-section-right {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .event-info-container .contact-box,
+  .event-info-container .contact-box-info {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .event-info-container .contact-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .event-info-container .contact-box-info .contact-texts {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .donation-hero-section-donation-causes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
+  .donation-card,
+  .donation-card-status,
+  .donation-card-status-bottom {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .donation-card-status-bottom {
+    gap: 8px;
+  }
+
+  .donation-card-status-bottom h2,
+  .progress-tracker .progress-tracker-texts h2 {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .services-section {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 0;
+    padding: 32px 16px;
+    gap: 16px;
+  }
+
+  .services-section-single-service {
+    min-width: 0;
+    padding: 12px 8px;
+  }
+
+  .volunteers-card-container,
+  .donors-card-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .volunteers-card,
+  .donors-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .footer-container,
+  .footer-container-top,
+  .footer-container-top-left,
+  .footer-container-top-middle,
+  .footer-container-top-right {
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .footer-container-top-left-description,
+  .footer-container-top-right-addresses,
+  .footer-container-top-middle-links {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section,
+  .about-hero,
+  .contact-info {
+    max-width: calc(100% - 40px);
+    margin-top: 24px;
+  }
+
+  .about-section-images,
+  .about-hero-images {
+    min-height: 230px;
+  }
+
+  .contact-info-images {
+    height: 220px;
+  }
+
+  .about-section-images .large-back,
+  .about-section-images .large-front img {
+    width: 62vw;
+  }
+
+  .about-section-images .small-back,
+  .about-section-images .small-front img {
+    width: 44vw;
+  }
+
+  .contact-info-cards-container {
+    max-width: calc(100% - 32px);
+  }
+
+  .contact-info-form {
+    padding: 16px;
+  }
+
+  .contact-info-form-inner {
+    padding: 14px;
+  }
+
+  .contact-info-form-top {
+    flex-direction: column;
+  }
+
+  .event-section {
+    padding: 36px 12px;
+  }
+
+  .event-section-event-container {
+    padding: 20px 12px;
+  }
+
+  #event-section-event-inner-container {
+    gap: 24px;
+  }
+
+  .event-detail-hero-section .hero-container {
+    width: 100%;
+  }
+
+  .event-detail-hero-section .event-info-container {
+    max-width: 100%;
+    padding: 16px 0;
+  }
+
+  .map-location {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: min(60vh, 380px);
+    margin: 16px 0;
+  }
+
+  .donation-hero-section-donation-causes {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 16px 12px;
+  }
+
+  .services-section {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px 0;
+    gap: 0;
+  }
+
+  .services-section-single-service {
+    width: auto;
+    grid-column: 1 / -1;
+    border: 1px solid #78be20;
+    border-radius: 12px;
+    margin: 8px 12px;
+  }
+
+  .volunteers-section,
+  .donors-section {
+    width: 100%;
+    padding: 24px 12px;
+  }
+
+  .volunteers-card-container,
+  .donors-card-container {
+    gap: 12px;
+  }
+
+  .volunteers-card-container img,
+  .donors-card-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+
+  .pay-btn {
+    flex: 1 1 0;
+  }
+
+  .footer-container-top {
+    gap: 24px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    gap: 8px;
+  }
+
+  .about-hero-description-bottom-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .about-hero-description-bottom-container button {
+    margin-left: 0 !important;
+  }
+
+  .bottom-container-contact,
+  .bottom-container-contact img {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .hero-section-images,
+  .about-section-images,
+  .about-hero-images,
+  .contact-info-images {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    margin-top: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .hero-section-images .custom-layout {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section-images .bg-shape,
+  .hero-section-images .large-back,
+  .hero-section-images .small-back,
+  .hero-section-images .small-front,
+  .about-section-images .bg-shape,
+  .about-section-images .large-back,
+  .about-section-images .small-back,
+  .about-section-images .small-front,
+  .about-hero-images .bg-shape,
+  .about-hero-images .large-back,
+  .about-hero-images .small-back,
+  .about-hero-images .small-front,
+  .contact-info-images .bg-shape,
+  .contact-info-images .large-back,
+  .contact-info-images .small-back,
+  .contact-info-images .small-front {
+    display: none;
+  }
+
+  .hero-section-images .large-front img,
+  .about-section-images .large-front img,
+  .about-hero-images .large-front img,
+  .contact-info-images .large-front img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .hero-section-images {
+    margin-top: -96px !important;
+  }
+}
+/* Tablet layouts: show the primary image as a single, full-width image. */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero-section-images,
+  .about-section-images,
+  .about-hero-images,
+  .contact-info-images {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    max-width: calc(100% - 48px);
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    margin-right: 24px;
+    margin-left: 24px;
+    padding: 0;
+  }
+
+  .hero-section-images .custom-layout,
+  .about-section-images .custom-layout,
+  .about-hero-images .custom-layout,
+  .contact-info-images .custom-layout {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section-images .bg-shape,
+  .hero-section-images .large-back,
+  .hero-section-images .small-back,
+  .hero-section-images .small-front,
+  .about-section-images .bg-shape,
+  .about-section-images .large-back,
+  .about-section-images .small-back,
+  .about-section-images .small-front,
+  .about-hero-images .bg-shape,
+  .about-hero-images .large-back,
+  .about-hero-images .small-back,
+  .about-hero-images .small-front,
+  .contact-info-images .bg-shape,
+  .contact-info-images .large-back,
+  .contact-info-images .small-back,
+  .contact-info-images .small-front {
+    display: none;
+  }
+
+  .hero-section-images .large-front,
+  .about-section-images .large-front,
+  .about-hero-images .large-front,
+  .contact-info-images .large-front {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section-images .large-front img,
+  .about-section-images .large-front img,
+  .about-hero-images .large-front img,
+  .contact-info-images .large-front img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
