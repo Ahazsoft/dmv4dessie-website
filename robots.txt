@@ -1,0 +1,26 @@
+```txt
+# robots.txt for DMV For Dessie
+# https://dmvfor-dessie.org/
+
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /about.html
+Allow: /donation.html
+Allow: /event-detail.html
+Allow: /contact.html
+
+# Block unnecessary/system folders if needed
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Allow CSS and JS for proper rendering
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Sitemap location
+Sitemap: https://dmvfor-dessie.org/sitemap.xml
+```

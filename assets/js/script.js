@@ -1,0 +1,170 @@
+function injectHeader() {
+  // JavaScript to inject the header HTML
+  const headerHTML = `
+    <div class="header-logo-title-container">
+        <img src="assets/images/Logo.png"  alt="DMV Logo" />
+        <h2>DMV For Dessie</h2>
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- DRAWER NAV -->
+    <ul class="header-nav-container" id="navMenu">
+        <div class="drawer-header">
+            <button class="close-btn" id="closeBtn" aria-label="Close menu">
+                <svg class="close-icon" viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <li><a href="index.html" class="navlinks">Home</a></li>
+        <li><a href="about.html" class="navlinks">About us</a></li>
+       <!--   <li><a href="index.html#events-section" class="navlinks">Event</a></li> -->
+        <!--  <li><a href="event.html" class="navlinks">Event</a></li>-->
+         <li><a href="donation.html" class="navlinks">Donation</a></li>
+
+        <li><a href="contact.html" class="navlinks">Contact</a></li>
+    </ul>
+
+    <a href="https://dmvfor-dessie.org/form/index.html" class="header-donate-button">
+        <button class="btn" id="donate-button">Join Now</button>
+    </a>
+`;
+
+  // Injecting the HTML into the header
+  document.querySelector(".header-container").innerHTML = headerHTML;
+}
+
+function injectFooter() {
+  // JavaScript to inject HTML into footer
+  const footerHTML = `
+    <div class="footer-container-top">
+        <div class="footer-container-top-left">
+            <div class="footer-container-top-left-title">
+                <img src="assets/images/Logo.png" alt="DMV Logo" />
+                <h2 style="font-family: Work Sans">DMV For Dessie</h2>
+            </div>
+            <div class="footer-container-top-left-description">
+                <p style="font-family: Work Sans">A nonprofit organization committed to humanitarian aid and community recovery.</p>
+            </div>
+            <div class="footer-container-top-left-socials">
+                <div class="icon-box">
+                    <a href=""><img src="assets/images/icon/instagram-100.png" alt="instagram" /></a>
+                </div>
+                <div class="icon-box">
+                    <a href=""><img src="assets/images/icon/facebook-100.png" alt="facebook" /></a>
+                </div>
+                <div class="icon-box">
+                    <a href=""><img src="assets/images/icon/telegram-100.png" alt="telegram" /></a>
+                </div>
+                <div class="icon-box">
+                    <a href=""><img src="assets/images/icon/tiktok-100.png" alt="tiktok" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container-top-middle">
+            <div class="footer-container-top-middle-title" style="font-family: Work Sans">Quick Links</div>
+            <div class="footer-container-top-middle-links">
+                <a href="/index.html" style="font-family: Work Sans">Home</a>
+                <a href="/about.html" style="font-family: Work Sans">About Us</a>
+                <a href="/donation.html" style="font-family: Work Sans">Donations</a>
+                <a href="/contact.html" style="font-family: Work Sans">Contact Us</a>
+                <!-- <a href="#" style="font-family: Work Sans">Team</a>-->
+            </div>
+        </div>
+        <div class="footer-container-top-right">
+            <div class="footer-container-top-right-title" style="font-family: Work Sans">Contacts</div>
+            <div class="footer-container-top-right-addresses">
+                <p style="font-family: Work Sans">4324 Georgia an Nw Washington DC 20011</p>
+                <p style="font-family: Work Sans">contact_us@dmvfordessie.org</p>
+                <p style="font-family: Work Sans">+1 (571) 622-9455</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container-copyright">
+        <p style="font-family: Work Sans">
+            Copyright &copy; Dmv For Dessie | Powered By <a href="https://www.ahaz.io/" style="color: #57B3E5">Ahaz Solutions</a>          
+        </p>
+    </div>
+`;
+
+  // Injecting the HTML into the footer
+  document.querySelector(".footer-container").innerHTML = footerHTML;
+}
+
+function initHeaderLogic() {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("closeBtn");
+  const donateButton = document.getElementById("donate-button");
+  const navLinks = document.querySelectorAll("#navMenu a");
+
+  // // Donate
+  // donateButton.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   window.location.href = "https://form.dmvfor-dessie.org/";
+
+  // });
+
+  function openDrawer() {
+    navMenu.classList.add("active");
+    overlay.classList.add("active");
+  }
+
+  function closeDrawer() {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+
+  hamburger.addEventListener("click", openDrawer);
+  closeBtn.addEventListener("click", closeDrawer);
+  overlay.addEventListener("click", closeDrawer);
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeDrawer);
+  });
+
+  // Active link highlight
+  const currentPath = window.location.pathname.split("/").pop();
+  navLinks.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+}
+
+function displayDimensions() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  const h2 = document.createElement("h2");
+  h2.innerText = `Current Width: ${width}px, Current Height: ${height}px`;
+
+  document.querySelector(".debug").appendChild(h2);
+}
+
+/* === Proper Execution Order === */
+document.addEventListener("DOMContentLoaded", () => {
+  injectHeader();
+  injectFooter();
+  initHeaderLogic();
+  //   displayDimensions();
+  const logoContainers = document.querySelectorAll(
+    ".header-logo-title-container img, .footer-container-top-left-title img",
+  );
+
+  logoContainers.forEach((logo) => {
+    logo.addEventListener("click", () => {
+      window.location.href = "/index.html";
+    });
+  });
+});
