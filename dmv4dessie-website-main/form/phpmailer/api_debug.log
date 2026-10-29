@@ -1,0 +1,6 @@
+2026-05-18T13:02:22+00:00 | DMV API call failed
+URL: http://localhost:3000//api/members
+HTTP Code: 308
+Curl Error: [none]
+Response: /api/members
+

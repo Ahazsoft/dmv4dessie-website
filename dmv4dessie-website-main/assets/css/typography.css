@@ -1,0 +1,79 @@
+﻿
+/* Override Font Awesome's default `block` behavior so icon text never waits
+   for its webfont to become visible. */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+body :where(*:not(i):not(svg):not(path):not([class*="fa"]):not([class*="bi"])) {
+  font-family: "Inter", sans-serif !important;
+}
+
+body p {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.7;
+}
+
+body .website-title,
+body h1 {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-size: clamp(1.5rem, 3vw, 2.25rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.1 !important;
+}
+
+body h2 {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.2 !important;
+}
+
+body h3 {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-size: clamp(1.125rem, 1.8vw, 1.5rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+body h4,
+body h5,
+body h6,
+body [class*="title"],
+body [class*="subtitle"] {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.35 !important;
+}
+
+body .header-nav-container a,
+body [class*="nav"] a,
+body button,
+body input[type="button"],
+body input[type="submit"],
+body input[type="reset"],
+body [role="button"],
+body [class*="btn"],
+body [class*="button"],
+body .btn {
+  font-family: "Inter", sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+body .header-nav-container a {
+  font-size: 20px !important;
+}

@@ -1,0 +1,56 @@
+```xml id="d4qk92"
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://dmvfor-dessie.org/</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About -->
+    <url>
+        <loc>https://dmvfor-dessie.org/about.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Donation -->
+    <url>
+        <loc>https://dmvfor-dessie.org/donation.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Donation Detail -->
+    <url>
+        <loc>https://dmvfor-dessie.org/donation-detail.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Contact -->
+    <url>
+        <loc>https://dmvfor-dessie.org/contact.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Events -->
+    <url>
+        <loc>https://dmvfor-dessie.org/event-detail.html</loc>
+        <lastmod>2026-05-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
+```
