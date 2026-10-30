@@ -147,6 +147,14 @@
         transition: transform 0.2s;
         min-width: 28px;
         text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .faq-icon-wrapper i {
+        font-family: "Font Awesome 6 Free" !important;
+        font-weight: 900 !important;
       }
 
       .faq-answer-panel {
@@ -285,9 +293,9 @@
           border-radius:8px; 
           font-size:16px; 
           font-weight:600; 
-          cursor:pointer;">
-          Learn More about DMV 
-          <span aria-hidden="true">↗</span>
+          cursor:pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;">
+          Learn More about DMV <span aria-hidden="true">↗</span>
         </a>
 
           </div>
@@ -301,7 +309,7 @@
 
             <div class="large-back"></div>
             <div class="large-front">
-              <img src="assets/images/hero/hero-big.webp" alt="Main Image" />
+              <img src="assets/images/hero/hero-big.webp" alt="Main Image" fetchpriority="high" />
             </div>
 
             <!-- Small Overlap -->
@@ -393,9 +401,9 @@
           </div>
 
           <div class="about-section-description-bottom" data-aos="zoom-in" data-aos-delay="100">
-            <a href="about.html" class="btn" style="font-family: Work Sans">
-              Learn More about DMV <span class="custom-btn-arrow"> </span
-            ></a>
+            <a href="about.html" class="btn" style="font-family: Work Sans; transition: background-color 0.3s ease, transform 0.2s ease;">
+              Learn More about DMV <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
 
@@ -488,7 +496,7 @@
       <div class="faq-attractive-container">
         <div class="faq-header-custom">
           <h2 style="font-family: Work Sans">
-            <i class="fas fa-circle-question"></i> 
+            <span style="font-size: 1.8rem;">?</span> 
             Frequently Asked Questions
           </h2>
           <div class="faq-subhead">Everything you need to know about DMV for Dessie</div>
@@ -498,7 +506,7 @@
           <div class="faq-card">
             <button class="faq-question-btn" aria-expanded="false">
               <h3 style="font-family: Work Sans">What does "DMV for Dessie" mean?</h3>
-              <span class="faq-icon-wrapper"><i class="fas fa-plus"></i></span>
+              <span class="faq-icon-wrapper"><span style="font-size: 1.3rem; color: #f9a65a;">+</span></span>
             </button>
             <div class="faq-answer-panel">
               <p style="font-family: Work Sans">"DMV" refers to the Washington, DC metropolitan area — commonly known as the DMV area, covering Washington DC, Maryland, and Virginia. "Dessie" refers to the city of Dessie in the Wollo Zone of the Amhara Region in northern Ethiopia. <strong>DMV for Dessie</strong> is a nonprofit organization founded in 2021 by Ethiopian diaspora members living in the DC, Maryland, and Virginia area who came together to support families, children, and elderly residents affected by conflict in Dessie, Ethiopia.</p>
@@ -508,7 +516,7 @@
           <div class="faq-card">
             <button class="faq-question-btn" aria-expanded="false">
               <h3 style="font-family: Work Sans">Where is DMV for Dessie based, and where does it operate?</h3>
-              <span class="faq-icon-wrapper"><i class="fas fa-plus"></i></span>
+              <span class="faq-icon-wrapper"><span style="font-size: 1.3rem; color: #f9a65a;">+</span></span>
             </button>
             <div class="faq-answer-panel">
               <p style="font-family: Work Sans">The organization is based in <strong>Silver Spring, Maryland</strong>, in the Washington DC metropolitan area. Its humanitarian programs and aid distribution operate primarily in <strong>Dessie</strong>, a city in the Wollo Zone of the Amhara Region in northern Ethiopia, as well as surrounding communities affected by conflict and displacement.</p>
@@ -518,7 +526,7 @@
           <div class="faq-card">
             <button class="faq-question-btn" aria-expanded="false">
               <h3 style="font-family: Work Sans">How does the aid reach people in Dessie, Ethiopia?</h3>
-              <span class="faq-icon-wrapper"><i class="fas fa-plus"></i></span>
+              <span class="faq-icon-wrapper"><span style="font-size: 1.3rem; color: #f9a65a;">+</span></span>
             </button>
             <div class="faq-answer-panel">
               <p style="font-family: Work Sans">DMV for Dessie works through a network of trusted community members and local contacts in Dessie to identify the most vulnerable individuals and families. Funds raised in the United States are transferred and distributed on the ground in Dessie, ensuring aid reaches recipients directly. The organization maintains accountability through regular reporting and community oversight.</p>
@@ -528,7 +536,7 @@
           <div class="faq-card">
             <button class="faq-question-btn" aria-expanded="false">
               <h3 style="font-family: Work Sans">How can I donate to DMV for Dessie?</h3>
-              <span class="faq-icon-wrapper"><i class="fas fa-plus"></i></span>
+              <span class="faq-icon-wrapper"><span style="font-size: 1.3rem; color: #f9a65a;">+</span></span>
             </button>
             <div class="faq-answer-panel">
               <p style="font-family: Work Sans">You can donate through several methods: online via <strong>dmvfordessie.org/donate</strong>, or by cash, check, or bank transfer by contacting the organization at <strong>+1 (571) 622-9455</strong>. All donations to DMV for Dessie are tax-deductible as the organization is a registered 501(c)(3) charity.</p>
@@ -562,7 +570,7 @@
         function toggleFaq(button) {
           const faqCard = button.closest('.faq-card');
           const answerPanel = faqCard.querySelector('.faq-answer-panel');
-          const iconSpan = button.querySelector('.faq-icon-wrapper i');
+          const iconSpan = button.querySelector('.faq-icon-wrapper span');
           const isExpanded = button.getAttribute('aria-expanded') === 'true';
           
           if (!isExpanded) {
@@ -571,15 +579,13 @@
             answerPanel.classList.add('open');
             button.setAttribute('aria-expanded', 'true');
             if (iconSpan) {
-              iconSpan.classList.remove('fa-plus');
-              iconSpan.classList.add('fa-minus');
+              iconSpan.textContent = '-';
             }
           } else {
             answerPanel.classList.remove('open');
             button.setAttribute('aria-expanded', 'false');
             if (iconSpan) {
-              iconSpan.classList.remove('fa-minus');
-              iconSpan.classList.add('fa-plus');
+              iconSpan.textContent = '+';
             }
           }
         }
@@ -606,10 +612,9 @@
         });
         document.querySelectorAll('.faq-question-btn').forEach(btn => {
           btn.setAttribute('aria-expanded', 'false');
-          const icon = btn.querySelector('.faq-icon-wrapper i');
+          const icon = btn.querySelector('.faq-icon-wrapper span');
           if (icon) {
-            icon.classList.remove('fa-minus');
-            icon.classList.add('fa-plus');
+            icon.textContent = '+';
           }
         });
       })();
